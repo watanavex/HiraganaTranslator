@@ -653,7 +653,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6D9B96279B959B8F0300CE5 /* Pods-HiraganaTranslatorTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WLN29ZWFG6;
@@ -676,7 +675,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WLN29ZWFG6;
@@ -782,7 +780,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5FEC31C01376C2DD0DFFAB83 /* Pods-HiraganaTranslatorTests.debug-stub.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WLN29ZWFG6;
