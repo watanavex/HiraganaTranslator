@@ -23,6 +23,7 @@
 		08A9AC4423D5F30300C3DAE5 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */; };
 		08A9AC4823D5F30700C3DAE5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */; };
 		08A9AC4A23D5F30800C3DAE5 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2A23D5EF5C00C3DAE5 /* RxOptional.framework */; };
+		08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9AC4E23D5F59000C3DAE5 /* R.generated.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
 		EC39BEDE74EBB97268681E6F /* Pods_HiraganaTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		08A9AC2823D5EF5C00C3DAE5 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		08A9AC2923D5EF5C00C3DAE5 /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
 		08A9AC2A23D5EF5C00C3DAE5 /* RxOptional.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxOptional.framework; path = Carthage/Build/iOS/RxOptional.framework; sourceTree = "<group>"; };
+		08A9AC4E23D5F59000C3DAE5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		1A0406D1DAEA05C3697F5761 /* Pods-HiraganaTranslator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug.xcconfig"; sourceTree = "<group>"; };
 		1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				08988C8323D5E27A00BAA135 /* Assets.xcassets */,
 				08988C8523D5E27A00BAA135 /* LaunchScreen.storyboard */,
 				08988C8823D5E27A00BAA135 /* Info.plist */,
+				08A9AC4C23D5F55400C3DAE5 /* generated */,
 			);
 			path = HiraganaTranslator;
 			sourceTree = "<group>";
@@ -137,6 +140,14 @@
 				08988C9323D5E27A00BAA135 /* Info.plist */,
 			);
 			path = HiraganaTranslatorTests;
+			sourceTree = "<group>";
+		};
+		08A9AC4C23D5F55400C3DAE5 /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				08A9AC4E23D5F59000C3DAE5 /* R.generated.swift */,
+			);
+			path = generated;
 			sourceTree = "<group>";
 		};
 		A0A8EF0F5FA4BC37D28C5F49 /* Frameworks */ = {
@@ -177,6 +188,7 @@
 			buildConfigurationList = 08988C9623D5E27A00BAA135 /* Build configuration list for PBXNativeTarget "HiraganaTranslator" */;
 			buildPhases = (
 				43CEC780DDE62B360512A757 /* [CP] Check Pods Manifest.lock */,
+				08A9AC4D23D5F56100C3DAE5 /* R.swift */,
 				08988C7323D5E27600BAA135 /* Sources */,
 				08988C7423D5E27600BAA135 /* Frameworks */,
 				08988C7523D5E27600BAA135 /* Resources */,
@@ -308,6 +320,26 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		08A9AC4D23D5F56100C3DAE5 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/$PRODUCT_NAME/generated/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/R.swift/rswift generate $SRCROOT/$PRODUCT_NAME/generated/R.generated.swift\n";
+		};
 		429D5B3D7D07A4067A92B824 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +411,7 @@
 				08988C7F23D5E27600BAA135 /* ViewController.swift in Sources */,
 				08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */,
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
+				08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
