@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,15 @@
 		08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8323D5E27A00BAA135 /* Assets.xcassets */; };
 		08988C8723D5E27A00BAA135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8523D5E27A00BAA135 /* LaunchScreen.storyboard */; };
 		08988C9223D5E27A00BAA135 /* HiraganaTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C9123D5E27A00BAA135 /* HiraganaTranslatorTests.swift */; };
+		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
+		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
+		08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */; };
+		08A9AC3923D5EF5D00C3DAE5 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2823D5EF5C00C3DAE5 /* Swinject.framework */; };
+		08A9AC3B23D5EF5D00C3DAE5 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2923D5EF5C00C3DAE5 /* SwinjectAutoregistration.framework */; };
+		08A9AC4123D5F30100C3DAE5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2523D5EF5C00C3DAE5 /* Alamofire.framework */; };
+		08A9AC4423D5F30300C3DAE5 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */; };
+		08A9AC4823D5F30700C3DAE5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */; };
+		08A9AC4A23D5F30800C3DAE5 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2A23D5EF5C00C3DAE5 /* RxOptional.framework */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
 		EC39BEDE74EBB97268681E6F /* Pods_HiraganaTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +50,16 @@
 		08988C8D23D5E27A00BAA135 /* HiraganaTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiraganaTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C9123D5E27A00BAA135 /* HiraganaTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaTranslatorTests.swift; sourceTree = "<group>"; };
 		08988C9323D5E27A00BAA135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
+		08A9AC2423D5EF5C00C3DAE5 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		08A9AC2523D5EF5C00C3DAE5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		08A9AC2823D5EF5C00C3DAE5 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		08A9AC2923D5EF5C00C3DAE5 /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
+		08A9AC2A23D5EF5C00C3DAE5 /* RxOptional.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxOptional.framework; path = Carthage/Build/iOS/RxOptional.framework; sourceTree = "<group>"; };
 		1A0406D1DAEA05C3697F5761 /* Pods-HiraganaTranslator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug.xcconfig"; sourceTree = "<group>"; };
 		1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -53,7 +72,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */,
+				08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */,
+				08A9AC3B23D5EF5D00C3DAE5 /* SwinjectAutoregistration.framework in Frameworks */,
 				8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */,
+				08A9AC4123D5F30100C3DAE5 /* Alamofire.framework in Frameworks */,
+				08A9AC3923D5EF5D00C3DAE5 /* Swinject.framework in Frameworks */,
+				08A9AC4A23D5F30800C3DAE5 /* RxOptional.framework in Frameworks */,
+				08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */,
+				08A9AC4823D5F30700C3DAE5 /* RxCocoa.framework in Frameworks */,
+				08A9AC4423D5F30300C3DAE5 /* RxAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +142,16 @@
 		A0A8EF0F5FA4BC37D28C5F49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08A9AC2523D5EF5C00C3DAE5 /* Alamofire.framework */,
+				08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */,
+				08A9AC2423D5EF5C00C3DAE5 /* RxBlocking.framework */,
+				08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */,
+				08A9AC2A23D5EF5C00C3DAE5 /* RxOptional.framework */,
+				08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */,
+				08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */,
+				08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */,
+				08A9AC2823D5EF5C00C3DAE5 /* Swinject.framework */,
+				08A9AC2923D5EF5C00C3DAE5 /* SwinjectAutoregistration.framework */,
 				1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */,
 				EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */,
 			);
@@ -128,7 +166,6 @@
 				F6D9B96279B959B8F0300CE5 /* Pods-HiraganaTranslatorTests.debug.xcconfig */,
 				4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +181,7 @@
 				08988C7423D5E27600BAA135 /* Frameworks */,
 				08988C7523D5E27600BAA135 /* Resources */,
 				429D5B3D7D07A4067A92B824 /* [CP] Embed Pods Frameworks */,
+				08A9AC4023D5F08200C3DAE5 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -249,6 +287,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		08A9AC4023D5F08200C3DAE5 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/input.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/output.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		429D5B3D7D07A4067A92B824 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -483,6 +541,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WLN29ZWFG6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HiraganaTranslator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -502,6 +564,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WLN29ZWFG6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HiraganaTranslator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
