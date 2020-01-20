@@ -1,0 +1,36 @@
+PODS:
+  - iOSSnapshotTestCase (6.2.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
+  - iOSSnapshotTestCase/Core (6.2.0)
+  - iOSSnapshotTestCase/SwiftSupport (6.2.0):
+    - iOSSnapshotTestCase/Core
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - Sourcery (0.17.0)
+  - SwiftLint (0.38.2)
+
+DEPENDENCIES:
+  - iOSSnapshotTestCase
+  - R.swift
+  - Sourcery
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - iOSSnapshotTestCase
+    - R.swift
+    - R.swift.Library
+    - Sourcery
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
+  SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+
+PODFILE CHECKSUM: fd91e6e419dcda0fdf93ad30119a44698f425176
+
+COCOAPODS: 1.8.4
