@@ -1,0 +1,9 @@
+github "ReactiveX/RxSwift"
+github "RxSwiftCommunity/RxOptional"
+github "SnapKit/SnapKit"
+github "Swinject/Swinject"
+github "Swinject/SwinjectAutoregistration"
+github "RxSwiftCommunity/RxAlamofire"
+github "Brightify/Cuckoo"
+github "manGoweb/SpecTools"
+github "honghaoz/Ji" ~> 5.1.0
