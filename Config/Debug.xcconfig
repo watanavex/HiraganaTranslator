@@ -1,0 +1,6 @@
+OTHER_SWIFT_FLAGS = "-D" "DEBUG" -Xfrontend -warn-long-function-bodies=1000
+CODE_SIGN_IDENTITY = iPhone Developer
+CODE_SIGN_STYLE = Manual
+DEVELOPMENT_TEAM = WLN29ZWFG6
+PROVISIONING_PROFILE_SPECIFIER = match Development *
+PRODUCT_BUNDLE_IDENTIFIER = tech.watanave.HiraganaTranslator
