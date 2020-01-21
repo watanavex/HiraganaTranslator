@@ -9,7 +9,8 @@ target 'HiraganaTranslator' do
   pod 'R.swift'
   pod 'SwiftLint'
   pod 'Sourcery'
-
+  pod 'Firebase/Analytics'
+  
   target 'HiraganaTranslatorTests' do
     inherit! :search_paths
     # Pods for testing

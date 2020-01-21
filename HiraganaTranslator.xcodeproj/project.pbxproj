@@ -25,6 +25,7 @@
 		08A9AC4A23D5F30800C3DAE5 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2A23D5EF5C00C3DAE5 /* RxOptional.framework */; };
 		08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9AC4E23D5F59000C3DAE5 /* R.generated.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
+		DBFCBAB123D68FB500FC3545 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBFCBAB023D68FB500FC3545 /* GoogleService-Info.plist */; };
 		EC39BEDE74EBB97268681E6F /* Pods_HiraganaTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		566DC8C0485EE8977C217298 /* Pods-HiraganaTranslator.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug-stub.xcconfig"; sourceTree = "<group>"; };
 		5FEC31C01376C2DD0DFFAB83 /* Pods-HiraganaTranslatorTests.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; sourceTree = "<group>"; };
+		DBFCBAB023D68FB500FC3545 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D9B96279B959B8F0300CE5 /* Pods-HiraganaTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.debug.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 				08988C8323D5E27A00BAA135 /* Assets.xcassets */,
 				08988C8523D5E27A00BAA135 /* LaunchScreen.storyboard */,
 				08988C8823D5E27A00BAA135 /* Info.plist */,
+				DBFCBAAF23D68FA300FC3545 /* supportingFiles */,
 				08A9AC4C23D5F55400C3DAE5 /* generated */,
 			);
 			path = HiraganaTranslator;
@@ -183,6 +186,14 @@
 				EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBFCBAAF23D68FA300FC3545 /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DBFCBAB023D68FB500FC3545 /* GoogleService-Info.plist */,
+			);
+			path = supportingFiles;
 			sourceTree = "<group>";
 		};
 		DEB8C712E248728D8F9595A1 /* Pods */ = {
@@ -287,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08988C8723D5E27A00BAA135 /* LaunchScreen.storyboard in Resources */,
+				DBFCBAB123D68FB500FC3545 /* GoogleService-Info.plist in Resources */,
 				08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */,
 				08988C8223D5E27600BAA135 /* Main.storyboard in Resources */,
 			);
