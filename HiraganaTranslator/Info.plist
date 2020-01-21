@@ -64,5 +64,7 @@
 	<array>
 		<string>mini-wakuwaku.otf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>ぶんしょうをかめらでさつえいするよ</string>
 </dict>
 </plist>

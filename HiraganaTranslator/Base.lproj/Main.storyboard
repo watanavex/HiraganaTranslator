@@ -91,7 +91,7 @@
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UAH-di-Nas" kind="show" id="EVg-2S-k8p"/>
+                                    <segue destination="Ahw-w5-5QL" kind="show" id="Xui-5J-JWd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,12 +116,28 @@
             </objects>
             <point key="canvasLocation" x="598" y="8"/>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="PEL-CZ-js3">
+            <objects>
+                <viewController id="Ahw-w5-5QL" customClass="CameraViewController" customModule="HiraganaTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="abG-XF-rED">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Fpa-Dv-J8h"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iQi-gO-Uvn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCl-mq-igv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="6"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="APJ-KT-pbM">
             <objects>
                 <viewController id="UAH-di-Nas" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2v-ut-Bvw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdp-AZ-nHS">
@@ -159,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBh-Mi-Ckc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511.25" y="8.4507042253521121"/>
+            <point key="canvasLocation" x="2323" y="7"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iYy-9L-X6m">
@@ -216,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhn-ci-9SM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="9"/>
+            <point key="canvasLocation" x="3015" y="7"/>
         </scene>
     </scenes>
     <resources>
