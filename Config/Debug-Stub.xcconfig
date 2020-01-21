@@ -8,3 +8,6 @@ PRODUCT_BUNDLE_IDENTIFIER = tech.watanave.HiraganaTranslator.stub
 // https://github.com/gali8/Tesseract-OCR-iOS/issues/406
 // ランタイムエラー対策
 OTHER_LDFLAGS = -all_load
+// https://github.com/gali8/Tesseract-OCR-iOS/issues/351
+// Tesseract-OCR-iOSがBitcode未サポート
+ENABLE_BITCODE = NO
