@@ -4,3 +4,7 @@ CODE_SIGN_STYLE = Manual
 DEVELOPMENT_TEAM = WLN29ZWFG6
 PROVISIONING_PROFILE_SPECIFIER = match Development *
 PRODUCT_BUNDLE_IDENTIFIER = tech.watanave.HiraganaTranslator.stub
+
+// https://github.com/gali8/Tesseract-OCR-iOS/issues/406
+// ランタイムエラー対策
+OTHER_LDFLAGS = -all_load
