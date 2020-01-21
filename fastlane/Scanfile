@@ -1,0 +1,3 @@
+output_types("junit")
+devices(["iPhone 11 Pro Max"])
+disable_concurrent_testing(true)

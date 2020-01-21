@@ -1,0 +1,68 @@
+---
+format_version: '8'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: ios
+workflows:
+  setup:
+    steps:
+    - cache-pull: {}
+    - script@1.1.6:
+        inputs:
+        - content: ./bootstrap.sh
+    meta:
+      bitrise.io:
+        stack: osx-xcode-13.1.x
+  save-cache:
+    steps:
+    - cache-push:
+        is_always_run: true
+        run_if: .IsCI
+        inputs:
+        - cache_paths: |-
+            ./vendor -> ./Gemfile.lock
+            ./Pods -> ./Podfile.lock
+            ./Carthage -> ./Cartfile.resolved
+        - compress_archive: 'true'
+    meta:
+      bitrise.io:
+        stack: osx-xcode-13.1.x
+  primary:
+    before_run:
+    - setup
+    after_run:
+    - save-cache
+    steps:
+    - script@1.1.6:
+        inputs:
+        - content: bundle exec fastlane test
+        title: Build and Test
+    meta:
+      bitrise.io:
+        stack: osx-xcode-13.1.x
+# --- bitrise.io
+# format_version: '8'
+# default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+# project_type: ios
+# trigger_map:
+# - push_branch: master
+#   workflow: primary
+# - pull_request_source_branch: "*"
+#   workflow: primary
+# workflows:
+#   _run_from_repo:
+#     steps:
+#     - activate-ssh-key@4.0.3:
+#         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+#     - git-clone@4.0.14: {}
+#     - script:
+#         title: continue from repo
+#         inputs:
+#         - content: |-
+#             #!/bin/bash
+#             set -ex
+#             bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"
+#   primary:
+#     after_run:
+#     - _run_from_repo
+
+
