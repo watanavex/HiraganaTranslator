@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u5Z-fi-QNQ">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="mini-wakuwaku.otf">
+            <string>mini-wakuwaku</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HiraganaTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSB-ke-1KD">
@@ -44,7 +49,179 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="9"/>
+            <point key="canvasLocation" x="-1179" y="8"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="keJ-sp-UBc">
+            <objects>
+                <viewController id="u5Z-fi-QNQ" customClass="MenuViewController" customModule="HiraganaTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CL2-5a-Bip">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkI-0L-lcs" customClass="MenuButton" customModule="HiraganaTranslator" customModuleProvider="target">
+                                <rect key="frame" x="92" y="270" width="136" height="28"/>
+                                <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="28"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="はりつけ" image="Clipboard">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnB-HO-Iow" customClass="MenuButton" customModule="HiraganaTranslator" customModuleProvider="target">
+                                <rect key="frame" x="78" y="348" width="164" height="28"/>
+                                <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="28"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="きーぼーど" image="Keyboard">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggK-n5-pHl">
+                                <rect key="frame" x="92.5" y="66" width="135" height="30"/>
+                                <string key="text">かんじをひらがなに
+へんかんするよ</string>
+                                <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-Vv-qLc" customClass="MenuButton" customModule="HiraganaTranslator" customModuleProvider="target">
+                                <rect key="frame" x="106" y="192" width="108" height="28"/>
+                                <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="28"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="かめら" image="Camera">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UAH-di-Nas" kind="show" id="EVg-2S-k8p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rkI-0L-lcs" firstAttribute="centerY" secondItem="CL2-5a-Bip" secondAttribute="centerY" id="7JO-Sm-gP1"/>
+                            <constraint firstItem="cHx-Vv-qLc" firstAttribute="centerX" secondItem="rkI-0L-lcs" secondAttribute="centerX" id="TyQ-ta-Djs"/>
+                            <constraint firstItem="rkI-0L-lcs" firstAttribute="centerX" secondItem="CL2-5a-Bip" secondAttribute="centerX" id="Yw3-qg-60o"/>
+                            <constraint firstItem="OnB-HO-Iow" firstAttribute="centerX" secondItem="rkI-0L-lcs" secondAttribute="centerX" id="cHt-Iy-R7j"/>
+                            <constraint firstItem="cHx-Vv-qLc" firstAttribute="top" secondItem="ggK-n5-pHl" secondAttribute="bottom" constant="96" id="g15-L9-hSw"/>
+                            <constraint firstItem="rkI-0L-lcs" firstAttribute="top" secondItem="cHx-Vv-qLc" secondAttribute="bottom" constant="50" id="oPV-Hf-63e"/>
+                            <constraint firstItem="OnB-HO-Iow" firstAttribute="top" secondItem="rkI-0L-lcs" secondAttribute="bottom" constant="50" id="rg3-U7-5ON"/>
+                            <constraint firstItem="ggK-n5-pHl" firstAttribute="centerX" secondItem="CL2-5a-Bip" secondAttribute="centerX" id="wuR-3X-NRD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fel-da-SyS"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="cHx-Vv-qLc" id="26a-eF-FLG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCg-Lv-3cD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="8"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="APJ-KT-pbM">
+            <objects>
+                <viewController id="UAH-di-Nas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F2v-ut-Bvw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdp-AZ-nHS">
+                                <rect key="frame" x="16" y="62" width="288" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgw-Gj-txk">
+                                <rect key="frame" x="181" y="268" width="80" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="20"/>
+                                <state key="normal" title="へんかん">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zar-KR-Jbm" kind="show" id="vSw-04-ODT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gd4-UL-ncH">
+                                <rect key="frame" x="61" y="268" width="60" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="20"/>
+                                <state key="normal" title="もどる">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bjt-bJ-VxC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ho-IR-z54"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OBh-Mi-Ckc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511.25" y="8.4507042253521121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iYy-9L-X6m">
+            <objects>
+                <viewController id="zar-KR-Jbm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="68y-oI-DRc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-YG-9AT">
+                                <rect key="frame" x="16" y="105" width="288" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkp-nG-wfv">
+                                <rect key="frame" x="17" y="268" width="288" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY0-De-tWP">
+                                <rect key="frame" x="71" y="471" width="180" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="20"/>
+                                <state key="normal" title="ぶんしょうをなおす">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="へんかんけっか" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWg-Mt-RGD">
+                                <rect key="frame" x="56" y="29" width="209" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNC-jO-Cgp">
+                                <rect key="frame" x="90" y="418" width="140" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="20"/>
+                                <state key="normal" title="はじめにもどる">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IHv-Yx-r6d"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cyp-sv-rPj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhn-ci-9SM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2204" y="9"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="24" height="24"/>
+        <image name="Clipboard" width="24" height="24"/>
+        <image name="Keyboard" width="24" height="24"/>
+    </resources>
 </document>

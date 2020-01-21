@@ -26,6 +26,7 @@
 		08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9AC4E23D5F59000C3DAE5 /* R.generated.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
 		DB5BE4BC23D6E9A2003652AF /* mini-wakuwaku.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB9DF5AB23D6DE62000624CF /* mini-wakuwaku.otf */; };
+		DB5BE4BE23D6EB9F003652AF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5BE4BD23D6EB9F003652AF /* MenuViewController.swift */; };
 		DBFCBAB323D697BA00FC3545 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFCBAB223D697BA00FC3545 /* TesseractOCR.framework */; };
 		DBFCBABB23D69AA800FC3545 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DBFCBABA23D69AA700FC3545 /* tessdata */; };
 		DBFCBABD23D69B9400FC3545 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFCBABC23D69B9400FC3545 /* sample.png */; };
@@ -75,6 +76,7 @@
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		566DC8C0485EE8977C217298 /* Pods-HiraganaTranslator.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug-stub.xcconfig"; sourceTree = "<group>"; };
 		5FEC31C01376C2DD0DFFAB83 /* Pods-HiraganaTranslatorTests.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; sourceTree = "<group>"; };
+		DB5BE4BD23D6EB9F003652AF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DB9DF5AB23D6DE62000624CF /* mini-wakuwaku.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mini-wakuwaku.otf"; sourceTree = "<group>"; };
 		DBFCBAB223D697BA00FC3545 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = Carthage/Build/iOS/Static/TesseractOCR.framework; sourceTree = "<group>"; };
 		DBFCBABA23D69AA700FC3545 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				DBFCBAAF23D68FA300FC3545 /* supportingFiles */,
 				08A9AC4C23D5F55400C3DAE5 /* generated */,
 				DBFCBABC23D69B9400FC3545 /* sample.png */,
+				DB5BE4BD23D6EB9F003652AF /* MenuViewController.swift */,
 			);
 			path = HiraganaTranslator;
 			sourceTree = "<group>";
@@ -411,7 +414,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+			shellScript = "#${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		429D5B3D7D07A4067A92B824 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -482,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08988C7F23D5E27600BAA135 /* ViewController.swift in Sources */,
+				DB5BE4BE23D6EB9F003652AF /* MenuViewController.swift in Sources */,
 				08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */,
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
 				08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */,
