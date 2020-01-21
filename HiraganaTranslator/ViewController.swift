@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import TesseractOCR
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, G8TesseractDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let tesseract = G8Tesseract(language: "jpn")
+        tesseract?.delegate = self
+        tesseract?.image = R.image.sample()
+        print(tesseract?.recognizedText)
     }
 
 }
