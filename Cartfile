@@ -7,3 +7,4 @@ github "RxSwiftCommunity/RxAlamofire"
 github "Brightify/Cuckoo"
 github "manGoweb/SpecTools"
 github "honghaoz/Ji" ~> 5.1.0
+github "gali8/Tesseract-OCR-iOS"

@@ -26,6 +26,7 @@
 		08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9AC4E23D5F59000C3DAE5 /* R.generated.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
 		DBFCBAB123D68FB500FC3545 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBFCBAB023D68FB500FC3545 /* GoogleService-Info.plist */; };
+		DBFCBAB323D697BA00FC3545 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFCBAB223D697BA00FC3545 /* TesseractOCR.framework */; };
 		EC39BEDE74EBB97268681E6F /* Pods_HiraganaTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		566DC8C0485EE8977C217298 /* Pods-HiraganaTranslator.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug-stub.xcconfig"; sourceTree = "<group>"; };
 		5FEC31C01376C2DD0DFFAB83 /* Pods-HiraganaTranslatorTests.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; sourceTree = "<group>"; };
 		DBFCBAB023D68FB500FC3545 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DBFCBAB223D697BA00FC3545 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = Carthage/Build/iOS/Static/TesseractOCR.framework; sourceTree = "<group>"; };
 		EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D9B96279B959B8F0300CE5 /* Pods-HiraganaTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.debug.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 			files = (
 				08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */,
 				08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */,
+				DBFCBAB323D697BA00FC3545 /* TesseractOCR.framework in Frameworks */,
 				08A9AC3B23D5EF5D00C3DAE5 /* SwinjectAutoregistration.framework in Frameworks */,
 				8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */,
 				08A9AC4123D5F30100C3DAE5 /* Alamofire.framework in Frameworks */,
@@ -172,6 +175,7 @@
 		A0A8EF0F5FA4BC37D28C5F49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBFCBAB223D697BA00FC3545 /* TesseractOCR.framework */,
 				08A9AC2523D5EF5C00C3DAE5 /* Alamofire.framework */,
 				08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */,
 				08A9AC2423D5EF5C00C3DAE5 /* RxBlocking.framework */,
@@ -627,6 +631,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 				);
 				INFOPLIST_FILE = HiraganaTranslator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -648,6 +653,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 				);
 				INFOPLIST_FILE = HiraganaTranslator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -775,6 +781,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 				);
 				INFOPLIST_FILE = HiraganaTranslator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
