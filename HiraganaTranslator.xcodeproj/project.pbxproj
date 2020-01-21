@@ -27,6 +27,7 @@
 		08988C8723D5E27A00BAA135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8523D5E27A00BAA135 /* LaunchScreen.storyboard */; };
 		089A8CD223D88EF3000C2F10 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CD123D88EF3000C2F10 /* main.swift */; };
 		089A8CD423D88F46000C2F10 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CD323D88F46000C2F10 /* TestAppDelegate.swift */; };
+		089A8CE223D89883000C2F10 /* mini-wakuwaku.otf in Resources */ = {isa = PBXBuildFile; fileRef = 089A8CE123D89882000C2F10 /* mini-wakuwaku.otf */; };
 		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
 		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
 		08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */; };
@@ -79,6 +80,7 @@
 		08988C9323D5E27A00BAA135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		089A8CD123D88EF3000C2F10 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		089A8CD323D88F46000C2F10 /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
+		089A8CE123D89882000C2F10 /* mini-wakuwaku.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mini-wakuwaku.otf"; sourceTree = "<group>"; };
 		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		0819C90F23D7EEA60075B796 /* supportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				089A8CE023D89882000C2F10 /* fonts */,
 				0819C91023D7EEB60075B796 /* stencil */,
 				0819C98C23D854F70075B796 /* Secret.strings */,
 			);
@@ -262,6 +265,14 @@
 				08988C9323D5E27A00BAA135 /* Info.plist */,
 			);
 			path = HiraganaTranslatorTests;
+			sourceTree = "<group>";
+		};
+		089A8CE023D89882000C2F10 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				089A8CE123D89882000C2F10 /* mini-wakuwaku.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		08A9AC4C23D5F55400C3DAE5 /* generated */ = {
@@ -416,6 +427,7 @@
 				0819C98D23D854F70075B796 /* Secret.strings in Resources */,
 				08988C8723D5E27A00BAA135 /* LaunchScreen.storyboard in Resources */,
 				0819C91223D7EF100075B796 /* ViewModel.stencil in Resources */,
+				089A8CE223D89883000C2F10 /* mini-wakuwaku.otf in Resources */,
 				08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
