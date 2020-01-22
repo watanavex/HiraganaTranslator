@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>ViewController and ViewModel.</string>
+	<key>Summary</key>
+	<string>ViewController and ViewModel.</string>
+	<key>SortOrder</key>
+	<string>0</string>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>DefaultCompletionName</key>
+	<string>File</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___.swift</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>ViewController Name:</string>
+			<key>Description</key>
+			<string>The name of the ViewController</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>DI</string>
+			<key>Name</key>
+			<string>DI framework</string>
+			<key>Description</key>
+			<string>Whether to create DI container of Swinject</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>Swinject</string>
+			<key>Values</key>
+			<array>
+				<string>Swinject</string>
+				<string>None</string>
+			</array>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>parentContainer</string>
+			<key>Name</key>
+			<string>Parent container Name:</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>nil</string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>DI</key>
+				<array>
+					<string>Swinject</string>
+				</array>
+			</dict>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+	</array>
+</dict>
+</plist>
