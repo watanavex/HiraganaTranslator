@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,10 @@
 		089A8CE223D89883000C2F10 /* mini-wakuwaku.otf in Resources */ = {isa = PBXBuildFile; fileRef = 089A8CE123D89882000C2F10 /* mini-wakuwaku.otf */; };
 		089A8CE623D8AC5F000C2F10 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */; };
 		089A8CE723D8AC5F000C2F10 /* CAGradientLayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */; };
+		089A8CEA23D8B111000C2F10 /* MenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CE923D8B111000C2F10 /* MenuViewControllerTests.swift */; };
+		089A8CEF23D8B2E0000C2F10 /* SpecTools.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CEC23D8B2E0000C2F10 /* SpecTools.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		089A8CF023D8B2E0000C2F10 /* RxBlocking.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		089A8CF123D8B2E0000C2F10 /* RxTest.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CEE23D8B2E0000C2F10 /* RxTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
 		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
 		08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */; };
@@ -59,6 +63,22 @@
 			remoteInfo = HiraganaTranslator;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		089A8CEB23D8B29B000C2F10 /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				089A8CEF23D8B2E0000C2F10 /* SpecTools.framework in Carthage */,
+				089A8CF023D8B2E0000C2F10 /* RxBlocking.framework in Carthage */,
+				089A8CF123D8B2E0000C2F10 /* RxTest.framework in Carthage */,
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06B0DB1E939CAFA15A0C11F0 /* Pods-HiraganaTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +114,10 @@
 		089A8CE123D89882000C2F10 /* mini-wakuwaku.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mini-wakuwaku.otf"; sourceTree = "<group>"; };
 		089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+extension.swift"; sourceTree = "<group>"; };
+		089A8CE923D8B111000C2F10 /* MenuViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerTests.swift; sourceTree = "<group>"; };
+		089A8CEC23D8B2E0000C2F10 /* SpecTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpecTools.framework; path = Carthage/Build/iOS/SpecTools.framework; sourceTree = "<group>"; };
+		089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		089A8CEE23D8B2E0000C2F10 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
@@ -179,6 +203,7 @@
 		0819C96223D806590075B796 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				089A8CE823D8B0E5000C2F10 /* menu */,
 				0819C96323D806590075B796 /* alert */,
 			);
 			path = view;
@@ -311,6 +336,14 @@
 			path = common;
 			sourceTree = "<group>";
 		};
+		089A8CE823D8B0E5000C2F10 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				089A8CE923D8B111000C2F10 /* MenuViewControllerTests.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
 		08A9AC4C23D5F55400C3DAE5 /* generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +374,9 @@
 		A0A8EF0F5FA4BC37D28C5F49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */,
+				089A8CEE23D8B2E0000C2F10 /* RxTest.framework */,
+				089A8CEC23D8B2E0000C2F10 /* SpecTools.framework */,
 				0819C98623D841A80075B796 /* Ji.framework */,
 				08A9AC2523D5EF5C00C3DAE5 /* Alamofire.framework */,
 				08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */,
@@ -406,6 +442,7 @@
 				08988C8A23D5E27A00BAA135 /* Frameworks */,
 				08988C8B23D5E27A00BAA135 /* Resources */,
 				04F33428EB57F7B1A61B1930 /* [CP] Embed Pods Frameworks */,
+				089A8CEB23D8B29B000C2F10 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -671,6 +708,7 @@
 				0819C96523D806590075B796 /* AlertServiceTest.swift in Sources */,
 				08AB284C23D87BF0005A479B /* XMLParserTests.swift in Sources */,
 				0819C96723D8081C0075B796 /* TestUtil.swift in Sources */,
+				089A8CEA23D8B111000C2F10 /* MenuViewControllerTests.swift in Sources */,
 				089A8CD423D88F46000C2F10 /* TestAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
