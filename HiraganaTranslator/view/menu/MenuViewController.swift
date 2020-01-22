@@ -91,7 +91,8 @@ class MenuViewController: UIViewController {
                 case .camera:
                     break // TODO: 画面遷移を実装する
                 case .textInput:
-                    break // TODO: 画面遷移を実装する
+                    let viewController = sharedTextInputContainer.resolve(TextInputViewController.self)!
+                    self.present(viewController, animated: true, completion: nil)
                 }
             }
             .disposed(by: self.disposeBag)

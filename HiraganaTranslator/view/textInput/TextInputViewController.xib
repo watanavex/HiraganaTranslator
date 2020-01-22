@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,11 +14,50 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cEt-oL-GjS" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
+                    <rect key="frame" x="30" y="60" width="260" height="170"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="mFp-9R-oYZ"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apH-Ks-vVU" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
+                    <rect key="frame" x="30" y="260" width="46" height="30"/>
+                    <state key="normal" title="もどる"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="theme">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkS-ba-ycd" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
+                    <rect key="frame" x="228" y="260" width="62" height="30"/>
+                    <state key="normal" title="へんかん"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="theme">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cEt-oL-GjS" secondAttribute="trailing" constant="30" id="2JR-mU-U7d"/>
+                <constraint firstItem="cEt-oL-GjS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="Lje-lL-SOa"/>
+                <constraint firstItem="apH-Ks-vVU" firstAttribute="leading" secondItem="cEt-oL-GjS" secondAttribute="leading" id="No3-5X-96c"/>
+                <constraint firstItem="cEt-oL-GjS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Pag-qG-MTK"/>
+                <constraint firstItem="apH-Ks-vVU" firstAttribute="top" secondItem="cEt-oL-GjS" secondAttribute="bottom" constant="30" id="VXh-oc-H3m"/>
+                <constraint firstItem="IkS-ba-ycd" firstAttribute="trailing" secondItem="cEt-oL-GjS" secondAttribute="trailing" id="khT-Th-6Nk"/>
+                <constraint firstItem="IkS-ba-ycd" firstAttribute="top" secondItem="cEt-oL-GjS" secondAttribute="bottom" constant="30" id="rnv-gq-3rV"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
 </document>

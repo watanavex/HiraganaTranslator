@@ -28,8 +28,10 @@ class TextInputViewController: UIViewController {
     init(viewModel: TextInputViewModel, alertService: AlertService) {
         self.viewModel = viewModel
         self.alertService = alertService
-            
+        
         super.init(nibName: nil, bundle: nil)
+        self.modalPresentationStyle = .fullScreen
+        self.modalTransitionStyle = .flipHorizontal
     }
 
     override func viewDidLoad() {
@@ -43,6 +45,15 @@ class TextInputViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.setSkyGradientColor()
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        self.rx.methodInvoked(#selector(UIViewController.viewDidLayoutSubviews))
+            .bind { [view] _ in
+                guard let view = view else { return }
+                gradientLayer.frame = view.bounds
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind intent
