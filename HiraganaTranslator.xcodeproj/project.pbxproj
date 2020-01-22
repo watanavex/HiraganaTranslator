@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0819C90523D7EA100075B796 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C90423D7EA100075B796 /* UIAlertController+extension.swift */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
 		08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7C23D5E27600BAA135 /* SceneDelegate.swift */; };
 		08988C7F23D5E27600BAA135 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7E23D5E27600BAA135 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		06B0DB1E939CAFA15A0C11F0 /* Pods-HiraganaTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.release.xcconfig"; sourceTree = "<group>"; };
+		0819C90423D7EA100075B796 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C7A23D5E27600BAA135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08988C7C23D5E27600BAA135 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0819C90323D7E9A90075B796 /* alert */ = {
+			isa = PBXGroup;
+			children = (
+				0819C90423D7EA100075B796 /* UIAlertController+extension.swift */,
+			);
+			path = alert;
+			sourceTree = "<group>";
+		};
 		08886FD723D7DEFC0070E679 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 				08988C7E23D5E27600BAA135 /* ViewController.swift */,
 				08988C8023D5E27600BAA135 /* Main.storyboard */,
 				08988C8523D5E27A00BAA135 /* LaunchScreen.storyboard */,
+				0819C90323D7E9A90075B796 /* alert */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -479,6 +490,7 @@
 			files = (
 				08988C7F23D5E27600BAA135 /* ViewController.swift in Sources */,
 				08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */,
+				0819C90523D7EA100075B796 /* UIAlertController+extension.swift in Sources */,
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
 				08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */,
 			);
