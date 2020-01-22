@@ -11,6 +11,8 @@
 		0819C8FE23D7E0D00075B796 /* ErrorTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C8FD23D7E0D00075B796 /* ErrorTranslator.swift */; };
 		0819C90023D7E0F10075B796 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C8FF23D7E0F10075B796 /* ViewModel.swift */; };
 		0819C90223D7E2A70075B796 /* AssociatedObjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C90123D7E2A70075B796 /* AssociatedObjectStore.swift */; };
+		0819C91223D7EF100075B796 /* ViewModel.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 0819C91123D7EF100075B796 /* ViewModel.stencil */; };
+		0819C91523D7EFEC0075B796 /* ViewModel.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C91423D7EFEC0075B796 /* ViewModel.generated.swift */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
 		08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7C23D5E27600BAA135 /* SceneDelegate.swift */; };
 		08988C7F23D5E27600BAA135 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7E23D5E27600BAA135 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		0819C8FD23D7E0D00075B796 /* ErrorTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTranslator.swift; sourceTree = "<group>"; };
 		0819C8FF23D7E0F10075B796 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		0819C90123D7E2A70075B796 /* AssociatedObjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedObjectStore.swift; sourceTree = "<group>"; };
+		0819C91123D7EF100075B796 /* ViewModel.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ViewModel.stencil; sourceTree = "<group>"; };
+		0819C91423D7EFEC0075B796 /* ViewModel.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.generated.swift; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C7A23D5E27600BAA135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08988C7C23D5E27600BAA135 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0819C90F23D7EEA60075B796 /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0819C91023D7EEB60075B796 /* stencil */,
+			);
+			path = supportingFiles;
+			sourceTree = "<group>";
+		};
+		0819C91023D7EEB60075B796 /* stencil */ = {
+			isa = PBXGroup;
+			children = (
+				0819C91123D7EF100075B796 /* ViewModel.stencil */,
+			);
+			path = stencil;
+			sourceTree = "<group>";
+		};
 		08886FD723D7DEFC0070E679 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +198,7 @@
 				08886FDA23D7DF330070E679 /* flux */,
 				08988C8323D5E27A00BAA135 /* Assets.xcassets */,
 				08988C8823D5E27A00BAA135 /* Info.plist */,
+				0819C90F23D7EEA60075B796 /* supportingFiles */,
 				08A9AC4C23D5F55400C3DAE5 /* generated */,
 			);
 			path = HiraganaTranslator;
@@ -195,6 +216,7 @@
 		08A9AC4C23D5F55400C3DAE5 /* generated */ = {
 			isa = PBXGroup;
 			children = (
+				0819C91423D7EFEC0075B796 /* ViewModel.generated.swift */,
 				08A9AC4E23D5F59000C3DAE5 /* R.generated.swift */,
 			);
 			path = generated;
@@ -251,6 +273,7 @@
 			buildPhases = (
 				43CEC780DDE62B360512A757 /* [CP] Check Pods Manifest.lock */,
 				08A9AC4D23D5F56100C3DAE5 /* R.swift */,
+				0819C91323D7EF210075B796 /* Sourcery */,
 				08988C7323D5E27600BAA135 /* Sources */,
 				08A9AC5023D5F5B300C3DAE5 /* Swiftlint */,
 				08988C7423D5E27600BAA135 /* Frameworks */,
@@ -331,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08988C8723D5E27A00BAA135 /* LaunchScreen.storyboard in Resources */,
+				0819C91223D7EF100075B796 /* ViewModel.stencil in Resources */,
 				08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */,
 				08988C8223D5E27600BAA135 /* Main.storyboard in Resources */,
 			);
@@ -362,6 +386,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		0819C91323D7EF210075B796 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				$SRCROOT/$PRODUCT_NAME/view,
+			);
+			name = Sourcery;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/$PRODUCT_NAME/generated/ViewModel.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/Sourcery/bin/sourcery \\\n    --sources $SRCROOT/$PRODUCT_NAME/ \\\n    --templates $SRCROOT/$PRODUCT_NAME/supportingFiles/stencil \\\n    --output $SRCROOT/$PRODUCT_NAME/generated \\\n    --disableCache\n";
 		};
 		08A9AC4023D5F08200C3DAE5 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -493,6 +537,7 @@
 				08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */,
 				0819C90223D7E2A70075B796 /* AssociatedObjectStore.swift in Sources */,
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
+				0819C91523D7EFEC0075B796 /* ViewModel.generated.swift in Sources */,
 				0819C8FC23D7E07A0075B796 /* Async.swift in Sources */,
 				0819C8FE23D7E0D00075B796 /* ErrorTranslator.swift in Sources */,
 				08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */,
