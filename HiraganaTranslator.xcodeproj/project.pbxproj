@@ -17,6 +17,7 @@
 		0819C91523D7EFEC0075B796 /* ViewModel.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C91423D7EFEC0075B796 /* ViewModel.generated.swift */; };
 		0819C96523D806590075B796 /* AlertServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C96423D806590075B796 /* AlertServiceTest.swift */; };
 		0819C96723D8081C0075B796 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C96623D8081C0075B796 /* TestUtil.swift */; };
+		0819C98523D841390075B796 /* TranslateApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C98423D841390075B796 /* TranslateApi.swift */; };
 		0819C98723D841A80075B796 /* Ji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0819C98623D841A80075B796 /* Ji.framework */; };
 		0819C98D23D854F70075B796 /* Secret.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0819C98C23D854F70075B796 /* Secret.strings */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
@@ -61,6 +62,7 @@
 		0819C91423D7EFEC0075B796 /* ViewModel.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.generated.swift; sourceTree = "<group>"; };
 		0819C96423D806590075B796 /* AlertServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServiceTest.swift; sourceTree = "<group>"; };
 		0819C96623D8081C0075B796 /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
+		0819C98423D841390075B796 /* TranslateApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateApi.swift; sourceTree = "<group>"; };
 		0819C98623D841A80075B796 /* Ji.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ji.framework; path = Carthage/Build/iOS/Ji.framework; sourceTree = "<group>"; };
 		0819C98C23D854F70075B796 /* Secret.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Secret.strings; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +185,7 @@
 		08886FD823D7DF030070E679 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				0819C98423D841390075B796 /* TranslateApi.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */,
 				0819C90223D7E2A70075B796 /* AssociatedObjectStore.swift in Sources */,
 				0819C90523D7EA100075B796 /* UIAlertController+extension.swift in Sources */,
+				0819C98523D841390075B796 /* TranslateApi.swift in Sources */,
 				0819C90823D7EC620075B796 /* AlertService.swift in Sources */,
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
 				0819C91523D7EFEC0075B796 /* ViewModel.generated.swift in Sources */,
