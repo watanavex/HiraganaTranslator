@@ -55,6 +55,7 @@
 		08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9AC4E23D5F59000C3DAE5 /* R.generated.swift */; };
 		08AB284923D875FD005A479B /* TranslateApiStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB284823D875FD005A479B /* TranslateApiStub.swift */; };
 		08AB284C23D87BF0005A479B /* XMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB284B23D87BF0005A479B /* XMLParserTests.swift */; };
+		08ABE3E123D910BB00973C2A /* RoundTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABE3E023D910BB00973C2A /* RoundTextView.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
 		EC39BEDE74EBB97268681E6F /* Pods_HiraganaTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */; };
 /* End PBXBuildFile section */
@@ -144,6 +145,7 @@
 		08A9AC5723D600C500C3DAE5 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		08AB284823D875FD005A479B /* TranslateApiStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateApiStub.swift; sourceTree = "<group>"; };
 		08AB284B23D87BF0005A479B /* XMLParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserTests.swift; sourceTree = "<group>"; };
+		08ABE3E023D910BB00973C2A /* RoundTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextView.swift; sourceTree = "<group>"; };
 		1A0406D1DAEA05C3697F5761 /* Pods-HiraganaTranslator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug.xcconfig"; sourceTree = "<group>"; };
 		1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			children = (
 				089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */,
 				089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */,
+				08ABE3E023D910BB00973C2A /* RoundTextView.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
 				089A8CD723D893C0000C2F10 /* AppContainer.swift in Sources */,
 				0819C91523D7EFEC0075B796 /* ViewModel.generated.swift in Sources */,
+				08ABE3E123D910BB00973C2A /* RoundTextView.swift in Sources */,
 				089A8CDB23D8940F000C2F10 /* MenuViewController.swift in Sources */,
 				089A8CD223D88EF3000C2F10 /* main.swift in Sources */,
 				0819C8FC23D7E07A0075B796 /* Async.swift in Sources */,
