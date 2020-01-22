@@ -13,7 +13,6 @@
 		0819C90223D7E2A70075B796 /* AssociatedObjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C90123D7E2A70075B796 /* AssociatedObjectStore.swift */; };
 		0819C90523D7EA100075B796 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C90423D7EA100075B796 /* UIAlertController+extension.swift */; };
 		0819C90823D7EC620075B796 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C90723D7EC620075B796 /* AlertService.swift */; };
-		0819C91223D7EF100075B796 /* ViewModel.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 0819C91123D7EF100075B796 /* ViewModel.stencil */; };
 		0819C91523D7EFEC0075B796 /* ViewModel.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C91423D7EFEC0075B796 /* ViewModel.generated.swift */; };
 		0819C96523D806590075B796 /* AlertServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C96423D806590075B796 /* AlertServiceTest.swift */; };
 		0819C96723D8081C0075B796 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C96623D8081C0075B796 /* TestUtil.swift */; };
@@ -426,7 +425,6 @@
 			files = (
 				0819C98D23D854F70075B796 /* Secret.strings in Resources */,
 				08988C8723D5E27A00BAA135 /* LaunchScreen.storyboard in Resources */,
-				0819C91223D7EF100075B796 /* ViewModel.stencil in Resources */,
 				089A8CE223D89883000C2F10 /* mini-wakuwaku.otf in Resources */,
 				08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */,
 			);
