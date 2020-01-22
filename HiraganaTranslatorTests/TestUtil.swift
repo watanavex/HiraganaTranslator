@@ -9,6 +9,7 @@
 import XCTest
 import RxSwift
 import RxCocoa
+import FBSnapshotTestCase
 
 extension XCTestCase {
     func wait(_ time: Double) {
@@ -32,4 +33,21 @@ extension XCTestCase {
         self.wait(for: [expection], timeout: timeout * 2)
     }
 
+}
+
+let recordMode = false
+extension FBSnapshotTestCase {
+    
+    func snapshot(_ view: UIView, identifier: String = "") {
+        let size = "\(Int(view.bounds.width))x\(Int(view.bounds.height))"
+        
+        func mode() -> String {
+            switch view.overrideUserInterfaceStyle {
+            case .dark: return "dark"
+            default: return "light"
+            }
+        }
+        FBSnapshotVerifyView(view, identifier: "\(identifier)_\(mode())_\(size)")
+    }
+    
 }

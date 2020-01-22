@@ -9,9 +9,10 @@
 import XCTest
 import RxSwift
 import RxTest
+import FBSnapshotTestCase
 @testable import HiraganaTranslator
 
-class MenuViewControllerTests: XCTestCase {
+class MenuViewControllerTests: FBSnapshotTestCase {
 
     var testScheduler: TestScheduler!
     var viewController: MenuViewController!
@@ -20,6 +21,9 @@ class MenuViewControllerTests: XCTestCase {
     var window: UIWindow!
     
     override func setUp() {
+        super.setUp()
+        self.recordMode = HiraganaTranslatorTests.recordMode
+        
         self.testScheduler = TestScheduler(initialClock: 0)
         
         self.viewModel = MenuViewModel(errorTranslator: ErrorTranslatorImpl())
@@ -31,10 +35,6 @@ class MenuViewControllerTests: XCTestCase {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window.rootViewController = self.viewController
         self.window.makeKeyAndVisible()
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
     func test_カメラボタンをタップするとカメラへの画面遷移命令が通知されること() {
@@ -65,5 +65,9 @@ class MenuViewControllerTests: XCTestCase {
         self.viewController.keyboardButton.sendActions(for: .touchUpInside)
         
         XCTAssertEqual(transition.events, [.next(0, .textInput)])
+    }
+    
+    func test_snapshot() {
+        snapshot(self.window)
     }
 }
