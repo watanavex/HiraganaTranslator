@@ -131,3 +131,4 @@ DerivedData/
 # End of https://www.gitignore.io/api/ruby,xcode,fastlane,carthage,cocoapods
 
 *.generated.swift
+Secret.strings
