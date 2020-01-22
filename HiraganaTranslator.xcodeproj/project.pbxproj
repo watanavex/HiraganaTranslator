@@ -16,7 +16,6 @@
 		08988C8223D5E27600BAA135 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8023D5E27600BAA135 /* Main.storyboard */; };
 		08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8323D5E27A00BAA135 /* Assets.xcassets */; };
 		08988C8723D5E27A00BAA135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8523D5E27A00BAA135 /* LaunchScreen.storyboard */; };
-		08988C9223D5E27A00BAA135 /* HiraganaTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C9123D5E27A00BAA135 /* HiraganaTranslatorTests.swift */; };
 		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
 		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
 		08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */; };
@@ -55,7 +54,6 @@
 		08988C8623D5E27A00BAA135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08988C8823D5E27A00BAA135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08988C8D23D5E27A00BAA135 /* HiraganaTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiraganaTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		08988C9123D5E27A00BAA135 /* HiraganaTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaTranslatorTests.swift; sourceTree = "<group>"; };
 		08988C9323D5E27A00BAA135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 		08988C9023D5E27A00BAA135 /* HiraganaTranslatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				08988C9123D5E27A00BAA135 /* HiraganaTranslatorTests.swift */,
 				0819C96623D8081C0075B796 /* TestUtil.swift */,
 				08988C9323D5E27A00BAA135 /* Info.plist */,
 			);
@@ -507,7 +504,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08988C9223D5E27A00BAA135 /* HiraganaTranslatorTests.swift in Sources */,
 				0819C96723D8081C0075B796 /* TestUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
