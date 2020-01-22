@@ -20,6 +20,7 @@
 		0819C98723D841A80075B796 /* Ji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0819C98623D841A80075B796 /* Ji.framework */; };
 		0819C98B23D850E20075B796 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C98A23D850E20075B796 /* XMLParser.swift */; };
 		0819C98D23D854F70075B796 /* Secret.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0819C98C23D854F70075B796 /* Secret.strings */; };
+		08258D5923D915990084D51E /* TextInputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08258D5823D915990084D51E /* TextInputViewControllerTests.swift */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
 		08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7C23D5E27600BAA135 /* SceneDelegate.swift */; };
 		08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8323D5E27A00BAA135 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		0819C98623D841A80075B796 /* Ji.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ji.framework; path = Carthage/Build/iOS/Ji.framework; sourceTree = "<group>"; };
 		0819C98A23D850E20075B796 /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		0819C98C23D854F70075B796 /* Secret.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Secret.strings; sourceTree = "<group>"; };
+		08258D5823D915990084D51E /* TextInputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewControllerTests.swift; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C7A23D5E27600BAA135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08988C7C23D5E27600BAA135 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				089A8CE823D8B0E5000C2F10 /* menu */,
+				08258D5723D915760084D51E /* textIput */,
 				0819C96323D806590075B796 /* alert */,
 			);
 			path = view;
@@ -227,6 +230,14 @@
 				0819C96423D806590075B796 /* AlertServiceTest.swift */,
 			);
 			path = alert;
+			sourceTree = "<group>";
+		};
+		08258D5723D915760084D51E /* textIput */ = {
+			isa = PBXGroup;
+			children = (
+				08258D5823D915990084D51E /* TextInputViewControllerTests.swift */,
+			);
+			path = textIput;
 			sourceTree = "<group>";
 		};
 		08886FD723D7DEFC0070E679 /* view */ = {
@@ -741,6 +752,7 @@
 				0819C96723D8081C0075B796 /* TestUtil.swift in Sources */,
 				089A8CEA23D8B111000C2F10 /* MenuViewControllerTests.swift in Sources */,
 				089A8CD423D88F46000C2F10 /* TestAppDelegate.swift in Sources */,
+				08258D5923D915990084D51E /* TextInputViewControllerTests.swift in Sources */,
 				089A8CF323D8B675000C2F10 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
