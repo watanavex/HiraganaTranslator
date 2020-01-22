@@ -11,7 +11,9 @@ import Swinject
 
 class TextInputViewController: UIViewController {
 
-    enum Transition {
+    enum Transition: Equatable {
+        case translateResult
+        case dismiss
         case errorAlert(String)
     }
 
@@ -20,6 +22,9 @@ class TextInputViewController: UIViewController {
     private let disposeBag = DisposeBag()
     let transitionDispatcher = PublishSubject<Transition>()
 
+    @IBOutlet weak var backButton: ThemeButton!
+    @IBOutlet weak var translateButton: ThemeButton!
+    
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -45,6 +50,17 @@ class TextInputViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        self.backButton.rx.tap
+            .bind { [transitionDispatcher] in
+                transitionDispatcher.onNext(.dismiss)
+            }
+            .disposed(by: self.disposeBag)
+        self.translateButton.rx.tap
+            .bind { [transitionDispatcher] in
+                transitionDispatcher.onNext(.translateResult)
+            }
+            .disposed(by: self.disposeBag)
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.setSkyGradientColor()
         self.view.layer.insertSublayer(gradientLayer, at: 0)
@@ -70,6 +86,10 @@ class TextInputViewController: UIViewController {
             .bind { [weak self] transition in
                 guard let self = self else { return }
                 switch transition {
+                case .translateResult:
+                    break // TODO: 画面遷移を実装する
+                case .dismiss:
+                    self.dismiss(animated: true, completion: nil)
                 case .errorAlert(let errorMessage):
                     self.alertService.present(viewController: self,
                                               message: errorMessage,
