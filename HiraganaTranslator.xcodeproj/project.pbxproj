@@ -27,6 +27,7 @@
 		089A8CD223D88EF3000C2F10 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CD123D88EF3000C2F10 /* main.swift */; };
 		089A8CD423D88F46000C2F10 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CD323D88F46000C2F10 /* TestAppDelegate.swift */; };
 		089A8CE223D89883000C2F10 /* mini-wakuwaku.otf in Resources */ = {isa = PBXBuildFile; fileRef = 089A8CE123D89882000C2F10 /* mini-wakuwaku.otf */; };
+		089A8CD723D893C0000C2F10 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CD623D893C0000C2F10 /* AppContainer.swift */; };
 		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
 		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
 		08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */; };
@@ -80,6 +81,7 @@
 		089A8CD123D88EF3000C2F10 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		089A8CD323D88F46000C2F10 /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
 		089A8CE123D89882000C2F10 /* mini-wakuwaku.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mini-wakuwaku.otf"; sourceTree = "<group>"; };
+		089A8CD623D893C0000C2F10 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppContainer.swift; path = HiraganaTranslatorTests/AppContainer.swift; sourceTree = SOURCE_ROOT; };
 		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		08886FD923D7DF2A0070E679 /* di */ = {
 			isa = PBXGroup;
 			children = (
+				089A8CD623D893C0000C2F10 /* AppContainer.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				0819C90823D7EC620075B796 /* AlertService.swift in Sources */,
 				0819C98B23D850E20075B796 /* XMLParser.swift in Sources */,
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
+				089A8CD723D893C0000C2F10 /* AppContainer.swift in Sources */,
 				0819C91523D7EFEC0075B796 /* ViewModel.generated.swift in Sources */,
 				089A8CD223D88EF3000C2F10 /* main.swift in Sources */,
 				0819C8FC23D7E07A0075B796 /* Async.swift in Sources */,
