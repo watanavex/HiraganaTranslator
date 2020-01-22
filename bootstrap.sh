@@ -24,3 +24,8 @@ eval curl -Lo "${FILE_NAME}" "$DOWNLOAD_URL"
 chmod +x "$FILE_NAME"
 
 cd $OLDPWD
+
+######## Secret ########
+AppID="\"AppId\" = \"$HIRAGANA_TRANSLATOR_APP_ID\";"
+StringsFile=./HiraganaTranslator/supportingFiles/Secret.strings
+echo $AppID > $StringsFile
