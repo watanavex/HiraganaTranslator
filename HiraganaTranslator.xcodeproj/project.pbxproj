@@ -17,6 +17,7 @@
 		0819C91523D7EFEC0075B796 /* ViewModel.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C91423D7EFEC0075B796 /* ViewModel.generated.swift */; };
 		0819C96523D806590075B796 /* AlertServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C96423D806590075B796 /* AlertServiceTest.swift */; };
 		0819C96723D8081C0075B796 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C96623D8081C0075B796 /* TestUtil.swift */; };
+		0819C98723D841A80075B796 /* Ji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0819C98623D841A80075B796 /* Ji.framework */; };
 		0819C98D23D854F70075B796 /* Secret.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0819C98C23D854F70075B796 /* Secret.strings */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
 		08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7C23D5E27600BAA135 /* SceneDelegate.swift */; };
@@ -60,6 +61,7 @@
 		0819C91423D7EFEC0075B796 /* ViewModel.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.generated.swift; sourceTree = "<group>"; };
 		0819C96423D806590075B796 /* AlertServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServiceTest.swift; sourceTree = "<group>"; };
 		0819C96623D8081C0075B796 /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
+		0819C98623D841A80075B796 /* Ji.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ji.framework; path = Carthage/Build/iOS/Ji.framework; sourceTree = "<group>"; };
 		0819C98C23D854F70075B796 /* Secret.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Secret.strings; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C7A23D5E27600BAA135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				08A9AC4A23D5F30800C3DAE5 /* RxOptional.framework in Frameworks */,
 				08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */,
 				08A9AC4823D5F30700C3DAE5 /* RxCocoa.framework in Frameworks */,
+				0819C98723D841A80075B796 /* Ji.framework in Frameworks */,
 				08A9AC4423D5F30300C3DAE5 /* RxAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +274,7 @@
 		A0A8EF0F5FA4BC37D28C5F49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0819C98623D841A80075B796 /* Ji.framework */,
 				08A9AC2523D5EF5C00C3DAE5 /* Alamofire.framework */,
 				08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */,
 				08A9AC2423D5EF5C00C3DAE5 /* RxBlocking.framework */,

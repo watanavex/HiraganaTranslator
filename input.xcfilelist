@@ -7,3 +7,4 @@ $(SRCROOT)/Carthage/Build/iOS/RxSwift.framework
 $(SRCROOT)/Carthage/Build/iOS/SnapKit.framework
 $(SRCROOT)/Carthage/Build/iOS/Swinject.framework
 $(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework
+$(SRCROOT)/Carthage/Build/iOS/Ji.framework
