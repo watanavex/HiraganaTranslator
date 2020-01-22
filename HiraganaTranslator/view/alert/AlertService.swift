@@ -9,12 +9,12 @@
 import UIKit
 import RxSwift
 
-protocol AlertServiceProtocol {
+protocol AlertService {
     func present<AlertAction: RxAlertActionType>(viewController: UIViewController, message: String, actions: [AlertAction]) -> Observable<AlertAction>
     func present<AlertAction: RxAlertActionType>(viewController: UIViewController, title: String?, message: String, preferredStyle: UIAlertController.Style, actions: [AlertAction]) -> Observable<AlertAction>
 }
 
-open class AlertService: AlertServiceProtocol {
+open class AlertServiceImpl: AlertService {
     
     public init() {}
     
@@ -29,7 +29,7 @@ open class AlertService: AlertServiceProtocol {
 }
 
 #if DEBUG
-open class AlertServiceStub: AlertServiceProtocol {
+open class AlertServiceStub: AlertService {
     
     public init() {}
     
