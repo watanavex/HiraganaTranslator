@@ -32,6 +32,7 @@
 		089A8CDD23D8940F000C2F10 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CDA23D8940F000C2F10 /* MenuViewModel.swift */; };
 		089A8CDF23D89442000C2F10 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089A8CDE23D89442000C2F10 /* MenuViewController.xib */; };
 		089A8CE223D89883000C2F10 /* mini-wakuwaku.otf in Resources */ = {isa = PBXBuildFile; fileRef = 089A8CE123D89882000C2F10 /* mini-wakuwaku.otf */; };
+		089A8CE623D8AC5F000C2F10 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */; };
 		089A8CE723D8AC5F000C2F10 /* CAGradientLayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */; };
 		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
 		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
@@ -91,6 +92,7 @@
 		089A8CDA23D8940F000C2F10 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		089A8CDE23D89442000C2F10 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		089A8CE123D89882000C2F10 /* mini-wakuwaku.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mini-wakuwaku.otf"; sourceTree = "<group>"; };
+		089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+extension.swift"; sourceTree = "<group>"; };
 		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		089A8CE323D8AC5F000C2F10 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */,
 				089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */,
 			);
 			path = common;
@@ -654,6 +657,7 @@
 				0819C8FC23D7E07A0075B796 /* Async.swift in Sources */,
 				0819C8FE23D7E0D00075B796 /* ErrorTranslator.swift in Sources */,
 				08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */,
+				089A8CE623D8AC5F000C2F10 /* ThemeButton.swift in Sources */,
 				089A8CE723D8AC5F000C2F10 /* CAGradientLayer+extension.swift in Sources */,
 				089A8CDC23D8940F000C2F10 /* MenuContainer.swift in Sources */,
 				0819C90023D7E0F10075B796 /* ViewModel.swift in Sources */,
