@@ -12,14 +12,14 @@ import RxSwift
 
 class AlertServiceTest: XCTestCase {
 
+    var window: UIWindow!
     var viewController: UIViewController!
     
     override func setUp() {
-        self.viewController = UIApplication.shared.windows.first!.rootViewController!
-        if let presentedViewController = self.viewController.presentedViewController {
-            presentedViewController.dismiss(animated: false, completion: nil)
-        }
-        waitFor { self.viewController.presentedViewController == nil }
+        self.window = UIWindow()
+        self.viewController = UIViewController()
+        self.window.rootViewController = self.viewController
+        self.window.makeKeyAndVisible()
     }
 
     func test_presentメソッドから返却されるObservableを購読するとAlertControllerがPresentされること() {
