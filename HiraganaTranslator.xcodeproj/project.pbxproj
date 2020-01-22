@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0819C8FE23D7E0D00075B796 /* ErrorTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C8FD23D7E0D00075B796 /* ErrorTranslator.swift */; };
+		0819C90223D7E2A70075B796 /* AssociatedObjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C90123D7E2A70075B796 /* AssociatedObjectStore.swift */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
 		08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7C23D5E27600BAA135 /* SceneDelegate.swift */; };
 		08988C7F23D5E27600BAA135 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7E23D5E27600BAA135 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		06B0DB1E939CAFA15A0C11F0 /* Pods-HiraganaTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		0819C8FD23D7E0D00075B796 /* ErrorTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTranslator.swift; sourceTree = "<group>"; };
+		0819C90123D7E2A70075B796 /* AssociatedObjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedObjectStore.swift; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C7A23D5E27600BAA135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08988C7C23D5E27600BAA135 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				0819C8FD23D7E0D00075B796 /* ErrorTranslator.swift */,
+				0819C90123D7E2A70075B796 /* AssociatedObjectStore.swift */,
 			);
 			path = flux;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			files = (
 				08988C7F23D5E27600BAA135 /* ViewController.swift in Sources */,
 				08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */,
+				0819C90223D7E2A70075B796 /* AssociatedObjectStore.swift in Sources */,
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
 				0819C8FE23D7E0D00075B796 /* ErrorTranslator.swift in Sources */,
 				08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */,
