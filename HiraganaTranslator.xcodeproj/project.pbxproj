@@ -39,6 +39,10 @@
 		089A8CF023D8B2E0000C2F10 /* RxBlocking.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		089A8CF123D8B2E0000C2F10 /* RxTest.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CEE23D8B2E0000C2F10 /* RxTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		089A8CF323D8B675000C2F10 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF223D8B675000C2F10 /* SnapshotHelper.swift */; };
+		089A8CF823D8CCAA000C2F10 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF523D8CCAA000C2F10 /* TextInputViewController.swift */; };
+		089A8CF923D8CCAA000C2F10 /* TextInputContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */; };
+		089A8CFA23D8CCAA000C2F10 /* TextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */; };
+		089A8CFC23D8CCD2000C2F10 /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */; };
 		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
 		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
 		08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */; };
@@ -120,6 +124,10 @@
 		089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		089A8CEE23D8B2E0000C2F10 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		089A8CF223D8B675000C2F10 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		089A8CF523D8CCAA000C2F10 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
+		089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputContainer.swift; sourceTree = "<group>"; };
+		089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewModel.swift; sourceTree = "<group>"; };
+		089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
@@ -225,6 +233,7 @@
 				08988C7C23D5E27600BAA135 /* SceneDelegate.swift */,
 				08988C8523D5E27A00BAA135 /* LaunchScreen.storyboard */,
 				089A8CD523D8939F000C2F10 /* menu */,
+				089A8CF423D8CC90000C2F10 /* textInput */,
 				089A8CE323D8AC5F000C2F10 /* common */,
 				0819C90323D7E9A90075B796 /* alert */,
 			);
@@ -345,6 +354,17 @@
 				089A8CE923D8B111000C2F10 /* MenuViewControllerTests.swift */,
 			);
 			path = menu;
+			sourceTree = "<group>";
+		};
+		089A8CF423D8CC90000C2F10 /* textInput */ = {
+			isa = PBXGroup;
+			children = (
+				089A8CF523D8CCAA000C2F10 /* TextInputViewController.swift */,
+				089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */,
+				089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */,
+				089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */,
+			);
+			path = textInput;
 			sourceTree = "<group>";
 		};
 		08A9AC4C23D5F55400C3DAE5 /* generated */ = {
@@ -502,6 +522,7 @@
 			files = (
 				0819C98D23D854F70075B796 /* Secret.strings in Resources */,
 				08988C8723D5E27A00BAA135 /* LaunchScreen.storyboard in Resources */,
+				089A8CFC23D8CCD2000C2F10 /* TextInputViewController.xib in Resources */,
 				089A8CE223D89883000C2F10 /* mini-wakuwaku.otf in Resources */,
 				08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */,
 				089A8CDF23D89442000C2F10 /* MenuViewController.xib in Resources */,
@@ -681,10 +702,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089A8CFA23D8CCAA000C2F10 /* TextInputViewModel.swift in Sources */,
 				08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */,
+				089A8CF923D8CCAA000C2F10 /* TextInputContainer.swift in Sources */,
 				0819C90223D7E2A70075B796 /* AssociatedObjectStore.swift in Sources */,
 				0819C90523D7EA100075B796 /* UIAlertController+extension.swift in Sources */,
 				0819C98523D841390075B796 /* TranslateApi.swift in Sources */,
+				089A8CF823D8CCAA000C2F10 /* TextInputViewController.swift in Sources */,
 				08AB284923D875FD005A479B /* TranslateApiStub.swift in Sources */,
 				089A8CDD23D8940F000C2F10 /* MenuViewModel.swift in Sources */,
 				0819C90823D7EC620075B796 /* AlertService.swift in Sources */,
