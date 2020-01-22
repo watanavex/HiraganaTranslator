@@ -15,7 +15,7 @@ enum XMLParseError: Error {
     case invalidContent(nodeName: String?)
 }
 
-struct Word {
+struct Word: Equatable {
     let surface: String
     let furigana: String
 }
