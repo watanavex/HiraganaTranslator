@@ -12,7 +12,8 @@ import Swinject
 class MenuViewController: UIViewController {
 
     enum Transition {
-        case errorAlert(String)
+        case camera
+        case textInput
     }
 
     private let viewModel: MenuViewModel
@@ -20,6 +21,10 @@ class MenuViewController: UIViewController {
     private let disposeBag = DisposeBag()
     let transitionDispatcher = PublishSubject<Transition>()
 
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var clipboardButton: UIButton!
+    @IBOutlet weak var keyboardButton: UIButton!
+    
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -43,6 +48,31 @@ class MenuViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        self.cameraButton.rx.tap
+            .bind { [transitionDispatcher] in
+                transitionDispatcher.onNext(.camera)
+            }
+            .disposed(by: self.disposeBag)
+        self.clipboardButton.rx.tap
+            .bind { [transitionDispatcher] in
+                transitionDispatcher.onNext(.textInput)
+            }
+            .disposed(by: self.disposeBag)
+        self.keyboardButton.rx.tap
+            .bind { [transitionDispatcher] in
+                transitionDispatcher.onNext(.textInput)
+            }
+            .disposed(by: self.disposeBag)
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.setSkyGradientColor()
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        self.rx.methodInvoked(#selector(UIViewController.viewDidLayoutSubviews))
+            .bind { [view] _ in
+                guard let view = view else { return }
+                gradientLayer.frame = view.bounds
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind intent
@@ -56,15 +86,12 @@ class MenuViewController: UIViewController {
     // MARK: - bind transition
     func bindTransision(transitionDispatcher: PublishSubject<Transition>) {
         transitionDispatcher
-            .bind { [weak self] transition in
-                guard let self = self else { return }
+            .bind { transition in
                 switch transition {
-                case .errorAlert(let errorMessage):
-                    self.alertService.present(viewController: self,
-                                              message: errorMessage,
-                                              actions: [CloseAlertAction()])
-                        .subscribe()
-                        .disposed(by: self.disposeBag)
+                case .camera:
+                    break // TODO: 画面遷移を実装する
+                case .textInput:
+                    break // TODO: 画面遷移を実装する
                 }
             }
             .disposed(by: self.disposeBag)
