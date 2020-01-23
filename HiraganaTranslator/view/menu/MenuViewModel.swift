@@ -7,6 +7,7 @@
 //
 import UIKit
 import RxSwift
+import MobileCoreServices
 
 class MenuViewModel: AutoGenerateViewModel {
 
@@ -30,4 +31,19 @@ class MenuViewModel: AutoGenerateViewModel {
     }
 
     // MARK: - Processor
+    func getStringFromPasteboard() {
+        let errorMessage = "ひらがなに へんかんしたい ぶんしょうを こぴーしてね"
+        self.dispatcher.onNext(.pasteboardResult(.uninitialized))
+        
+        let value = UIPasteboard.general.value(forPasteboardType: kUTTypeUTF8PlainText as String)
+        guard let planeText = value as? String else {
+            self.dispatcher.onNext(.pasteboardResult(.fail(errorMessage: errorMessage)))
+            return
+        }
+        if planeText.isEmpty {
+            self.dispatcher.onNext(.pasteboardResult(.fail(errorMessage: errorMessage)))
+            return
+        }
+        self.dispatcher.onNext(.pasteboardResult(.some(pastBoardString: planeText)))
+    }
 }
