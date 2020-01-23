@@ -9,8 +9,9 @@ import UIKit
 import RxSwift
 import RxOptional
 import Swinject
+import SnapKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     enum Transition: Equatable {
         case camera
@@ -26,6 +27,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var clipboardButton: UIButton!
     @IBOutlet weak var keyboardButton: UIButton!
+    var loadingView: LoadingView!
     
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
@@ -50,6 +52,13 @@ class MenuViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        self.loadingView = LoadingView()
+        self.view.addSubview(self.loadingView)
+        self.loadingView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        self.loadingView.isHidden = true
+        
         self.cameraButton.rx.tap
             .bind { [transitionDispatcher] in
                 transitionDispatcher.onNext(.camera)
@@ -95,6 +104,24 @@ class MenuViewController: UIViewController {
                 transitionDispatcher.onNext(.errorAlert(errorMessage))
             }
             .disposed(by: self.disposeBag)
+        viewModel.state.map { $0.textRecognizeResult }
+            .loading()
+            .bind { [loadingView] isLoading in
+                loadingView?.isHidden = !isLoading
+            }
+            .disposed(by: self.disposeBag)
+        viewModel.state.map { $0.textRecognizeResult }
+            .fail()
+            .bind { [transitionDispatcher] errorMessage in
+                transitionDispatcher.onNext(.errorAlert(errorMessage))
+            }
+            .disposed(by: self.disposeBag)
+        viewModel.state.map { $0.textRecognizeResult }
+            .success()
+            .bind { [transitionDispatcher] resultText in
+                transitionDispatcher.onNext(.textInput(initialText: resultText))
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind transition
@@ -103,7 +130,10 @@ class MenuViewController: UIViewController {
             .bind { transition in
                 switch transition {
                 case .camera:
-                    break // TODO: 画面遷移を実装する
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.sourceType = .camera
+                    imagePicker.delegate = self
+                    self.present(imagePicker, animated: true, completion: nil)
                 case .textInput:
                     let viewController = sharedTextInputContainer.resolve(TextInputViewController.self)!
                     self.navigationController?.pushViewController(viewController, animated: true)
@@ -116,5 +146,14 @@ class MenuViewController: UIViewController {
                 }
             }
             .disposed(by: self.disposeBag)
+    }
+    
+    // MARK: - UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            return
+        }
+        self.viewModel.textRecognize(image)
+        picker.dismiss(animated: true, completion: nil)
     }
 }

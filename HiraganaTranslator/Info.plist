@@ -62,5 +62,7 @@
 	<array>
 		<string>mini-wakuwaku.otf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>しゃしんからぶんしょうをよみとるよ</string>
 </dict>
 </plist>
