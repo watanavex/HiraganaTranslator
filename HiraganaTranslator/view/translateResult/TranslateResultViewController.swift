@@ -20,6 +20,9 @@ class TranslateResultViewController: UIViewController {
     private let disposeBag = DisposeBag()
     let transitionDispatcher = PublishSubject<Transition>()
 
+    @IBOutlet weak var backToTopButton: ThemeButton!
+    @IBOutlet weak var backButton: ThemeButton!
+    
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -30,6 +33,8 @@ class TranslateResultViewController: UIViewController {
         self.alertService = alertService
             
         super.init(nibName: nil, bundle: nil)
+        self.modalPresentationStyle = .fullScreen
+        self.modalTransitionStyle = .flipHorizontal
     }
 
     override func viewDidLoad() {
@@ -43,6 +48,15 @@ class TranslateResultViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.setSkyGradientColor()
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        self.rx.methodInvoked(#selector(UIViewController.viewDidLayoutSubviews))
+            .bind { [view] _ in
+                guard let view = view else { return }
+                gradientLayer.frame = view.bounds
+        }
+        .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind intent
