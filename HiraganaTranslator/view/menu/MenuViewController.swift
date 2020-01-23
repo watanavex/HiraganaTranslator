@@ -54,11 +54,6 @@ class MenuViewController: UIViewController {
                 transitionDispatcher.onNext(.camera)
             }
             .disposed(by: self.disposeBag)
-        self.clipboardButton.rx.tap
-            .bind { [transitionDispatcher] in
-                transitionDispatcher.onNext(.textInput)
-            }
-            .disposed(by: self.disposeBag)
         self.keyboardButton.rx.tap
             .bind { [transitionDispatcher] in
                 transitionDispatcher.onNext(.textInput)
@@ -78,6 +73,11 @@ class MenuViewController: UIViewController {
 
     // MARK: - bind intent
     func bindIntent(viewModel: MenuViewModel) {
+        self.clipboardButton.rx.tap
+            .bind {
+                viewModel.getStringFromPasteboard()
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind render
