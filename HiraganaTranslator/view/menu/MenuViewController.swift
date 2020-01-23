@@ -92,7 +92,7 @@ class MenuViewController: UIViewController {
                     break // TODO: 画面遷移を実装する
                 case .textInput:
                     let viewController = sharedTextInputContainer.resolve(TextInputViewController.self)!
-                    self.present(viewController, animated: true, completion: nil)
+                    self.navigationController?.pushViewController(viewController, animated: true)
                 }
             }
             .disposed(by: self.disposeBag)
