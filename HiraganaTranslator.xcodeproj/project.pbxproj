@@ -61,6 +61,7 @@
 		DBF3AAF723D9259300D71845 /* TranslateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */; };
 		DBF3AAF823D9259300D71845 /* TranslateResultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */; };
 		DBF3AAF923D9259300D71845 /* TranslateResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */; };
+		DBF3AAFB23D9262500D71845 /* TranslateResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF3AAFA23D9262500D71845 /* TranslateResultViewController.xib */; };
 		EC39BEDE74EBB97268681E6F /* Pods_HiraganaTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +160,7 @@
 		DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultViewController.swift; sourceTree = "<group>"; };
 		DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultContainer.swift; sourceTree = "<group>"; };
 		DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultViewModel.swift; sourceTree = "<group>"; };
+		DBF3AAFA23D9262500D71845 /* TranslateResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslateResultViewController.xib; sourceTree = "<group>"; };
 		EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D9B96279B959B8F0300CE5 /* Pods-HiraganaTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.debug.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -442,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */,
+				DBF3AAFA23D9262500D71845 /* TranslateResultViewController.xib */,
 				DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */,
 				DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */,
 			);
@@ -556,6 +559,7 @@
 				089A8CFC23D8CCD2000C2F10 /* TextInputViewController.xib in Resources */,
 				089A8CE223D89883000C2F10 /* mini-wakuwaku.otf in Resources */,
 				08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */,
+				DBF3AAFB23D9262500D71845 /* TranslateResultViewController.xib in Resources */,
 				089A8CDF23D89442000C2F10 /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -920,7 +924,6 @@
 			baseConfigurationReference = 1A0406D1DAEA05C3697F5761 /* Pods-HiraganaTranslator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WLN29ZWFG6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1080,7 +1083,6 @@
 			baseConfigurationReference = 566DC8C0485EE8977C217298 /* Pods-HiraganaTranslator.debug-stub.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WLN29ZWFG6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
