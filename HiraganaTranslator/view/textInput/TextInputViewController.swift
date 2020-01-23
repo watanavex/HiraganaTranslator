@@ -35,8 +35,6 @@ class TextInputViewController: UIViewController {
         self.alertService = alertService
         
         super.init(nibName: nil, bundle: nil)
-        self.modalPresentationStyle = .fullScreen
-        self.modalTransitionStyle = .flipHorizontal
     }
 
     override func viewDidLoad() {
@@ -88,9 +86,9 @@ class TextInputViewController: UIViewController {
                 switch transition {
                 case .translateResult:
                     let viewController = sharedTranslateResultContainer.resolve(TranslateResultViewController.self)!
-                    self.present(viewController, animated: true, completion: nil)
+                    self.navigationController?.pushViewController(viewController, animated: true)
                 case .dismiss:
-                    self.dismiss(animated: true, completion: nil)
+                    self.navigationController?.popViewController(animated: true)
                 case .errorAlert(let errorMessage):
                     self.alertService.present(viewController: self,
                                               message: errorMessage,

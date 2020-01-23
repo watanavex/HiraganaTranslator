@@ -35,8 +35,6 @@ class TranslateResultViewController: UIViewController {
         self.alertService = alertService
             
         super.init(nibName: nil, bundle: nil)
-        self.modalPresentationStyle = .fullScreen
-        self.modalTransitionStyle = .flipHorizontal
     }
 
     override func viewDidLoad() {
@@ -87,14 +85,9 @@ class TranslateResultViewController: UIViewController {
                 guard let self = self else { return }
                 switch transition {
                 case .menu:
-                    // FIXME: NavigationControllerを利用した実装に置き換える
-                    guard var viewController = self.presentingViewController else { return }
-                    while viewController.presentingViewController != nil {
-                        viewController = viewController.presentingViewController!
-                    }
-                    viewController.dismiss(animated: true, completion: nil)
+                    self.navigationController?.popToRootViewController(animated: true)
                 case .dismiss:
-                    self.dismiss(animated: true, completion: nil)
+                    self.navigationController?.popViewController(animated: true)
                 case .errorAlert(let errorMessage):
                     self.alertService.present(viewController: self,
                                               message: errorMessage,
