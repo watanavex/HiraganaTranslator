@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mini-wakuwaku.otf">
+            <string>mini-wakuwaku</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TranslateResultViewController" customModule="HiraganaTranslator" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="O2D-5j-qXM" id="o2n-YB-BXr"/>
+                <outlet property="backToTopButton" destination="ghB-Ia-xLI" id="aGZ-vS-tKb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="DvP-ds-AKX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="へんかんけっか" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nc5-BS-jLM">
+                    <rect key="frame" x="107.5" y="30" width="105" height="15"/>
+                    <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-AR-s0V" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
+                    <rect key="frame" x="30" y="53" width="260" height="142"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KRM-Yc-UDt" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
+                    <rect key="frame" x="30" y="258" width="260" height="142"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghB-Ia-xLI" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
+                    <rect key="frame" x="62" y="448" width="196" height="40"/>
+                    <state key="normal" title="はじめにもどる"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="theme">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2D-5j-qXM" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
+                    <rect key="frame" x="34" y="508" width="252" height="40"/>
+                    <state key="normal" title="ぶんしょうをなおす"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="theme">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="もとのぶんしょう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5h-gp-7vn">
+                    <rect key="frame" x="100" y="235" width="120" height="15"/>
+                    <fontDescription key="fontDescription" name="mini-wakuwaku" family="mini-wakuwaku" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Nc5-BS-jLM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="C6C-9n-aDv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BaS-AR-s0V" secondAttribute="trailing" constant="30" id="CfM-Ua-Orl"/>
+                <constraint firstItem="KRM-Yc-UDt" firstAttribute="top" secondItem="O5h-gp-7vn" secondAttribute="bottom" constant="8" id="Gkt-Hw-cls"/>
+                <constraint firstItem="O2D-5j-qXM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ibn-IB-Jfc"/>
+                <constraint firstItem="BaS-AR-s0V" firstAttribute="top" secondItem="Nc5-BS-jLM" secondAttribute="bottom" constant="8" id="PSe-f0-QPu"/>
+                <constraint firstItem="ghB-Ia-xLI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SK3-Ui-rIL"/>
+                <constraint firstItem="O5h-gp-7vn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Sk7-Vd-a8c"/>
+                <constraint firstItem="O5h-gp-7vn" firstAttribute="top" secondItem="BaS-AR-s0V" secondAttribute="bottom" constant="40" id="Uzb-KP-J0e"/>
+                <constraint firstItem="KRM-Yc-UDt" firstAttribute="trailing" secondItem="BaS-AR-s0V" secondAttribute="trailing" id="Wop-WF-0Tg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="O2D-5j-qXM" secondAttribute="bottom" constant="20" id="ZvF-5p-SUi"/>
+                <constraint firstItem="Nc5-BS-jLM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eUG-Y9-chR"/>
+                <constraint firstItem="KRM-Yc-UDt" firstAttribute="height" secondItem="BaS-AR-s0V" secondAttribute="height" id="euk-GA-3hP"/>
+                <constraint firstItem="O2D-5j-qXM" firstAttribute="top" secondItem="ghB-Ia-xLI" secondAttribute="bottom" constant="20" id="fY1-Qk-MC6"/>
+                <constraint firstItem="BaS-AR-s0V" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.25" id="k50-Jo-AtG"/>
+                <constraint firstItem="KRM-Yc-UDt" firstAttribute="leading" secondItem="BaS-AR-s0V" secondAttribute="leading" id="svN-wO-92I"/>
+                <constraint firstItem="BaS-AR-s0V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="xru-pi-hVq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="136.875" y="153.16901408450704"/>
+        </view>
+    </objects>
+</document>
