@@ -11,9 +11,10 @@ import Swinject
 
 class MenuViewController: UIViewController {
 
-    enum Transition {
+    enum Transition: Equatable {
         case camera
         case textInput
+        case errorAlert(String)
     }
 
     private let viewModel: MenuViewModel
@@ -93,6 +94,12 @@ class MenuViewController: UIViewController {
                 case .textInput:
                     let viewController = sharedTextInputContainer.resolve(TextInputViewController.self)!
                     self.navigationController?.pushViewController(viewController, animated: true)
+                case .errorAlert(let errorMessage):
+                    self.alertService.present(viewController: self,
+                                              message: errorMessage,
+                                              actions: [CloseAlertAction()])
+                        .subscribe()
+                        .disposed(by: self.disposeBag)
                 }
             }
             .disposed(by: self.disposeBag)
