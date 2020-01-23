@@ -5,6 +5,15 @@ project_type: ios
 workflows:
   setup:
     steps:
+    - script@1.1.6:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+            env
     - cache-pull: {}
     - script@1.1.6:
         inputs:
