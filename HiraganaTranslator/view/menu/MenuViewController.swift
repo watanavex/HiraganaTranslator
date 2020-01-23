@@ -7,13 +7,14 @@
 //
 import UIKit
 import RxSwift
+import RxOptional
 import Swinject
 
 class MenuViewController: UIViewController {
 
     enum Transition: Equatable {
         case camera
-        case textInput
+        case textInput(initialText: String)
         case errorAlert(String)
     }
 
@@ -56,7 +57,7 @@ class MenuViewController: UIViewController {
             .disposed(by: self.disposeBag)
         self.keyboardButton.rx.tap
             .bind { [transitionDispatcher] in
-                transitionDispatcher.onNext(.textInput)
+                transitionDispatcher.onNext(.textInput(initialText: ""))
             }
             .disposed(by: self.disposeBag)
         
@@ -82,6 +83,19 @@ class MenuViewController: UIViewController {
 
     // MARK: - bind render
     func bindRender(viewModel: MenuViewModel) {
+        viewModel.state.map { $0.pasteboardResult }
+            .distinctUntilChanged()
+            .bind { [transitionDispatcher] pastboardResult in
+                switch pastboardResult {
+                case .some(let pastBoardString):
+                    transitionDispatcher.onNext(.textInput(initialText: pastBoardString))
+                case .fail(let errorMessage):
+                    transitionDispatcher.onNext(.errorAlert(errorMessage))
+                case .uninitialized:
+                    break
+                }
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind transition
