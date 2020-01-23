@@ -10,13 +10,19 @@ import RxSwift
 
 class MenuViewModel: AutoGenerateViewModel {
 
+    enum PasteboardResult: Equatable {
+        case uninitialized
+        case some(pastBoardString: String)
+        case fail(errorMessage: String)
+    }
+    
     // MARK: - State
     struct State {
-        var request: Async<Void>
+        var pasteboardResult: PasteboardResult
     }
 
     // MARK: - Members
-    let initialState = State(request: Async.uninitialized)
+    let initialState = State(pasteboardResult: .uninitialized)
     let errorTranslator: ErrorTranslator
 
     init(errorTranslator: ErrorTranslator) {
