@@ -11,7 +11,7 @@ import Swinject
 
 class TranslateResultViewController: UIViewController {
 
-    enum Transition {
+    enum Transition: Equatable {
         case menu
         case dismiss
         case errorAlert(String)
