@@ -58,6 +58,8 @@
 		08AB284C23D87BF0005A479B /* XMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB284B23D87BF0005A479B /* XMLParserTests.swift */; };
 		08ABE3E123D910BB00973C2A /* RoundTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABE3E023D910BB00973C2A /* RoundTextView.swift */; };
 		08C2610323DA3C9100E32E6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08C2610223DA3C9100E32E6E /* GoogleService-Info.plist */; };
+		08C2610523DA47CA00E32E6E /* TextRecognizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2610423DA47CA00E32E6E /* TextRecognizeModel.swift */; };
+		08C2610723DA4A1400E32E6E /* TextRecognizeModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2610623DA4A1400E32E6E /* TextRecognizeModelStub.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
 		DBF3AAF723D9259300D71845 /* TranslateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */; };
 		DBF3AAF823D9259300D71845 /* TranslateResultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */; };
@@ -155,6 +157,8 @@
 		08AB284B23D87BF0005A479B /* XMLParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserTests.swift; sourceTree = "<group>"; };
 		08ABE3E023D910BB00973C2A /* RoundTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextView.swift; sourceTree = "<group>"; };
 		08C2610223DA3C9100E32E6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		08C2610423DA47CA00E32E6E /* TextRecognizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizeModel.swift; sourceTree = "<group>"; };
+		08C2610623DA4A1400E32E6E /* TextRecognizeModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizeModelStub.swift; sourceTree = "<group>"; };
 		1A0406D1DAEA05C3697F5761 /* Pods-HiraganaTranslator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug.xcconfig"; sourceTree = "<group>"; };
 		1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -274,6 +278,8 @@
 				0819C98423D841390075B796 /* TranslateApi.swift */,
 				08AB284823D875FD005A479B /* TranslateApiStub.swift */,
 				0819C98A23D850E20075B796 /* XMLParser.swift */,
+				08C2610423DA47CA00E32E6E /* TextRecognizeModel.swift */,
+				08C2610623DA4A1400E32E6E /* TextRecognizeModelStub.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -759,10 +765,12 @@
 				0819C90523D7EA100075B796 /* UIAlertController+extension.swift in Sources */,
 				0819C98523D841390075B796 /* TranslateApi.swift in Sources */,
 				089A8CF823D8CCAA000C2F10 /* TextInputViewController.swift in Sources */,
+				08C2610723DA4A1400E32E6E /* TextRecognizeModelStub.swift in Sources */,
 				08AB284923D875FD005A479B /* TranslateApiStub.swift in Sources */,
 				089A8CDD23D8940F000C2F10 /* MenuViewModel.swift in Sources */,
 				0819C90823D7EC620075B796 /* AlertService.swift in Sources */,
 				0819C98B23D850E20075B796 /* XMLParser.swift in Sources */,
+				08C2610523DA47CA00E32E6E /* TextRecognizeModel.swift in Sources */,
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
 				089A8CD723D893C0000C2F10 /* AppContainer.swift in Sources */,
 				DBF3AAF723D9259300D71845 /* TranslateResultViewController.swift in Sources */,
