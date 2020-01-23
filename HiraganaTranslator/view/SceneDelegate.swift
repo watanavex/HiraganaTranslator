@@ -18,7 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        window.rootViewController = sharedMenuContainer.resolve(MenuViewController.self)!
+        let viewController = sharedMenuContainer.resolve(MenuViewController.self)!
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.setNavigationBarHidden(true, animated: false)
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
 
