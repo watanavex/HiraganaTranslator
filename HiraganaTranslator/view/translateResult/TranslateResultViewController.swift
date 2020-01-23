@@ -12,6 +12,8 @@ import Swinject
 class TranslateResultViewController: UIViewController {
 
     enum Transition {
+        case menu
+        case dismiss
         case errorAlert(String)
     }
 
@@ -48,6 +50,17 @@ class TranslateResultViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        self.backToTopButton.rx.tap
+            .bind { [transitionDispatcher] in
+                transitionDispatcher.onNext(.menu)
+            }
+            .disposed(by: self.disposeBag)
+        self.backButton.rx.tap
+            .bind { [transitionDispatcher] in
+                transitionDispatcher.onNext(.dismiss)
+            }
+            .disposed(by: self.disposeBag)
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.setSkyGradientColor()
         self.view.layer.insertSublayer(gradientLayer, at: 0)
@@ -73,6 +86,15 @@ class TranslateResultViewController: UIViewController {
             .bind { [weak self] transition in
                 guard let self = self else { return }
                 switch transition {
+                case .menu:
+                    // FIXME: NavigationControllerを利用した実装に置き換える
+                    guard var viewController = self.presentingViewController else { return }
+                    while viewController.presentingViewController != nil {
+                        viewController = viewController.presentingViewController!
+                    }
+                    viewController.dismiss(animated: true, completion: nil)
+                case .dismiss:
+                    self.dismiss(animated: true, completion: nil)
                 case .errorAlert(let errorMessage):
                     self.alertService.present(viewController: self,
                                               message: errorMessage,
