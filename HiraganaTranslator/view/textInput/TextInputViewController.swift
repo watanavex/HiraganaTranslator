@@ -87,7 +87,8 @@ class TextInputViewController: UIViewController {
                 guard let self = self else { return }
                 switch transition {
                 case .translateResult:
-                    break // TODO: 画面遷移を実装する
+                    let viewController = sharedTranslateResultContainer.resolve(TranslateResultViewController.self)!
+                    self.present(viewController, animated: true, completion: nil)
                 case .dismiss:
                     self.dismiss(animated: true, completion: nil)
                 case .errorAlert(let errorMessage):
