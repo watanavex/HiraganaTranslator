@@ -20,6 +20,7 @@
 		0819C98723D841A80075B796 /* Ji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0819C98623D841A80075B796 /* Ji.framework */; };
 		0819C98B23D850E20075B796 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C98A23D850E20075B796 /* XMLParser.swift */; };
 		0819C98D23D854F70075B796 /* Secret.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0819C98C23D854F70075B796 /* Secret.strings */; };
+		08258D5923D915990084D51E /* TextInputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08258D5823D915990084D51E /* TextInputViewControllerTests.swift */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
 		08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7C23D5E27600BAA135 /* SceneDelegate.swift */; };
 		08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8323D5E27A00BAA135 /* Assets.xcassets */; };
@@ -39,6 +40,10 @@
 		089A8CF023D8B2E0000C2F10 /* RxBlocking.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		089A8CF123D8B2E0000C2F10 /* RxTest.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CEE23D8B2E0000C2F10 /* RxTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		089A8CF323D8B675000C2F10 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF223D8B675000C2F10 /* SnapshotHelper.swift */; };
+		089A8CF823D8CCAA000C2F10 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF523D8CCAA000C2F10 /* TextInputViewController.swift */; };
+		089A8CF923D8CCAA000C2F10 /* TextInputContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */; };
+		089A8CFA23D8CCAA000C2F10 /* TextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */; };
+		089A8CFC23D8CCD2000C2F10 /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */; };
 		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
 		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
 		08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */; };
@@ -51,6 +56,7 @@
 		08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9AC4E23D5F59000C3DAE5 /* R.generated.swift */; };
 		08AB284923D875FD005A479B /* TranslateApiStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB284823D875FD005A479B /* TranslateApiStub.swift */; };
 		08AB284C23D87BF0005A479B /* XMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB284B23D87BF0005A479B /* XMLParserTests.swift */; };
+		08ABE3E123D910BB00973C2A /* RoundTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ABE3E023D910BB00973C2A /* RoundTextView.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
 		EC39BEDE74EBB97268681E6F /* Pods_HiraganaTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECED8D85EEFBB8E17B46E22 /* Pods_HiraganaTranslatorTests.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +103,7 @@
 		0819C98623D841A80075B796 /* Ji.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ji.framework; path = Carthage/Build/iOS/Ji.framework; sourceTree = "<group>"; };
 		0819C98A23D850E20075B796 /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		0819C98C23D854F70075B796 /* Secret.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Secret.strings; sourceTree = "<group>"; };
+		08258D5823D915990084D51E /* TextInputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewControllerTests.swift; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C7A23D5E27600BAA135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08988C7C23D5E27600BAA135 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +127,10 @@
 		089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		089A8CEE23D8B2E0000C2F10 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		089A8CF223D8B675000C2F10 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		089A8CF523D8CCAA000C2F10 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
+		089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputContainer.swift; sourceTree = "<group>"; };
+		089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewModel.swift; sourceTree = "<group>"; };
+		089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
@@ -136,6 +147,7 @@
 		08A9AC5723D600C500C3DAE5 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		08AB284823D875FD005A479B /* TranslateApiStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateApiStub.swift; sourceTree = "<group>"; };
 		08AB284B23D87BF0005A479B /* XMLParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserTests.swift; sourceTree = "<group>"; };
+		08ABE3E023D910BB00973C2A /* RoundTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextView.swift; sourceTree = "<group>"; };
 		1A0406D1DAEA05C3697F5761 /* Pods-HiraganaTranslator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug.xcconfig"; sourceTree = "<group>"; };
 		1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				089A8CE823D8B0E5000C2F10 /* menu */,
+				08258D5723D915760084D51E /* textIput */,
 				0819C96323D806590075B796 /* alert */,
 			);
 			path = view;
@@ -219,12 +232,21 @@
 			path = alert;
 			sourceTree = "<group>";
 		};
+		08258D5723D915760084D51E /* textIput */ = {
+			isa = PBXGroup;
+			children = (
+				08258D5823D915990084D51E /* TextInputViewControllerTests.swift */,
+			);
+			path = textIput;
+			sourceTree = "<group>";
+		};
 		08886FD723D7DEFC0070E679 /* view */ = {
 			isa = PBXGroup;
 			children = (
 				08988C7C23D5E27600BAA135 /* SceneDelegate.swift */,
 				08988C8523D5E27A00BAA135 /* LaunchScreen.storyboard */,
 				089A8CD523D8939F000C2F10 /* menu */,
+				089A8CF423D8CC90000C2F10 /* textInput */,
 				089A8CE323D8AC5F000C2F10 /* common */,
 				0819C90323D7E9A90075B796 /* alert */,
 			);
@@ -335,6 +357,7 @@
 			children = (
 				089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */,
 				089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */,
+				08ABE3E023D910BB00973C2A /* RoundTextView.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -345,6 +368,17 @@
 				089A8CE923D8B111000C2F10 /* MenuViewControllerTests.swift */,
 			);
 			path = menu;
+			sourceTree = "<group>";
+		};
+		089A8CF423D8CC90000C2F10 /* textInput */ = {
+			isa = PBXGroup;
+			children = (
+				089A8CF523D8CCAA000C2F10 /* TextInputViewController.swift */,
+				089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */,
+				089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */,
+				089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */,
+			);
+			path = textInput;
 			sourceTree = "<group>";
 		};
 		08A9AC4C23D5F55400C3DAE5 /* generated */ = {
@@ -502,6 +536,7 @@
 			files = (
 				0819C98D23D854F70075B796 /* Secret.strings in Resources */,
 				08988C8723D5E27A00BAA135 /* LaunchScreen.storyboard in Resources */,
+				089A8CFC23D8CCD2000C2F10 /* TextInputViewController.xib in Resources */,
 				089A8CE223D89883000C2F10 /* mini-wakuwaku.otf in Resources */,
 				08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */,
 				089A8CDF23D89442000C2F10 /* MenuViewController.xib in Resources */,
@@ -681,10 +716,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089A8CFA23D8CCAA000C2F10 /* TextInputViewModel.swift in Sources */,
 				08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */,
+				089A8CF923D8CCAA000C2F10 /* TextInputContainer.swift in Sources */,
 				0819C90223D7E2A70075B796 /* AssociatedObjectStore.swift in Sources */,
 				0819C90523D7EA100075B796 /* UIAlertController+extension.swift in Sources */,
 				0819C98523D841390075B796 /* TranslateApi.swift in Sources */,
+				089A8CF823D8CCAA000C2F10 /* TextInputViewController.swift in Sources */,
 				08AB284923D875FD005A479B /* TranslateApiStub.swift in Sources */,
 				089A8CDD23D8940F000C2F10 /* MenuViewModel.swift in Sources */,
 				0819C90823D7EC620075B796 /* AlertService.swift in Sources */,
@@ -692,6 +730,7 @@
 				08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */,
 				089A8CD723D893C0000C2F10 /* AppContainer.swift in Sources */,
 				0819C91523D7EFEC0075B796 /* ViewModel.generated.swift in Sources */,
+				08ABE3E123D910BB00973C2A /* RoundTextView.swift in Sources */,
 				089A8CDB23D8940F000C2F10 /* MenuViewController.swift in Sources */,
 				089A8CD223D88EF3000C2F10 /* main.swift in Sources */,
 				0819C8FC23D7E07A0075B796 /* Async.swift in Sources */,
@@ -713,6 +752,7 @@
 				0819C96723D8081C0075B796 /* TestUtil.swift in Sources */,
 				089A8CEA23D8B111000C2F10 /* MenuViewControllerTests.swift in Sources */,
 				089A8CD423D88F46000C2F10 /* TestAppDelegate.swift in Sources */,
+				08258D5923D915990084D51E /* TextInputViewControllerTests.swift in Sources */,
 				089A8CF323D8B675000C2F10 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

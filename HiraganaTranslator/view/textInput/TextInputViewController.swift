@@ -1,40 +1,42 @@
 //
-//  MenuViewController.swift
+//  TextInputViewController.swift
 //  HiraganaTranslator
 //
-//  Created by susan on 2020/01/22
+//  Created by susan on 2020/01/23
 //  Copyright © 2020 Yohta Watanave. All rights reserved.
 //
 import UIKit
 import RxSwift
 import Swinject
 
-class MenuViewController: UIViewController {
+class TextInputViewController: UIViewController {
 
-    enum Transition {
-        case camera
-        case textInput
+    enum Transition: Equatable {
+        case translateResult
+        case dismiss
+        case errorAlert(String)
     }
 
-    private let viewModel: MenuViewModel
+    private let viewModel: TextInputViewModel
     private let alertService: AlertService
     private let disposeBag = DisposeBag()
     let transitionDispatcher = PublishSubject<Transition>()
 
-    @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var clipboardButton: UIButton!
-    @IBOutlet weak var keyboardButton: UIButton!
+    @IBOutlet weak var backButton: ThemeButton!
+    @IBOutlet weak var translateButton: ThemeButton!
     
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(viewModel: MenuViewModel, alertService: AlertService) {
+    init(viewModel: TextInputViewModel, alertService: AlertService) {
         self.viewModel = viewModel
         self.alertService = alertService
-            
+        
         super.init(nibName: nil, bundle: nil)
+        self.modalPresentationStyle = .fullScreen
+        self.modalTransitionStyle = .flipHorizontal
     }
 
     override func viewDidLoad() {
@@ -48,19 +50,14 @@ class MenuViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
-        self.cameraButton.rx.tap
+        self.backButton.rx.tap
             .bind { [transitionDispatcher] in
-                transitionDispatcher.onNext(.camera)
+                transitionDispatcher.onNext(.dismiss)
             }
             .disposed(by: self.disposeBag)
-        self.clipboardButton.rx.tap
+        self.translateButton.rx.tap
             .bind { [transitionDispatcher] in
-                transitionDispatcher.onNext(.textInput)
-            }
-            .disposed(by: self.disposeBag)
-        self.keyboardButton.rx.tap
-            .bind { [transitionDispatcher] in
-                transitionDispatcher.onNext(.textInput)
+                transitionDispatcher.onNext(.translateResult)
             }
             .disposed(by: self.disposeBag)
         
@@ -76,23 +73,29 @@ class MenuViewController: UIViewController {
     }
 
     // MARK: - bind intent
-    func bindIntent(viewModel: MenuViewModel) {
+    func bindIntent(viewModel: TextInputViewModel) {
     }
 
     // MARK: - bind render
-    func bindRender(viewModel: MenuViewModel) {
+    func bindRender(viewModel: TextInputViewModel) {
     }
 
     // MARK: - bind transition
     func bindTransision(transitionDispatcher: PublishSubject<Transition>) {
         transitionDispatcher
-            .bind { transition in
+            .bind { [weak self] transition in
+                guard let self = self else { return }
                 switch transition {
-                case .camera:
+                case .translateResult:
                     break // TODO: 画面遷移を実装する
-                case .textInput:
-                    let viewController = sharedTextInputContainer.resolve(TextInputViewController.self)!
-                    self.present(viewController, animated: true, completion: nil)
+                case .dismiss:
+                    self.dismiss(animated: true, completion: nil)
+                case .errorAlert(let errorMessage):
+                    self.alertService.present(viewController: self,
+                                              message: errorMessage,
+                                              actions: [CloseAlertAction()])
+                        .subscribe()
+                        .disposed(by: self.disposeBag)
                 }
             }
             .disposed(by: self.disposeBag)
