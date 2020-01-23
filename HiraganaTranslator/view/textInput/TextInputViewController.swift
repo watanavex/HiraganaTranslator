@@ -35,8 +35,6 @@ class TextInputViewController: UIViewController {
         self.alertService = alertService
         
         super.init(nibName: nil, bundle: nil)
-        self.modalPresentationStyle = .fullScreen
-        self.modalTransitionStyle = .flipHorizontal
     }
 
     override func viewDidLoad() {
