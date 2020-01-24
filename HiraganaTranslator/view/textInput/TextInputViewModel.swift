@@ -8,20 +8,60 @@
 import UIKit
 import RxSwift
 
+struct TranslateResult {
+    let words: [Word]
+    // 配列のIndexは文字数、配列の要素は単語のIndex
+    // N文字目はどの単語か？を判断するための配列
+    let surfaceWordIndexes: [Int]
+    let furiganaWordIndexes: [Int]
+    let surfaceCentence: String
+    let furiganaCentence: String
+}
+
 class TextInputViewModel: AutoGenerateViewModel {
 
     // MARK: - State
     struct State {
-        var request: Async<Void>
+        var translateResult: Async<TranslateResult>
     }
 
     // MARK: - Members
-    let initialState = State(request: Async.uninitialized)
+    let initialState = State(translateResult: .uninitialized)
     let errorTranslator: ErrorTranslator
+    let translateApi: TranslateApi
 
-    init(errorTranslator: ErrorTranslator) {
+    init(errorTranslator: ErrorTranslator, translateApi: TranslateApi) {
         self.errorTranslator = errorTranslator
+        self.translateApi = translateApi
     }
 
     // MARK: - Processor
+    func translate(sentence: String) {
+        self.translateApi.translate(sentence: sentence)
+            .asSingle()
+            .map { data in try parseXML(data: data) }
+            .map { words -> TranslateResult in
+                var surfaceWordIndexes = [Int]()
+                var furiganaWordIndexes = [Int]()
+                var furiganaCentence = ""
+                
+                words.enumerated().forEach { (offset: Int, word: Word) in
+                    let currentSurfaceIndexes = [Int](repeating: word.surface.count, count: offset)
+                    surfaceWordIndexes.append(contentsOf: currentSurfaceIndexes)
+                    let currentFuriganaIndexes = [Int](repeating: word.furigana.count, count: offset)
+                    furiganaWordIndexes.append(contentsOf: currentFuriganaIndexes)
+                    furiganaCentence.append(contentsOf: word.furigana)
+                }
+                
+                return TranslateResult(
+                    words: words,
+                    surfaceWordIndexes: surfaceWordIndexes,
+                    furiganaWordIndexes: furiganaWordIndexes,
+                    surfaceCentence: sentence,
+                    furiganaCentence: furiganaCentence
+                )
+            }
+            .bind(to: self) { .translateResult($0) }
+            .disposed(by: self.disposeBag)
+    }
 }
