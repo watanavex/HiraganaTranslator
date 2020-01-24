@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-struct TranslateResult {
+struct TranslateResult: Equatable {
     let words: [Word]
     // 配列のIndexは文字数、配列の要素は単語のIndex
     // N文字目はどの単語か？を判断するための配列

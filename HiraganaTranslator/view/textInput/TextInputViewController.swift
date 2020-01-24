@@ -12,7 +12,7 @@ import Swinject
 class TextInputViewController: UIViewController {
 
     enum Transition: Equatable {
-        case translateResult
+        case translateResult(TranslateResult)
         case dismiss
         case errorAlert(String)
     }
@@ -91,6 +91,24 @@ class TextInputViewController: UIViewController {
 
     // MARK: - bind render
     func bindRender(viewModel: TextInputViewModel) {
+        viewModel.state.map { $0.translateResult }
+            .loading()
+            .bind { [loadingView] isLoading in
+                loadingView?.isHidden = !isLoading
+            }
+            .disposed(by: self.disposeBag)
+        viewModel.state.map { $0.translateResult }
+            .fail()
+            .bind { [transitionDispatcher] errorMessage in
+                transitionDispatcher.onNext(.errorAlert(errorMessage))
+            }
+            .disposed(by: self.disposeBag)
+        viewModel.state.map { $0.translateResult }
+            .success()
+            .bind { [transitionDispatcher] result in
+                transitionDispatcher.onNext(.translateResult(result))
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind transition
