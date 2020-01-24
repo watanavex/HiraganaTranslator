@@ -24,6 +24,7 @@ class TextInputViewController: UIViewController {
 
     @IBOutlet weak var backButton: ThemeButton!
     @IBOutlet weak var translateButton: ThemeButton!
+    @IBOutlet weak var textView: RoundTextView!
     
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
@@ -72,6 +73,12 @@ class TextInputViewController: UIViewController {
 
     // MARK: - bind intent
     func bindIntent(viewModel: TextInputViewModel) {
+        self.translateButton.rx.tap
+            .bind { [textView] in
+                guard let textView = textView else { return }
+                viewModel.translate(sentence: textView.text)
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind render

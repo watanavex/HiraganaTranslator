@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextInputViewController" customModule="HiraganaTranslator" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="apH-Ks-vVU" id="zHq-ev-Bgk"/>
+                <outlet property="textView" destination="cEt-oL-GjS" id="wRA-hR-yuP"/>
                 <outlet property="translateButton" destination="IkS-ba-ycd" id="3ra-HH-mPL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="yXX-LB-UJu"/>
             </connections>
