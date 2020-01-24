@@ -48,6 +48,7 @@
 		089A8CF923D8CCAA000C2F10 /* TextInputContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */; };
 		089A8CFA23D8CCAA000C2F10 /* TextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */; };
 		089A8CFC23D8CCD2000C2F10 /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */; };
+		089E687023DBCF29006446B6 /* TranslateResultViewController+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089E686F23DBCF29006446B6 /* TranslateResultViewController+TextView.swift */; };
 		08A7D6F623DB9DA90073A85F /* ViewModelMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7D6F423DB9DA90073A85F /* ViewModelMocks.generated.swift */; };
 		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
 		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
@@ -154,6 +155,7 @@
 		089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputContainer.swift; sourceTree = "<group>"; };
 		089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewModel.swift; sourceTree = "<group>"; };
 		089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
+		089E686F23DBCF29006446B6 /* TranslateResultViewController+TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TranslateResultViewController+TextView.swift"; sourceTree = "<group>"; };
 		08A7D6F423DB9DA90073A85F /* ViewModelMocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelMocks.generated.swift; sourceTree = "<group>"; };
 		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */,
+				089E686F23DBCF29006446B6 /* TranslateResultViewController+TextView.swift */,
 				DBF3AAFA23D9262500D71845 /* TranslateResultViewController.xib */,
 				DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */,
 				DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */,
@@ -865,6 +868,7 @@
 				DBF3AAF923D9259300D71845 /* TranslateResultViewModel.swift in Sources */,
 				089A8CDC23D8940F000C2F10 /* MenuContainer.swift in Sources */,
 				0819C90023D7E0F10075B796 /* ViewModel.swift in Sources */,
+				089E687023DBCF29006446B6 /* TranslateResultViewController+TextView.swift in Sources */,
 				DBF3AAF823D9259300D71845 /* TranslateResultContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

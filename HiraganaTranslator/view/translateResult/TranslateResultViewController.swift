@@ -19,7 +19,7 @@ class TranslateResultViewController: UIViewController {
 
     private let viewModel: TranslateResultViewModel
     private let alertService: AlertService
-    private let disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
     let transitionDispatcher = PublishSubject<Transition>()
 
     @IBOutlet weak var backToTopButton: ThemeButton!
@@ -55,6 +55,7 @@ class TranslateResultViewController: UIViewController {
     func setupView() {
         self.surfaceTextView.text = self.translateResult.surfaceCentence
         self.furiganaTextView.text = self.translateResult.furiganaCentence
+        self.setupSyncScroll()
         
         self.backToTopButton.rx.tap
             .bind { [transitionDispatcher] in
