@@ -21,7 +21,6 @@
 		0819C98D23D854F70075B796 /* Secret.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0819C98C23D854F70075B796 /* Secret.strings */; };
 		08258D5923D915990084D51E /* TextInputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08258D5823D915990084D51E /* TextInputViewControllerTests.swift */; };
 		084876CD23DB79E9005302D1 /* PasteBoardModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084876CC23DB79E9005302D1 /* PasteBoardModelTests.swift */; };
-		084876D123DB8386005302D1 /* PasteBoardModelMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084876D023DB8386005302D1 /* PasteBoardModelMock.generated.swift */; };
 		084876D523DB8680005302D1 /* MenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084876D423DB8680005302D1 /* MenuViewModelTests.swift */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
 		08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7C23D5E27600BAA135 /* SceneDelegate.swift */; };
@@ -46,6 +45,9 @@
 		089A8CF923D8CCAA000C2F10 /* TextInputContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */; };
 		089A8CFA23D8CCAA000C2F10 /* TextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */; };
 		089A8CFC23D8CCD2000C2F10 /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */; };
+		08A7D6F623DB9DA90073A85F /* ViewModelMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7D6F423DB9DA90073A85F /* ViewModelMocks.generated.swift */; };
+		08A7D6F923DB9E560073A85F /* PasteBoardModelMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7D6F723DB9E560073A85F /* PasteBoardModelMock.generated.swift */; };
+		08A7D6FA23DB9E560073A85F /* TextRecognizeModelMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7D6F823DB9E560073A85F /* TextRecognizeModelMock.generated.swift */; };
 		08A9AC2B23D5EF5D00C3DAE5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */; };
 		08A9AC3523D5EF5D00C3DAE5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2623D5EF5C00C3DAE5 /* RxRelay.framework */; };
 		08A9AC3723D5EF5D00C3DAE5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A9AC2723D5EF5C00C3DAE5 /* SnapKit.framework */; };
@@ -66,7 +68,6 @@
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
 		DB197B0623DA899A005542CC /* Cuckoo.framework in Carthage */ = {isa = PBXBuildFile; fileRef = DB197B0523DA899A005542CC /* Cuckoo.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB197B0A23DA8CFE005542CC /* PasteBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB197B0923DA8CFE005542CC /* PasteBoardModel.swift */; };
-		DB4210F223DA772700437AD9 /* ViewModelMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4210F123DA772700437AD9 /* ViewModelMocks.generated.swift */; };
 		DBF3AAF723D9259300D71845 /* TranslateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */; };
 		DBF3AAF823D9259300D71845 /* TranslateResultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */; };
 		DBF3AAF923D9259300D71845 /* TranslateResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */; };
@@ -121,7 +122,6 @@
 		08258D5823D915990084D51E /* TextInputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewControllerTests.swift; sourceTree = "<group>"; };
 		08453E9C23DB905D007F773A /* fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fixtures; sourceTree = "<group>"; };
 		084876CC23DB79E9005302D1 /* PasteBoardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardModelTests.swift; sourceTree = "<group>"; };
-		084876D023DB8386005302D1 /* PasteBoardModelMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteBoardModelMock.generated.swift; sourceTree = "<group>"; };
 		084876D423DB8680005302D1 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C7A23D5E27600BAA135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +150,9 @@
 		089A8CF623D8CCAA000C2F10 /* TextInputContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputContainer.swift; sourceTree = "<group>"; };
 		089A8CF723D8CCAA000C2F10 /* TextInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewModel.swift; sourceTree = "<group>"; };
 		089A8CFB23D8CCD2000C2F10 /* TextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
+		08A7D6F423DB9DA90073A85F /* ViewModelMocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelMocks.generated.swift; sourceTree = "<group>"; };
+		08A7D6F723DB9E560073A85F /* PasteBoardModelMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteBoardModelMock.generated.swift; sourceTree = "<group>"; };
+		08A7D6F823DB9E560073A85F /* TextRecognizeModelMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextRecognizeModelMock.generated.swift; sourceTree = "<group>"; };
 		08A9AC2123D5EF5C00C3DAE5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		08A9AC2223D5EF5C00C3DAE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
@@ -178,7 +181,6 @@
 		5FEC31C01376C2DD0DFFAB83 /* Pods-HiraganaTranslatorTests.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; sourceTree = "<group>"; };
 		DB197B0523DA899A005542CC /* Cuckoo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cuckoo.framework; path = Carthage/Build/iOS/Cuckoo.framework; sourceTree = "<group>"; };
 		DB197B0923DA8CFE005542CC /* PasteBoardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteBoardModel.swift; sourceTree = "<group>"; };
-		DB4210F123DA772700437AD9 /* ViewModelMocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelMocks.generated.swift; sourceTree = "<group>"; };
 		DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultViewController.swift; sourceTree = "<group>"; };
 		DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultContainer.swift; sourceTree = "<group>"; };
 		DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultViewModel.swift; sourceTree = "<group>"; };
@@ -487,8 +489,9 @@
 		DB4210F023DA772700437AD9 /* generated */ = {
 			isa = PBXGroup;
 			children = (
-				DB4210F123DA772700437AD9 /* ViewModelMocks.generated.swift */,
-				084876D023DB8386005302D1 /* PasteBoardModelMock.generated.swift */,
+				08A7D6F423DB9DA90073A85F /* ViewModelMocks.generated.swift */,
+				08A7D6F723DB9E560073A85F /* PasteBoardModelMock.generated.swift */,
+				08A7D6F823DB9E560073A85F /* TextRecognizeModelMock.generated.swift */,
 			);
 			path = generated;
 			sourceTree = "<group>";
@@ -816,10 +819,11 @@
 			outputPaths = (
 				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ViewModelMocks.generated.swift",
 				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/PasteBoardModelMock.generated.swift",
+				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/TextRecognizeModelMock.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# generate mock for ViewModel\nCarthage/Checkouts/Cuckoo/run generate \\\n    --testable \\\n    \"$PROJECT_NAME\" mocking \\\n    --output \"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ViewModelMocks.generated.swift\" \\\n    $(find $PROJECT_DIR/$PROJECT_NAME/view/ -name *ViewModel.swift -print0 | xargs -0)\n\n# generate mock for Models\nCarthage/Checkouts/Cuckoo/run generate \\\n    --testable \"$PROJECT_NAME\" \\\n    --output \"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/PasteBoardModelMock.generated.swift\" \\\n    $PROJECT_DIR/$PROJECT_NAME/model/PasteBoardModel.swift\n";
+			shellScript = "# generate mock for ViewModel\nCarthage/Checkouts/Cuckoo/run generate \\\n    --testable \\\n    \"$PROJECT_NAME\" mocking \\\n    --output \"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ViewModelMocks.generated.swift\" \\\n    $(find $PROJECT_DIR/$PROJECT_NAME/view/ -name *ViewModel.swift -print0 | xargs -0)\n\n# generate mock for Models\nCarthage/Checkouts/Cuckoo/run generate \\\n    --testable \"$PROJECT_NAME\" \\\n    --output \"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/PasteBoardModelMock.generated.swift\" \\\n    $PROJECT_DIR/$PROJECT_NAME/model/PasteBoardModel.swift\nCarthage/Checkouts/Cuckoo/run generate \\\n    --testable \"$PROJECT_NAME\" \\\n    --output \"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/TextRecognizeModelMock.generated.swift\" \\\n    $PROJECT_DIR/$PROJECT_NAME/model/TextRecognizeModel.swift\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -867,17 +871,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0819C96523D806590075B796 /* AlertServiceTest.swift in Sources */,
-				084876D123DB8386005302D1 /* PasteBoardModelMock.generated.swift in Sources */,
 				08AB284C23D87BF0005A479B /* XMLParserTests.swift in Sources */,
-				DB4210F223DA772700437AD9 /* ViewModelMocks.generated.swift in Sources */,
 				DBF3AAFE23D932A500D71845 /* TranslateResultViewControllerTests.swift in Sources */,
 				0819C96723D8081C0075B796 /* TestUtil.swift in Sources */,
 				089A8CEA23D8B111000C2F10 /* MenuViewControllerTests.swift in Sources */,
 				084876CD23DB79E9005302D1 /* PasteBoardModelTests.swift in Sources */,
+				08A7D6FA23DB9E560073A85F /* TextRecognizeModelMock.generated.swift in Sources */,
 				089A8CD423D88F46000C2F10 /* TestAppDelegate.swift in Sources */,
+				08A7D6F923DB9E560073A85F /* PasteBoardModelMock.generated.swift in Sources */,
 				08258D5923D915990084D51E /* TextInputViewControllerTests.swift in Sources */,
 				089A8CF323D8B675000C2F10 /* SnapshotHelper.swift in Sources */,
 				084876D523DB8680005302D1 /* MenuViewModelTests.swift in Sources */,
+				08A7D6F623DB9DA90073A85F /* ViewModelMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

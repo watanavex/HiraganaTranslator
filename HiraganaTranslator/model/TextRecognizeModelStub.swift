@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 #if STUB
-class TextRecognizeModelStub {
+class TextRecognizeModelStub: TextRecognizeModel {
     
     func recognize(_ uiImage: UIImage) -> Single<String> {
         return Single.just("魑魅魍魎がやって来る")
