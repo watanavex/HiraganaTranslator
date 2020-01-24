@@ -33,7 +33,6 @@ class FirebaseTextRecognizeModel: TextRecognizeModel {
 
         return Single.create { emitter in
             textRecognizer.process(visionImage) { result, error in
-                print(Thread.current.isMainThread)
                 if let text = result?.text {
                     emitter(.success(text))
                 }
