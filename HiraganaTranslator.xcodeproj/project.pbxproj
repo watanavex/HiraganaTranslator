@@ -21,6 +21,7 @@
 		0819C98D23D854F70075B796 /* Secret.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0819C98C23D854F70075B796 /* Secret.strings */; };
 		08258D5923D915990084D51E /* TextInputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08258D5823D915990084D51E /* TextInputViewControllerTests.swift */; };
 		084876CD23DB79E9005302D1 /* PasteBoardModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084876CC23DB79E9005302D1 /* PasteBoardModelTests.swift */; };
+		084876D123DB8386005302D1 /* PasteBoardModelMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084876D023DB8386005302D1 /* PasteBoardModelMock.generated.swift */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
 		08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7C23D5E27600BAA135 /* SceneDelegate.swift */; };
 		08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8323D5E27A00BAA135 /* Assets.xcassets */; };
@@ -117,6 +118,7 @@
 		0819C98C23D854F70075B796 /* Secret.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Secret.strings; sourceTree = "<group>"; };
 		08258D5823D915990084D51E /* TextInputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewControllerTests.swift; sourceTree = "<group>"; };
 		084876CC23DB79E9005302D1 /* PasteBoardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardModelTests.swift; sourceTree = "<group>"; };
+		084876D023DB8386005302D1 /* PasteBoardModelMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteBoardModelMock.generated.swift; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C7A23D5E27600BAA135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08988C7C23D5E27600BAA135 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				DB4210F123DA772700437AD9 /* ViewModelMocks.generated.swift */,
+				084876D023DB8386005302D1 /* PasteBoardModelMock.generated.swift */,
 			);
 			path = generated;
 			sourceTree = "<group>";
@@ -785,10 +788,11 @@
 			);
 			outputPaths = (
 				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ViewModelMocks.generated.swift",
+				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/PasteBoardModelMock.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# generate mock for ViewModel\nCarthage/Checkouts/Cuckoo/run generate \\\n    --testable \\\n    \"$PROJECT_NAME\" mocking \\\n    --output \"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ViewModelMocks.generated.swift\" \\\n    $(find $PROJECT_DIR/$PROJECT_NAME/view/ -name *ViewModel.swift -print0 | xargs -0)\n";
+			shellScript = "# generate mock for ViewModel\nCarthage/Checkouts/Cuckoo/run generate \\\n    --testable \\\n    \"$PROJECT_NAME\" mocking \\\n    --output \"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ViewModelMocks.generated.swift\" \\\n    $(find $PROJECT_DIR/$PROJECT_NAME/view/ -name *ViewModel.swift -print0 | xargs -0)\n\n# generate mock for Models\nCarthage/Checkouts/Cuckoo/run generate \\\n    --testable \"$PROJECT_NAME\" \\\n    --output \"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/PasteBoardModelMock.generated.swift\" \\\n    $PROJECT_DIR/$PROJECT_NAME/model/PasteBoardModel.swift\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -835,6 +839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0819C96523D806590075B796 /* AlertServiceTest.swift in Sources */,
+				084876D123DB8386005302D1 /* PasteBoardModelMock.generated.swift in Sources */,
 				08AB284C23D87BF0005A479B /* XMLParserTests.swift in Sources */,
 				DB4210F223DA772700437AD9 /* ViewModelMocks.generated.swift in Sources */,
 				DBF3AAFE23D932A500D71845 /* TranslateResultViewControllerTests.swift in Sources */,
