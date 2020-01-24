@@ -14,10 +14,11 @@ struct AppContainer {
     private static let domainContainer = Container(defaultObjectScope: .container) { container in
         #if STUB
         container.autoregister(TextRecognizeModel.self, initializer: TextRecognizeModelStub.init)
+        container.autoregister(TranslateApi.self, initializer: TranslateApiStub.init)
         #else
         container.autoregister(TextRecognizeModel.self, initializer: FirebaseTextRecognizeModel.init)
+        container.autoregister(TranslateApi.self, initializer: TranslateApiImpl.init)
         #endif
-        
     }
     
     static let container = Container(parent: domainContainer, defaultObjectScope: .container) { container in
