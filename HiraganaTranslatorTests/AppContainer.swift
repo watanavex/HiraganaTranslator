@@ -14,5 +14,6 @@ struct AppContainer {
     static let container = Container(defaultObjectScope: .container) { container in
         container.autoregister(ErrorTranslator.self, initializer: ErrorTranslatorImpl.init)
         container.autoregister(AlertService.self, initializer: AlertServiceImpl.init)
+        container.autoregister(PasteBoardModel.self, initializer: PasteBoardModelImpl.init)
     }
 }
