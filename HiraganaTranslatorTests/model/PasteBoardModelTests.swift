@@ -1,5 +1,5 @@
 //
-//  PasteBoardModel.swift
+//  PasteBoardModelTests.swift
 //  HiraganaTranslatorTests
 //
 //  Created by Yohta Watanave on 2020/01/25.
@@ -11,7 +11,7 @@ import MobileCoreServices
 import RxBlocking
 @testable import HiraganaTranslator
 
-class PasteBoardModel: XCTestCase {
+class PasteBoardModelTests: XCTestCase {
 
     override func setUp() {
         UIPasteboard.general.strings = []

@@ -7,13 +7,15 @@
 //
 import UIKit
 import RxSwift
+import RxOptional
 import Swinject
 
 class MenuViewController: UIViewController {
 
-    enum Transition {
+    enum Transition: Equatable {
         case camera
-        case textInput
+        case textInput(initialText: String)
+        case errorAlert(String)
     }
 
     private let viewModel: MenuViewModel
@@ -53,14 +55,9 @@ class MenuViewController: UIViewController {
                 transitionDispatcher.onNext(.camera)
             }
             .disposed(by: self.disposeBag)
-        self.clipboardButton.rx.tap
-            .bind { [transitionDispatcher] in
-                transitionDispatcher.onNext(.textInput)
-            }
-            .disposed(by: self.disposeBag)
         self.keyboardButton.rx.tap
             .bind { [transitionDispatcher] in
-                transitionDispatcher.onNext(.textInput)
+                transitionDispatcher.onNext(.textInput(initialText: ""))
             }
             .disposed(by: self.disposeBag)
         
@@ -77,10 +74,27 @@ class MenuViewController: UIViewController {
 
     // MARK: - bind intent
     func bindIntent(viewModel: MenuViewModel) {
+        self.clipboardButton.rx.tap
+            .bind {
+                viewModel.getStringFromPasteboard()
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind render
     func bindRender(viewModel: MenuViewModel) {
+        viewModel.state.map { $0.pasteboardResult }
+            .success()
+            .bind { [transitionDispatcher] pastBoardString in
+                transitionDispatcher.onNext(.textInput(initialText: pastBoardString))
+            }
+            .disposed(by: self.disposeBag)
+        viewModel.state.map { $0.pasteboardResult }
+            .fail()
+            .bind { [transitionDispatcher] errorMessage in
+                transitionDispatcher.onNext(.errorAlert(errorMessage))
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind transition
@@ -93,6 +107,12 @@ class MenuViewController: UIViewController {
                 case .textInput:
                     let viewController = sharedTextInputContainer.resolve(TextInputViewController.self)!
                     self.navigationController?.pushViewController(viewController, animated: true)
+                case .errorAlert(let errorMessage):
+                    self.alertService.present(viewController: self,
+                                              message: errorMessage,
+                                              actions: [CloseAlertAction()])
+                        .subscribe()
+                        .disposed(by: self.disposeBag)
                 }
             }
             .disposed(by: self.disposeBag)
