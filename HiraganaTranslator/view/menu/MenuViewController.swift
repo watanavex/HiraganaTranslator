@@ -131,9 +131,17 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 switch transition {
                 case .camera:
                     let imagePicker = UIImagePickerController()
+                    #if (!arch(i386) && !arch(x86_64))
                     imagePicker.sourceType = .camera
                     imagePicker.delegate = self
                     self.present(imagePicker, animated: true, completion: nil)
+                    #elseif DEBUG
+                    let url = Bundle.main.url(forResource: "image", withExtension: "png", subdirectory: "fixtures")!
+                    let data = try? Data(contentsOf: url)
+                    let image = UIImage(data: data!)
+                    let info = [UIImagePickerController.InfoKey.originalImage: image as Any]
+                    self.imagePickerController(imagePicker, didFinishPickingMediaWithInfo: info)
+                    #endif
                 case .textInput:
                     let viewController = sharedTextInputContainer.resolve(TextInputViewController.self)!
                     self.navigationController?.pushViewController(viewController, animated: true)
