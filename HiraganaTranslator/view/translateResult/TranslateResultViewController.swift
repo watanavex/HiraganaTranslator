@@ -24,6 +24,8 @@ class TranslateResultViewController: UIViewController {
 
     @IBOutlet weak var backToTopButton: ThemeButton!
     @IBOutlet weak var backButton: ThemeButton!
+    @IBOutlet weak var surfaceTextView: RoundTextView!
+    @IBOutlet weak var furiganaTextView: RoundTextView!
     
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
