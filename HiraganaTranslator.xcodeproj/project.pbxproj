@@ -20,7 +20,7 @@
 		0819C98B23D850E20075B796 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819C98A23D850E20075B796 /* XMLParser.swift */; };
 		0819C98D23D854F70075B796 /* Secret.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0819C98C23D854F70075B796 /* Secret.strings */; };
 		08258D5923D915990084D51E /* TextInputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08258D5823D915990084D51E /* TextInputViewControllerTests.swift */; };
-		084876CD23DB79E9005302D1 /* PasteBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084876CC23DB79E9005302D1 /* PasteBoardModel.swift */; };
+		084876CD23DB79E9005302D1 /* PasteBoardModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084876CC23DB79E9005302D1 /* PasteBoardModelTests.swift */; };
 		08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7A23D5E27600BAA135 /* AppDelegate.swift */; };
 		08988C7D23D5E27600BAA135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08988C7C23D5E27600BAA135 /* SceneDelegate.swift */; };
 		08988C8423D5E27A00BAA135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08988C8323D5E27A00BAA135 /* Assets.xcassets */; };
@@ -116,7 +116,7 @@
 		0819C98A23D850E20075B796 /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		0819C98C23D854F70075B796 /* Secret.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Secret.strings; sourceTree = "<group>"; };
 		08258D5823D915990084D51E /* TextInputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewControllerTests.swift; sourceTree = "<group>"; };
-		084876CC23DB79E9005302D1 /* PasteBoardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardModel.swift; sourceTree = "<group>"; };
+		084876CC23DB79E9005302D1 /* PasteBoardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardModelTests.swift; sourceTree = "<group>"; };
 		08988C7723D5E27600BAA135 /* HiraganaTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08988C7A23D5E27600BAA135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08988C7C23D5E27600BAA135 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -434,7 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				08AB284B23D87BF0005A479B /* XMLParserTests.swift */,
-				084876CC23DB79E9005302D1 /* PasteBoardModel.swift */,
+				084876CC23DB79E9005302D1 /* PasteBoardModelTests.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -840,7 +840,7 @@
 				DBF3AAFE23D932A500D71845 /* TranslateResultViewControllerTests.swift in Sources */,
 				0819C96723D8081C0075B796 /* TestUtil.swift in Sources */,
 				089A8CEA23D8B111000C2F10 /* MenuViewControllerTests.swift in Sources */,
-				084876CD23DB79E9005302D1 /* PasteBoardModel.swift in Sources */,
+				084876CD23DB79E9005302D1 /* PasteBoardModelTests.swift in Sources */,
 				089A8CD423D88F46000C2F10 /* TestAppDelegate.swift in Sources */,
 				08258D5923D915990084D51E /* TextInputViewControllerTests.swift in Sources */,
 				089A8CF323D8B675000C2F10 /* SnapshotHelper.swift in Sources */,
