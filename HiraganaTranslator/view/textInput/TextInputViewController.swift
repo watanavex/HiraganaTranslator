@@ -21,6 +21,7 @@ class TextInputViewController: UIViewController {
     private let alertService: AlertService
     private let disposeBag = DisposeBag()
     let transitionDispatcher = PublishSubject<Transition>()
+    private let initialText: String
 
     @IBOutlet weak var backButton: ThemeButton!
     @IBOutlet weak var translateButton: ThemeButton!
@@ -32,9 +33,10 @@ class TextInputViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(viewModel: TextInputViewModel, alertService: AlertService) {
+    init(viewModel: TextInputViewModel, alertService: AlertService, initialText: String) {
         self.viewModel = viewModel
         self.alertService = alertService
+        self.initialText = initialText
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -50,6 +52,8 @@ class TextInputViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        self.textView.text = self.initialText
+        
         self.loadingView = LoadingView()
         self.view.addSubview(self.loadingView)
         self.loadingView.snp.makeConstraints { make in

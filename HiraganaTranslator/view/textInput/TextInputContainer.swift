@@ -13,6 +13,10 @@ let sharedTextInputContainer: Container = Container(parent: AppContainer.contain
     container.autoregister(TextInputViewModel.self, initializer: TextInputViewModel.init)
         .inObjectScope(.transient)
 
-    container.autoregister(TextInputViewController.self, initializer: TextInputViewController.init)
-        .inObjectScope(.transient)
+    container.register(TextInputViewController.self) { (resolver, initialText: String) -> TextInputViewController in
+        let viewModel = resolver.resolve(TextInputViewModel.self)!
+        let alertService = resolver.resolve(AlertService.self)!
+        return TextInputViewController(viewModel: viewModel, alertService: alertService, initialText: initialText)
+    }
+    .inObjectScope(.transient)
 }
