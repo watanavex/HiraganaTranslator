@@ -9,6 +9,7 @@
 import XCTest
 import RxSwift
 import RxTest
+import Cuckoo
 import FBSnapshotTestCase
 @testable import HiraganaTranslator
 
@@ -16,7 +17,7 @@ class MenuViewControllerTests: FBSnapshotTestCase {
 
     var testScheduler: TestScheduler!
     var viewController: MenuViewController!
-    var viewModel: MenuViewModel!
+    var viewModel: MockMenuViewModel!
     var alertService: AlertServiceStub!
     var window: UIWindow!
     
@@ -26,7 +27,11 @@ class MenuViewControllerTests: FBSnapshotTestCase {
         
         self.testScheduler = TestScheduler(initialClock: 0)
         
-        self.viewModel = MenuViewModel(errorTranslator: ErrorTranslatorImpl())
+        self.viewModel = MockMenuViewModel(
+                errorTranslator: ErrorTranslatorImpl(),
+                pasteBoardModel: PasteBoardModelImpl()
+            )
+            .withEnabledSuperclassSpy()
         self.viewModel.isStubEnable = true
         self.alertService = AlertServiceStub()
         
@@ -47,14 +52,18 @@ class MenuViewControllerTests: FBSnapshotTestCase {
         XCTAssertEqual(transition.events, [.next(0, .camera)])
     }
     
-    func test_クリップボードボタンをタップすると文字入力画面への遷移命令が通知されること() {
+    func test_クリップボードボタンをタップするとクリップボード取得メソッドがコールされること() {
+        stub(self.viewModel) { stub in
+            stub.getStringFromPasteboard().thenDoNothing()
+        }
+        
         let transition = self.testScheduler.createObserver(MenuViewController.Transition.self)
         _ = self.viewController.transitionDispatcher
             .bind(to: transition)
         
         self.viewController.clipboardButton.sendActions(for: .touchUpInside)
         
-        XCTAssertEqual(transition.events, [.next(0, .textInput)])
+        verify(self.viewModel, atLeastOnce()).getStringFromPasteboard()
     }
     
     func test_キーボードボタンをタップすると文字入力画面への遷移命令が通知されること() {
@@ -64,7 +73,31 @@ class MenuViewControllerTests: FBSnapshotTestCase {
         
         self.viewController.keyboardButton.sendActions(for: .touchUpInside)
         
-        XCTAssertEqual(transition.events, [.next(0, .textInput)])
+        XCTAssertEqual(transition.events, [.next(0, .textInput(initialText: ""))])
+    }
+    
+    func test_クリップボード取得エラーが通知されるとアラートへの遷移命令が通知されること() {
+        let transition = self.testScheduler.createObserver(MenuViewController.Transition.self)
+        _ = self.viewController.transitionDispatcher
+            .bind(to: transition)
+        
+        var state = self.viewModel.initialState
+        state.pasteboardResult = .fail(errorMessage: "error")
+        self.viewModel.stateSubject.onNext(state)
+        
+        XCTAssertEqual(transition.events, [.next(0, .errorAlert("error"))])
+    }
+    
+    func test_クリップボード取得成功が通知されると文章入力画面への遷移命令が通知されること() {
+        let transition = self.testScheduler.createObserver(MenuViewController.Transition.self)
+        _ = self.viewController.transitionDispatcher
+            .bind(to: transition)
+        
+        var state = self.viewModel.initialState
+        state.pasteboardResult = .success("text")
+        self.viewModel.stateSubject.onNext(state)
+        
+        XCTAssertEqual(transition.events, [.next(0, .textInput(initialText: "text"))])
     }
     
     func test_snapshot() {
