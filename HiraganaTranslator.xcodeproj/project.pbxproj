@@ -60,6 +60,7 @@
 		08C2610523DA47CA00E32E6E /* TextRecognizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2610423DA47CA00E32E6E /* TextRecognizeModel.swift */; };
 		08C2610723DA4A1400E32E6E /* TextRecognizeModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2610623DA4A1400E32E6E /* TextRecognizeModelStub.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
+		DB197B0A23DA8CFE005542CC /* PasteBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB197B0923DA8CFE005542CC /* PasteBoardModel.swift */; };
 		DBF3AAF723D9259300D71845 /* TranslateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */; };
 		DBF3AAF823D9259300D71845 /* TranslateResultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */; };
 		DBF3AAF923D9259300D71845 /* TranslateResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */; };
@@ -163,6 +164,7 @@
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		566DC8C0485EE8977C217298 /* Pods-HiraganaTranslator.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug-stub.xcconfig"; sourceTree = "<group>"; };
 		5FEC31C01376C2DD0DFFAB83 /* Pods-HiraganaTranslatorTests.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; sourceTree = "<group>"; };
+		DB197B0923DA8CFE005542CC /* PasteBoardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteBoardModel.swift; sourceTree = "<group>"; };
 		DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultViewController.swift; sourceTree = "<group>"; };
 		DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultContainer.swift; sourceTree = "<group>"; };
 		DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultViewModel.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				0819C98A23D850E20075B796 /* XMLParser.swift */,
 				08C2610423DA47CA00E32E6E /* TextRecognizeModel.swift */,
 				08C2610623DA4A1400E32E6E /* TextRecognizeModelStub.swift */,
+				DB197B0923DA8CFE005542CC /* PasteBoardModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -758,6 +761,7 @@
 			files = (
 				089A8CFA23D8CCAA000C2F10 /* TextInputViewModel.swift in Sources */,
 				08988C7B23D5E27600BAA135 /* AppDelegate.swift in Sources */,
+				DB197B0A23DA8CFE005542CC /* PasteBoardModel.swift in Sources */,
 				089A8CF923D8CCAA000C2F10 /* TextInputContainer.swift in Sources */,
 				0819C90223D7E2A70075B796 /* AssociatedObjectStore.swift in Sources */,
 				0819C90523D7EA100075B796 /* UIAlertController+extension.swift in Sources */,
