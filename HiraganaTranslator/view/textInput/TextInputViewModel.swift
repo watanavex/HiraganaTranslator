@@ -29,17 +29,19 @@ class TextInputViewModel: AutoGenerateViewModel {
     let initialState = State(translateResult: .uninitialized)
     let errorTranslator: ErrorTranslator
     let translateApi: TranslateApi
+    let xmlParseModel: XMLParseModel
 
-    init(errorTranslator: ErrorTranslator, translateApi: TranslateApi) {
+    init(errorTranslator: ErrorTranslator, translateApi: TranslateApi, xmlParseModel: XMLParseModel) {
         self.errorTranslator = errorTranslator
         self.translateApi = translateApi
+        self.xmlParseModel = xmlParseModel
     }
 
     // MARK: - Processor
     func translate(sentence: String) {
         self.translateApi.translate(sentence: sentence)
             .asSingle()
-            .map { data in try parseXML(data: data) }
+            .map { [xmlParseModel] data in try xmlParseModel.parse(data: data) }
             .map { words -> TranslateResult in
                 var surfaceWordIndexes = [Int]()
                 var furiganaWordIndexes = [Int]()

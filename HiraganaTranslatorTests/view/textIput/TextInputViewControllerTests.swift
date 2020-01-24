@@ -29,7 +29,8 @@ class TextInputViewControllerTests: FBSnapshotTestCase {
         
         self.viewModel = MockTextInputViewModel(
             errorTranslator: ErrorTranslatorImpl(),
-            translateApi: MockTranslateApi())
+            translateApi: MockTranslateApi(),
+            xmlParseModel: MockXMLParseModel())
         self.viewModel.isStubEnable = true
         self.alertService = AlertServiceStub()
         
