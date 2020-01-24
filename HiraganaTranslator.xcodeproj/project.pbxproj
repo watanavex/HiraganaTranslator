@@ -61,7 +61,9 @@
 		08C2610523DA47CA00E32E6E /* TextRecognizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2610423DA47CA00E32E6E /* TextRecognizeModel.swift */; };
 		08C2610723DA4A1400E32E6E /* TextRecognizeModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2610623DA4A1400E32E6E /* TextRecognizeModelStub.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
+		DB197B0623DA899A005542CC /* Cuckoo.framework in Carthage */ = {isa = PBXBuildFile; fileRef = DB197B0523DA899A005542CC /* Cuckoo.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB197B0A23DA8CFE005542CC /* PasteBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB197B0923DA8CFE005542CC /* PasteBoardModel.swift */; };
+		DB4210F223DA772700437AD9 /* ViewModelMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4210F123DA772700437AD9 /* ViewModelMocks.generated.swift */; };
 		DBF3AAF723D9259300D71845 /* TranslateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */; };
 		DBF3AAF823D9259300D71845 /* TranslateResultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */; };
 		DBF3AAF923D9259300D71845 /* TranslateResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */; };
@@ -87,6 +89,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DB197B0623DA899A005542CC /* Cuckoo.framework in Carthage */,
 				089A8CEF23D8B2E0000C2F10 /* SpecTools.framework in Carthage */,
 				089A8CF023D8B2E0000C2F10 /* RxBlocking.framework in Carthage */,
 				089A8CF123D8B2E0000C2F10 /* RxTest.framework in Carthage */,
@@ -166,7 +169,9 @@
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		566DC8C0485EE8977C217298 /* Pods-HiraganaTranslator.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug-stub.xcconfig"; sourceTree = "<group>"; };
 		5FEC31C01376C2DD0DFFAB83 /* Pods-HiraganaTranslatorTests.debug-stub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.debug-stub.xcconfig"; sourceTree = "<group>"; };
+		DB197B0523DA899A005542CC /* Cuckoo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cuckoo.framework; path = Carthage/Build/iOS/Cuckoo.framework; sourceTree = "<group>"; };
 		DB197B0923DA8CFE005542CC /* PasteBoardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteBoardModel.swift; sourceTree = "<group>"; };
+		DB4210F123DA772700437AD9 /* ViewModelMocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelMocks.generated.swift; sourceTree = "<group>"; };
 		DBF3AAF423D9259300D71845 /* TranslateResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultViewController.swift; sourceTree = "<group>"; };
 		DBF3AAF523D9259300D71845 /* TranslateResultContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultContainer.swift; sourceTree = "<group>"; };
 		DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResultViewModel.swift; sourceTree = "<group>"; };
@@ -352,6 +357,7 @@
 				089A8CF223D8B675000C2F10 /* SnapshotHelper.swift */,
 				0819C96223D806590075B796 /* view */,
 				08AB284A23D87BDC005A479B /* model */,
+				DB4210F023DA772700437AD9 /* generated */,
 				08988C9323D5E27A00BAA135 /* Info.plist */,
 			);
 			path = HiraganaTranslatorTests;
@@ -436,6 +442,7 @@
 		A0A8EF0F5FA4BC37D28C5F49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB197B0523DA899A005542CC /* Cuckoo.framework */,
 				089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */,
 				089A8CEE23D8B2E0000C2F10 /* RxTest.framework */,
 				089A8CEC23D8B2E0000C2F10 /* SpecTools.framework */,
@@ -465,6 +472,14 @@
 				DBF3AAF623D9259300D71845 /* TranslateResultViewModel.swift */,
 			);
 			path = translateResult;
+			sourceTree = "<group>";
+		};
+		DB4210F023DA772700437AD9 /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				DB4210F123DA772700437AD9 /* ViewModelMocks.generated.swift */,
+			);
+			path = generated;
 			sourceTree = "<group>";
 		};
 		DBF3AAFC23D9328C00D71845 /* translateResult */ = {
@@ -519,6 +534,7 @@
 			buildConfigurationList = 08988C9923D5E27A00BAA135 /* Build configuration list for PBXNativeTarget "HiraganaTranslatorTests" */;
 			buildPhases = (
 				828C6C477D38C4FDB74DCF7D /* [CP] Check Pods Manifest.lock */,
+				DB4210EF23DA76AB00437AD9 /* Cuckoo */,
 				08988C8923D5E27A00BAA135 /* Sources */,
 				08988C8A23D5E27A00BAA135 /* Frameworks */,
 				08988C8B23D5E27A00BAA135 /* Resources */,
@@ -755,6 +771,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DB4210EF23DA76AB00437AD9 /* Cuckoo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Cuckoo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ViewModelMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# generate mock for ViewModel\nCarthage/Checkouts/Cuckoo/run generate \\\n    --testable \\\n    \"$PROJECT_NAME\" mocking \\\n    --output \"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ViewModelMocks.generated.swift\" \\\n    $(find $PROJECT_DIR/$PROJECT_NAME/view/ -name *ViewModel.swift -print0 | xargs -0)\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -801,6 +836,7 @@
 			files = (
 				0819C96523D806590075B796 /* AlertServiceTest.swift in Sources */,
 				08AB284C23D87BF0005A479B /* XMLParserTests.swift in Sources */,
+				DB4210F223DA772700437AD9 /* ViewModelMocks.generated.swift in Sources */,
 				DBF3AAFE23D932A500D71845 /* TranslateResultViewControllerTests.swift in Sources */,
 				0819C96723D8081C0075B796 /* TestUtil.swift in Sources */,
 				089A8CEA23D8B111000C2F10 /* MenuViewControllerTests.swift in Sources */,
