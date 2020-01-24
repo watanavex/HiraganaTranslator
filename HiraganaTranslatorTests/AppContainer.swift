@@ -24,5 +24,6 @@ struct AppContainer {
         container.autoregister(ErrorTranslator.self, initializer: ErrorTranslatorImpl.init)
         container.autoregister(AlertService.self, initializer: AlertServiceImpl.init)
         container.autoregister(PasteBoardModel.self, initializer: PasteBoardModelImpl.init)
+        container.autoregister(XMLParseModel.self, initializer: XMLParseModelImpl.init)
     }
 }
