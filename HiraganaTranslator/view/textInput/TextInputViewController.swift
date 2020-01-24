@@ -25,6 +25,7 @@ class TextInputViewController: UIViewController {
     @IBOutlet weak var backButton: ThemeButton!
     @IBOutlet weak var translateButton: ThemeButton!
     @IBOutlet weak var textView: RoundTextView!
+    var loadingView: LoadingView!
     
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
@@ -49,6 +50,13 @@ class TextInputViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        self.loadingView = LoadingView()
+        self.view.addSubview(self.loadingView)
+        self.loadingView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        self.loadingView.isHidden = true
+        
         self.backButton.rx.tap
             .bind { [transitionDispatcher] in
                 transitionDispatcher.onNext(.dismiss)
