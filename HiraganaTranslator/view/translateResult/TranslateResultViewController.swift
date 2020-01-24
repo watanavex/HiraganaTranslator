@@ -27,15 +27,18 @@ class TranslateResultViewController: UIViewController {
     @IBOutlet weak var surfaceTextView: RoundTextView!
     @IBOutlet weak var furiganaTextView: RoundTextView!
     
+    let translateResult: TranslateResult
+    
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(viewModel: TranslateResultViewModel, alertService: AlertService) {
+    init(viewModel: TranslateResultViewModel, alertService: AlertService, translateResult: TranslateResult) {
         self.viewModel = viewModel
         self.alertService = alertService
-            
+        self.translateResult = translateResult
+        
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -50,6 +53,9 @@ class TranslateResultViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        self.surfaceTextView.text = self.translateResult.surfaceCentence
+        self.furiganaTextView.text = self.translateResult.furiganaCentence
+        
         self.backToTopButton.rx.tap
             .bind { [transitionDispatcher] in
                 transitionDispatcher.onNext(.menu)
