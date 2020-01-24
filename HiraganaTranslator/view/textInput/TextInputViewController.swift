@@ -61,13 +61,7 @@ class TextInputViewController: UIViewController {
             .bind { [transitionDispatcher] in
                 transitionDispatcher.onNext(.dismiss)
             }
-            .disposed(by: self.disposeBag)
-        self.translateButton.rx.tap
-            .bind { [transitionDispatcher] in
-                transitionDispatcher.onNext(.translateResult)
-            }
-            .disposed(by: self.disposeBag)
-        
+            .disposed(by: self.disposeBag)        
         let gradientLayer = CAGradientLayer()
         gradientLayer.setSkyGradientColor()
         self.view.layer.insertSublayer(gradientLayer, at: 0)
