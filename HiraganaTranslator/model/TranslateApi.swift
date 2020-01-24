@@ -10,6 +10,9 @@ import UIKit
 import RxSwift
 import RxAlamofire
 
+struct TranslateApiInvalidParamsError: Error {
+}
+
 protocol TranslateApi {
     func translate(sentence: String) -> Observable<Data>
 }
@@ -21,6 +24,10 @@ class TranslateApiImpl: TranslateApi {
     }
     
     func translate(sentence: String) -> Observable<Data> {
+        if sentence.isEmpty {
+            return Observable.error(TranslateApiInvalidParamsError())
+        }
+        
         let request: URLRequest
         do {
             request = try RxAlamofire.urlRequest(.get,
