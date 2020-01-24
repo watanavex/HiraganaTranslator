@@ -29,7 +29,8 @@ class MenuViewControllerTests: FBSnapshotTestCase {
         
         self.viewModel = MockMenuViewModel(
                 errorTranslator: ErrorTranslatorImpl(),
-                pasteBoardModel: PasteBoardModelImpl()
+                pasteBoardModel: PasteBoardModelImpl(),
+                textRecognizeModel: MockTextRecognizeModel()
             )
             .withEnabledSuperclassSpy()
         self.viewModel.isStubEnable = true
@@ -43,6 +44,9 @@ class MenuViewControllerTests: FBSnapshotTestCase {
     }
     
     func test_カメラボタンをタップするとカメラへの画面遷移命令が通知されること() {
+        stub(self.viewModel) { stub in
+            stub.textRecognize(any()).thenDoNothing()
+        }
         let transition = self.testScheduler.createObserver(MenuViewController.Transition.self)
         _ = self.viewController.transitionDispatcher
             .bind(to: transition)
@@ -95,6 +99,60 @@ class MenuViewControllerTests: FBSnapshotTestCase {
         
         var state = self.viewModel.initialState
         state.pasteboardResult = .success("text")
+        self.viewModel.stateSubject.onNext(state)
+        
+        XCTAssertEqual(transition.events, [.next(0, .textInput(initialText: "text"))])
+    }
+    
+    func test_写真を撮影すると文字認識メソッドがコールされること() {
+        stub(self.viewModel) { stub in
+            stub.textRecognize(any()).thenDoNothing()
+        }
+        let image = UIImage()
+        let imagePicker = UIImagePickerController()
+        let info = [UIImagePickerController.InfoKey.originalImage: image as Any]
+        self.viewController.imagePickerController(imagePicker, didFinishPickingMediaWithInfo: info)
+
+        verify(self.viewModel, atLeastOnce()).textRecognize(equal(to: image))
+    }
+    
+    func test_文字認識実行中が通知されるとLoadingViewが表示されること() {
+        var state = self.viewModel.initialState
+        state.textRecognizeResult = .loading
+        self.viewModel.stateSubject.onNext(state)
+        
+        XCTAssertFalse(self.viewController.loadingView.isHidden)
+    }
+    
+    func test_文字認識実行中以外が通知されるとLoadingViewが非表示になること() {
+        var state = self.viewModel.initialState
+        state.textRecognizeResult = .uninitialized
+        self.viewModel.stateSubject.onNext(state)
+        
+        XCTAssertTrue(self.viewController.loadingView.isHidden)
+    }
+    
+    func test_文字認識エラーが通知されるとアラートへの画面遷移命令が通知されること() {
+        let transition = self.testScheduler.createObserver(MenuViewController.Transition.self)
+        _ = self.viewController.transitionDispatcher
+            .bind(to: transition)
+
+        
+        var state = self.viewModel.initialState
+        state.textRecognizeResult = .fail(errorMessage: "error")
+        self.viewModel.stateSubject.onNext(state)
+        
+        XCTAssertEqual(transition.events, [.next(0, .errorAlert("error"))])
+    }
+    
+    func test_文字認識成功が通知されると文章入力画面への遷移命令が通知されること() {
+        let transition = self.testScheduler.createObserver(MenuViewController.Transition.self)
+        _ = self.viewController.transitionDispatcher
+            .bind(to: transition)
+
+        
+        var state = self.viewModel.initialState
+        state.textRecognizeResult = .success("text")
         self.viewModel.stateSubject.onNext(state)
         
         XCTAssertEqual(transition.events, [.next(0, .textInput(initialText: "text"))])
