@@ -119,6 +119,7 @@
 		0819C98A23D850E20075B796 /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		0819C98C23D854F70075B796 /* Secret.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Secret.strings; sourceTree = "<group>"; };
 		08258D5823D915990084D51E /* TextInputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewControllerTests.swift; sourceTree = "<group>"; };
+		08453E9C23DB905D007F773A /* fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fixtures; sourceTree = "<group>"; };
 		084876CC23DB79E9005302D1 /* PasteBoardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardModelTests.swift; sourceTree = "<group>"; };
 		084876D023DB8386005302D1 /* PasteBoardModelMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteBoardModelMock.generated.swift; sourceTree = "<group>"; };
 		084876D423DB8680005302D1 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
@@ -230,6 +231,7 @@
 			children = (
 				089A8CE023D89882000C2F10 /* fonts */,
 				0819C91023D7EEB60075B796 /* stencil */,
+				08453E9C23DB905D007F773A /* fixtures */,
 				0819C98C23D854F70075B796 /* Secret.strings */,
 				08C2610223DA3C9100E32E6E /* GoogleService-Info.plist */,
 			);
@@ -528,6 +530,7 @@
 				08988C7523D5E27600BAA135 /* Resources */,
 				429D5B3D7D07A4067A92B824 /* [CP] Embed Pods Frameworks */,
 				08A9AC4023D5F08200C3DAE5 /* Carthage */,
+				08453E9E23DB90B2007F773A /* fixtures */,
 			);
 			buildRules = (
 			);
@@ -660,6 +663,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$PODS_ROOT/Sourcery/bin/sourcery \\\n    --sources $SRCROOT/$PRODUCT_NAME/ \\\n    --templates $SRCROOT/$PRODUCT_NAME/supportingFiles/stencil \\\n    --output $SRCROOT/$PRODUCT_NAME/generated \\\n    --disableCache\n";
+		};
+		08453E9E23DB90B2007F773A /* fixtures */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = fixtures;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ $CONFIGURATION =~ Debug ]] ; then\n    echo \"Copy fixtures\"\n    cp -r $SRCROOT/$PRODUCT_NAME/supportingFiles/fixtures  ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\nfi\n";
 		};
 		08A9AC4023D5F08200C3DAE5 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
