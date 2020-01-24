@@ -84,16 +84,15 @@ class MenuViewController: UIViewController {
     // MARK: - bind render
     func bindRender(viewModel: MenuViewModel) {
         viewModel.state.map { $0.pasteboardResult }
-            .distinctUntilChanged()
-            .bind { [transitionDispatcher] pastboardResult in
-                switch pastboardResult {
-                case .some(let pastBoardString):
-                    transitionDispatcher.onNext(.textInput(initialText: pastBoardString))
-                case .fail(let errorMessage):
-                    transitionDispatcher.onNext(.errorAlert(errorMessage))
-                case .uninitialized:
-                    break
-                }
+            .success()
+            .bind { [transitionDispatcher] pastBoardString in
+                transitionDispatcher.onNext(.textInput(initialText: pastBoardString))
+            }
+            .disposed(by: self.disposeBag)
+        viewModel.state.map { $0.pasteboardResult }
+            .fail()
+            .bind { [transitionDispatcher] errorMessage in
+                transitionDispatcher.onNext(.errorAlert(errorMessage))
             }
             .disposed(by: self.disposeBag)
     }
