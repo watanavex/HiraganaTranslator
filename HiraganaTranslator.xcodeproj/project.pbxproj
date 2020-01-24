@@ -62,6 +62,7 @@
 		08C2610323DA3C9100E32E6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08C2610223DA3C9100E32E6E /* GoogleService-Info.plist */; };
 		08C2610523DA47CA00E32E6E /* TextRecognizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2610423DA47CA00E32E6E /* TextRecognizeModel.swift */; };
 		08C2610723DA4A1400E32E6E /* TextRecognizeModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2610623DA4A1400E32E6E /* TextRecognizeModelStub.swift */; };
+		08C2610A23DA505A00E32E6E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2610923DA505A00E32E6E /* LoadingView.swift */; };
 		8BA658A93BB104600B89966B /* Pods_HiraganaTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */; };
 		DB197B0623DA899A005542CC /* Cuckoo.framework in Carthage */ = {isa = PBXBuildFile; fileRef = DB197B0523DA899A005542CC /* Cuckoo.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB197B0A23DA8CFE005542CC /* PasteBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB197B0923DA8CFE005542CC /* PasteBoardModel.swift */; };
@@ -168,6 +169,7 @@
 		08C2610223DA3C9100E32E6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		08C2610423DA47CA00E32E6E /* TextRecognizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizeModel.swift; sourceTree = "<group>"; };
 		08C2610623DA4A1400E32E6E /* TextRecognizeModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizeModelStub.swift; sourceTree = "<group>"; };
+		08C2610923DA505A00E32E6E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1A0406D1DAEA05C3697F5761 /* Pods-HiraganaTranslator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslator.debug.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslator/Pods-HiraganaTranslator.debug.xcconfig"; sourceTree = "<group>"; };
 		1A9EB700DB6250E3F07B3D31 /* Pods_HiraganaTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiraganaTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7B19D23C14E2126A848D45 /* Pods-HiraganaTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiraganaTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-HiraganaTranslatorTests/Pods-HiraganaTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */,
 				089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */,
 				08ABE3E023D910BB00973C2A /* RoundTextView.swift */,
+				08C2610923DA505A00E32E6E /* LoadingView.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				0819C8FC23D7E07A0075B796 /* Async.swift in Sources */,
 				0819C8FE23D7E0D00075B796 /* ErrorTranslator.swift in Sources */,
 				08A9AC4F23D5F59000C3DAE5 /* R.generated.swift in Sources */,
+				08C2610A23DA505A00E32E6E /* LoadingView.swift in Sources */,
 				089A8CE623D8AC5F000C2F10 /* ThemeButton.swift in Sources */,
 				089A8CE723D8AC5F000C2F10 /* CAGradientLayer+extension.swift in Sources */,
 				DBF3AAF923D9259300D71845 /* TranslateResultViewModel.swift in Sources */,
