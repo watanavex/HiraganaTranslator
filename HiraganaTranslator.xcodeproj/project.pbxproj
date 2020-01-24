@@ -664,6 +664,24 @@
 			shellPath = /bin/sh;
 			shellScript = "$PODS_ROOT/Sourcery/bin/sourcery \\\n    --sources $SRCROOT/$PRODUCT_NAME/ \\\n    --templates $SRCROOT/$PRODUCT_NAME/supportingFiles/stencil \\\n    --output $SRCROOT/$PRODUCT_NAME/generated \\\n    --disableCache\n";
 		};
+		08453E9E23DB90B2007F773A /* fixtures */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = fixtures;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ $CONFIGURATION =~ Debug ]] ; then\n    echo \"Copy fixtures\"\n    cp -r $SRCROOT/$PRODUCT_NAME/supportingFiles/fixtures  ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\nfi\n";
+		};
 		08A9AC4023D5F08200C3DAE5 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
