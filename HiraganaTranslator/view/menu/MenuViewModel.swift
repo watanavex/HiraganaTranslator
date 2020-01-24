@@ -10,40 +10,26 @@ import RxSwift
 import MobileCoreServices
 
 class MenuViewModel: AutoGenerateViewModel {
-
-    enum PasteboardResult: Equatable {
-        case uninitialized
-        case some(pastBoardString: String)
-        case fail(errorMessage: String)
-    }
     
     // MARK: - State
     struct State {
-        var pasteboardResult: PasteboardResult
+        var pasteboardResult: Async<String>
     }
 
     // MARK: - Members
     let initialState = State(pasteboardResult: .uninitialized)
     let errorTranslator: ErrorTranslator
+    let pasteBoardModel: PasteBoardModel
 
-    init(errorTranslator: ErrorTranslator) {
+    init(errorTranslator: ErrorTranslator, pasteBoardModel: PasteBoardModel) {
         self.errorTranslator = errorTranslator
+        self.pasteBoardModel = pasteBoardModel
     }
 
     // MARK: - Processor
     func getStringFromPasteboard() {
-        let errorMessage = "ひらがなに へんかんしたい ぶんしょうを こぴーしてね"
-        self.dispatcher.onNext(.pasteboardResult(.uninitialized))
-        
-        let value = UIPasteboard.general.value(forPasteboardType: kUTTypeUTF8PlainText as String)
-        guard let planeText = value as? String else {
-            self.dispatcher.onNext(.pasteboardResult(.fail(errorMessage: errorMessage)))
-            return
-        }
-        if planeText.isEmpty {
-            self.dispatcher.onNext(.pasteboardResult(.fail(errorMessage: errorMessage)))
-            return
-        }
-        self.dispatcher.onNext(.pasteboardResult(.some(pastBoardString: planeText)))
+        self.pasteBoardModel.string()
+            .bind(to: self) { .pasteboardResult($0) }
+            .disposed(by: self.disposeBag)
     }
 }
