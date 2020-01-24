@@ -112,6 +112,7 @@ PODS:
   - iOSSnapshotTestCase/Core (6.2.0)
   - iOSSnapshotTestCase/SwiftSupport (6.2.0):
     - iOSSnapshotTestCase/Core
+  - Ji (5.0.0)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
@@ -129,6 +130,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/MLVision
   - iOSSnapshotTestCase
+  - Ji (~> 5.0.0)
   - R.swift
   - Sourcery
   - SwiftLint
@@ -152,6 +154,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - iOSSnapshotTestCase
+    - Ji
     - nanopb
     - PromisesObjC
     - Protobuf
@@ -178,6 +181,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: f8de7ddf8c706f58e9b405d53e38bbdaa2731e5a
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
+  Ji: d795fed288fe78658b404c88946d753b17d8d7f4
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
@@ -186,6 +190,6 @@ SPEC CHECKSUMS:
   Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
 
-PODFILE CHECKSUM: 0f8ced1adb80f1320d2208212b6edacce4d542a9
+PODFILE CHECKSUM: 23971367abc475f17acef2bb17977116794e4bad
 
 COCOAPODS: 1.8.4
