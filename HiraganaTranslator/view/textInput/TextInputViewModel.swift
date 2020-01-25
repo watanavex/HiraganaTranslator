@@ -76,7 +76,7 @@ class TextInputViewModel: AutoGenerateViewModel {
                     furiganaWordIndexes: furiganaWordIndexes,
                     surfaceWordInitialIndexes: surfaceWordInitialIndexes,
                     furiganaWordInitialIndexes: furiganaWordInitialIndexes,
-                    surfaceCentence: sentence,
+                    surfaceCentence: surfaceCentence,
                     furiganaCentence: furiganaCentence
                 )
             }
