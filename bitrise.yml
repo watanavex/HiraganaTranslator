@@ -34,7 +34,10 @@ workflows:
     steps:
     - script@1.1.6:
         inputs:
-        - content: bundle exec fastlane test
+        - content: |-
+            # iPhone SEのシミュレータの作成
+            xcrun simctl create "iPhone SE" "iPhone SE" iOS13.3
+            bundle exec fastlane test
         title: Build and Test
     meta:
       bitrise.io:
@@ -45,8 +48,6 @@ workflows:
 # project_type: ios
 # trigger_map:
 # - push_branch: master
-#   workflow: primary
-# - pull_request_source_branch: "*"
 #   workflow: primary
 # workflows:
 #   _run_from_repo:
