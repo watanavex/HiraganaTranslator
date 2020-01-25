@@ -32,6 +32,7 @@ extension TranslateResultViewController {
                 let characterIndex = primaryTextView.layoutManager.characterIndex(for: contentOffset,
                                                                                   in: primaryTextView.textContainer,
                                                                                   fractionOfDistanceBetweenInsertionPoints: nil)
+                
                 let wordIndex = primaryWordIndexes[characterIndex]
                 let secondaryCharactorIndex = secondaryWordBeginIndexes[wordIndex]
                 
@@ -43,10 +44,15 @@ extension TranslateResultViewController {
                 boundingRect.origin.y += secondaryTextView.textContainerInset.top
   
                 // デバッグ用
-//                var mark = secondaryTextView.subviews.first
-//                if (mark == nil) { mark = UIView(); secondaryTextView.addSubview(mark!) }
-//                mark!.frame = boundingRect
-//                mark!.backgroundColor = UIColor.blue
+                #if DEBUG
+                let mark = secondaryTextView.subviews.first ?? {
+                    let mark = UIView()
+                    secondaryTextView.addSubview(mark)
+                    return mark
+                }()
+                mark.frame = boundingRect
+                mark.backgroundColor = UIColor.blue
+                #endif
                 
                 secondaryTextView.setContentOffset(CGPoint(x: 0, y: boundingRect.minY), animated: true)
             }
