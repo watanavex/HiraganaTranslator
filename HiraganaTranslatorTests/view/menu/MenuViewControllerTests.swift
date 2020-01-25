@@ -28,7 +28,7 @@ class MenuViewControllerTests: FBSnapshotTestCase {
         self.testScheduler = TestScheduler(initialClock: 0)
         
         self.viewModel = MockMenuViewModel(
-                errorTranslator: ErrorTranslatorImpl(),
+                errorTranslator: ErrorTranslatorStub(),
                 pasteBoardModel: PasteBoardModelImpl(),
                 textRecognizeModel: MockTextRecognizeModel()
             )
