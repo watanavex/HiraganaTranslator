@@ -104,10 +104,10 @@ class TextInputViewControllerTests: FBSnapshotTestCase {
 
         
         let result = TranslateResult(
-            words: [Word(surface: "漢字",
-                         furigana: "かんじ")],
             surfaceWordIndexes: [0, 0],
             furiganaWordIndexes: [1, 1],
+            surfaceWordInitialIndexes: [0],
+            furiganaWordInitialIndexes: [0],
             surfaceCentence: "漢字",
             furiganaCentence: "かんじ")
         var state = self.viewModel.initialState
