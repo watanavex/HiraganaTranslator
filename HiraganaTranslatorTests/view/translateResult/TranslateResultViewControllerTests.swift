@@ -57,6 +57,17 @@ class TranslateResultViewControllerTests: FBSnapshotTestCase {
     }
     
     func test_snapshot() {
+        let translateResult = TranslateResult(
+            surfaceWordIndexes: [0, 0],
+            furiganaWordIndexes: [1, 1],
+            surfaceWordInitialIndexes: [0],
+            furiganaWordInitialIndexes: [0],
+            surfaceCentence: "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。",
+            furiganaCentence: "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。")
+
+        
+        self.viewController = TranslateResultViewController(translateResult: translateResult)
+        self.window.rootViewController = self.viewController
         snapshot(self.window)
     }
 
