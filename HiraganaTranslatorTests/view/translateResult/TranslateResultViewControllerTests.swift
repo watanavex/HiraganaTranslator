@@ -38,6 +38,11 @@ class TranslateResultViewControllerTests: FBSnapshotTestCase {
         self.window.makeKeyAndVisible()
     }
     
+    func test_変換前の文章がsurfaceTextView_変換後の文章がfuriganaTextViewに設定されること() {
+        XCTAssertEqual(self.viewController.surfaceTextView.text, "漢字")
+        XCTAssertEqual(self.viewController.furiganaTextView.text, "かんじ")
+    }
+    
     func test_ぶんしょうをなおすボタンをタップするとdismissの画面遷移命令が通知されること() {
         let transition = self.testScheduler.createObserver(TranslateResultViewController.Transition.self)
         _ = self.viewController.transitionDispatcher
