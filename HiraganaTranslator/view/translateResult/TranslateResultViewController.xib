@@ -32,14 +32,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-AR-s0V" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-AR-s0V" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
                     <rect key="frame" x="30" y="53" width="260" height="142"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KRM-Yc-UDt" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KRM-Yc-UDt" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
                     <rect key="frame" x="30" y="258" width="260" height="142"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -47,7 +47,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghB-Ia-xLI" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
-                    <rect key="frame" x="106" y="468" width="108" height="30"/>
+                    <rect key="frame" x="62" y="448" width="196" height="40"/>
                     <state key="normal" title="はじめにもどる"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="theme">
@@ -56,7 +56,7 @@
                     </userDefinedRuntimeAttributes>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2D-5j-qXM" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
-                    <rect key="frame" x="91" y="518" width="138" height="30"/>
+                    <rect key="frame" x="34" y="508" width="252" height="40"/>
                     <state key="normal" title="ぶんしょうをなおす"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="theme">
