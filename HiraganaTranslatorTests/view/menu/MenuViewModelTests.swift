@@ -25,7 +25,7 @@ class MenuViewModelTests: XCTestCase {
         self.pasteBoardModel = MockPasteBoardModel()
         self.textRecognizeModel = MockTextRecognizeModel()
         self.viewModel = MenuViewModel(
-            errorTranslator: ErrorTranslatorImpl(),
+            errorTranslator: ErrorTranslatorStub(),
             pasteBoardModel: self.pasteBoardModel,
             textRecognizeModel: self.textRecognizeModel
         )

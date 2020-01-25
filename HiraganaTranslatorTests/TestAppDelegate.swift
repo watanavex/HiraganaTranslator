@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import Cuckoo
 @testable import HiraganaTranslator
 
 class TestAppDelegate: AppDelegate {
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UIView.setAnimationsEnabled(false)
-        
+        // For ErrorTranslatorStub
+        DefaultValueRegistry.register(value: "Error", forType: String.self)
         return true
     }
     

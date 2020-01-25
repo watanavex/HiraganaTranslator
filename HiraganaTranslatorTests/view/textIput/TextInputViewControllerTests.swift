@@ -28,7 +28,7 @@ class TextInputViewControllerTests: FBSnapshotTestCase {
         self.testScheduler = TestScheduler(initialClock: 0)
         
         self.viewModel = MockTextInputViewModel(
-            errorTranslator: ErrorTranslatorImpl(),
+            errorTranslator: ErrorTranslatorStub(),
             translateApi: MockTranslateApi(),
             xmlParseModel: MockXMLParseModel())
         self.viewModel.isStubEnable = true

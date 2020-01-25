@@ -26,7 +26,7 @@ class TextInputViewModelTests: XCTestCase {
         self.translateApi = MockTranslateApi()
         self.xmlParseModel = MockXMLParseModel()
         self.viewModel = TextInputViewModel(
-            errorTranslator: ErrorTranslatorImpl(),
+            errorTranslator: ErrorTranslatorStub(),
             translateApi: self.translateApi,
             xmlParseModel: self.xmlParseModel
         )
