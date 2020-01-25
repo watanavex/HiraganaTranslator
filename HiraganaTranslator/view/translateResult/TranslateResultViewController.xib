@@ -16,8 +16,8 @@
             <connections>
                 <outlet property="backButton" destination="O2D-5j-qXM" id="o2n-YB-BXr"/>
                 <outlet property="backToTopButton" destination="ghB-Ia-xLI" id="aGZ-vS-tKb"/>
-                <outlet property="furiganaTextView" destination="KRM-Yc-UDt" id="IAp-lg-6Wb"/>
-                <outlet property="surfaceTextView" destination="BaS-AR-s0V" id="Wpa-KR-se8"/>
+                <outlet property="furiganaTextView" destination="BaS-AR-s0V" id="ll0-fQ-Ait"/>
+                <outlet property="surfaceTextView" destination="KRM-Yc-UDt" id="GRy-Zl-aff"/>
                 <outlet property="view" destination="iN0-l3-epB" id="DvP-ds-AKX"/>
             </connections>
         </placeholder>
@@ -47,7 +47,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghB-Ia-xLI" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
-                    <rect key="frame" x="62" y="448" width="196" height="40"/>
+                    <rect key="frame" x="106" y="468" width="108" height="30"/>
                     <state key="normal" title="はじめにもどる"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="theme">
@@ -56,7 +56,7 @@
                     </userDefinedRuntimeAttributes>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2D-5j-qXM" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
-                    <rect key="frame" x="34" y="508" width="252" height="40"/>
+                    <rect key="frame" x="91" y="518" width="138" height="30"/>
                     <state key="normal" title="ぶんしょうをなおす"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="theme">

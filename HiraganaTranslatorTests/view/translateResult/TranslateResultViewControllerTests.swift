@@ -38,6 +38,11 @@ class TranslateResultViewControllerTests: FBSnapshotTestCase {
         self.window.makeKeyAndVisible()
     }
     
+    func test_変換前の文章がsurfaceTextView_変換後の文章がfuriganaTextViewに設定されること() {
+        XCTAssertEqual(self.viewController.surfaceTextView.text, "漢字")
+        XCTAssertEqual(self.viewController.furiganaTextView.text, "かんじ")
+    }
+    
     func test_ぶんしょうをなおすボタンをタップするとdismissの画面遷移命令が通知されること() {
         let transition = self.testScheduler.createObserver(TranslateResultViewController.Transition.self)
         _ = self.viewController.transitionDispatcher
@@ -63,7 +68,7 @@ class TranslateResultViewControllerTests: FBSnapshotTestCase {
             surfaceWordInitialIndexes: [0],
             furiganaWordInitialIndexes: [0],
             surfaceCentence: "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。",
-            furiganaCentence: "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。")
+            furiganaCentence: "あのいーはとーヴぉのすきとおったかぜ、なつでもそこにつめたさをもつあおいそら、うつくしいもりでかざられたもりーおし、こうがいのぎらぎらひかるくさのなみ。")
 
         
         self.viewController = TranslateResultViewController(translateResult: translateResult)
