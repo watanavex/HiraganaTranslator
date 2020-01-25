@@ -9,7 +9,13 @@
 import XCTest
 @testable import HiraganaTranslator
 
-class XMLParserTests: XCTestCase {
+class XMLParseModelTests: XCTestCase {
+    
+    var xmlParser: XMLParseModel!
+    
+    override func setUp() {
+        xmlParser = XMLParseModelImpl()
+    }
     
     func test_YahooAPIの正しいフォーマットのXMLをパースできること() {
         let data = """
@@ -26,6 +32,9 @@ class XMLParserTests: XCTestCase {
                 <Surface>が</Surface>
                 <Furigana>が</Furigana>
                 <Roman>ga</Roman>
+              </Word>
+              <Word>
+                <Surface>、</Surface>
               </Word>
               <Word>
                 <Surface>やって来る</Surface>
@@ -53,18 +62,19 @@ class XMLParserTests: XCTestCase {
           </Result>
         </ResultSet>
         """.data(using: .utf8)!
-        let words = try! parseXML(data: data)
+        let words = try! xmlParser.parse(data: data)
         XCTAssertEqual(words, [
             Word(surface: "魑魅魍魎", furigana: "ちみもうりょう"),
             Word(surface: "が", furigana: "が"),
+            Word(surface: "、", furigana: "、"),
             Word(surface: "やって来る", furigana: "やってくる")
         ])
     }
     
     func test_XMLでないDataを渡すとinvalidDataエラーがthrowされること() {
-        XCTAssertThrowsError(try parseXML(data: Data())) { error in
+        XCTAssertThrowsError(try xmlParser.parse(data: Data())) { error in
             XCTAssertTrue(error is XMLParseError)
-            
+
             switch error as! XMLParseError {
             case .invalidData: break
             default: XCTFail("error is not 'invalidData'")
@@ -74,9 +84,9 @@ class XMLParserTests: XCTestCase {
     
     func test_ルートノード（ResultSet）が存在しないとinvalidXMLエラーがthrowされること() {
         let data = #"{ "key" : "value" }"#.data(using: .utf8)!
-        XCTAssertThrowsError(try parseXML(data: data)) { error in
+        XCTAssertThrowsError(try xmlParser.parse(data: data)) { error in
             XCTAssertTrue(error is XMLParseError)
-            
+
             switch error as! XMLParseError {
             case .invalidXML(let nodeName): XCTAssertEqual(nodeName, "Root")
             default: XCTFail("error is not 'invalidData'")
@@ -86,9 +96,9 @@ class XMLParserTests: XCTestCase {
     
     func test_Resultノードが存在しないとinvalidXMLエラーがthrowされること() {
         let data = "<ResultSet></ResultSet>".data(using: .utf8)!
-        XCTAssertThrowsError(try parseXML(data: data)) { error in
+        XCTAssertThrowsError(try xmlParser.parse(data: data)) { error in
             XCTAssertTrue(error is XMLParseError)
-            
+
             switch error as! XMLParseError {
             case .invalidXML(let nodeName): XCTAssertEqual(nodeName, "ResultSet")
             default: XCTFail("error is not 'invalidData'")
@@ -98,9 +108,9 @@ class XMLParserTests: XCTestCase {
     
     func test_WordListノードが存在しないとinvalidXMLエラーがthrowされること() {
         let data = "<ResultSet><Result></Result></ResultSet>".data(using: .utf8)!
-        XCTAssertThrowsError(try parseXML(data: data)) { error in
+        XCTAssertThrowsError(try xmlParser.parse(data: data)) { error in
             XCTAssertTrue(error is XMLParseError)
-            
+
             switch error as! XMLParseError {
             case .invalidXML(let nodeName): XCTAssertEqual(nodeName, "Result")
             default: XCTFail("error is not 'invalidData'")
@@ -121,10 +131,10 @@ class XMLParserTests: XCTestCase {
           </Result>
         </ResultSet>
         """.data(using: .utf8)!
-        
-        XCTAssertThrowsError(try parseXML(data: data)) { error in
+
+        XCTAssertThrowsError(try xmlParser.parse(data: data)) { error in
             XCTAssertTrue(error is XMLParseError)
-            
+
             switch error as! XMLParseError {
             case .invalidXML(let nodeName): XCTAssertEqual(nodeName, "Word")
             default: XCTFail("error is not 'invalidData'")
@@ -132,27 +142,23 @@ class XMLParserTests: XCTestCase {
         }
     }
     
-    func test_Furiganaノードが存在しないとinvalidXMLエラーがthrowされること() {
+    func test_Furiganaノードが存在しないとsurfaceと同値がfuriganaとなること() {
         let data = """
         <ResultSet>
           <Result>
             <WordList>
               <Word>
-                <Surface>魑魅魍魎</Surface>
+                <Surface>（）、。</Surface>
                 <Roman>timimouryou</Roman>
               </Word>
             </WordList>
           </Result>
         </ResultSet>
         """.data(using: .utf8)!
-                
-        XCTAssertThrowsError(try parseXML(data: data)) { error in
-            XCTAssertTrue(error is XMLParseError)
-            
-            switch error as! XMLParseError {
-            case .invalidXML(let nodeName): XCTAssertEqual(nodeName, "Word")
-            default: XCTFail("error is not 'invalidData'")
-            }
-        }
+
+        let words = try! xmlParser.parse(data: data)
+        XCTAssertEqual(words, [
+            Word(surface: "（）、。", furigana: "（）、。")
+        ])
     }
 }
