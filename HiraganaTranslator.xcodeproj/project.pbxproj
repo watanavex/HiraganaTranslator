@@ -42,7 +42,6 @@
 		089A8CE623D8AC5F000C2F10 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */; };
 		089A8CE723D8AC5F000C2F10 /* CAGradientLayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */; };
 		089A8CEA23D8B111000C2F10 /* MenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CE923D8B111000C2F10 /* MenuViewControllerTests.swift */; };
-		089A8CEF23D8B2E0000C2F10 /* SpecTools.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CEC23D8B2E0000C2F10 /* SpecTools.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		089A8CF023D8B2E0000C2F10 /* RxBlocking.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		089A8CF123D8B2E0000C2F10 /* RxTest.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 089A8CEE23D8B2E0000C2F10 /* RxTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		089A8CF323D8B675000C2F10 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A8CF223D8B675000C2F10 /* SnapshotHelper.swift */; };
@@ -97,7 +96,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				DB197B0623DA899A005542CC /* Cuckoo.framework in Carthage */,
-				089A8CEF23D8B2E0000C2F10 /* SpecTools.framework in Carthage */,
 				089A8CF023D8B2E0000C2F10 /* RxBlocking.framework in Carthage */,
 				089A8CF123D8B2E0000C2F10 /* RxTest.framework in Carthage */,
 			);
@@ -119,7 +117,6 @@
 		0819C96423D806590075B796 /* AlertServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServiceTest.swift; sourceTree = "<group>"; };
 		0819C96623D8081C0075B796 /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		0819C98423D841390075B796 /* TranslateApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateApi.swift; sourceTree = "<group>"; };
-		0819C98623D841A80075B796 /* Ji.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ji.framework; path = Carthage/Build/iOS/Ji.framework; sourceTree = "<group>"; };
 		0819C98A23D850E20075B796 /* XMLParseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParseModel.swift; sourceTree = "<group>"; };
 		0819C98C23D854F70075B796 /* Secret.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Secret.strings; sourceTree = "<group>"; };
 		08258D5823D915990084D51E /* TextInputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewControllerTests.swift; sourceTree = "<group>"; };
@@ -150,7 +147,6 @@
 		089A8CE423D8AC5F000C2F10 /* ThemeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		089A8CE523D8AC5F000C2F10 /* CAGradientLayer+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+extension.swift"; sourceTree = "<group>"; };
 		089A8CE923D8B111000C2F10 /* MenuViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerTests.swift; sourceTree = "<group>"; };
-		089A8CEC23D8B2E0000C2F10 /* SpecTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpecTools.framework; path = Carthage/Build/iOS/SpecTools.framework; sourceTree = "<group>"; };
 		089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		089A8CEE23D8B2E0000C2F10 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		089A8CF223D8B675000C2F10 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
@@ -465,8 +461,6 @@
 				DB197B0523DA899A005542CC /* Cuckoo.framework */,
 				089A8CED23D8B2E0000C2F10 /* RxBlocking.framework */,
 				089A8CEE23D8B2E0000C2F10 /* RxTest.framework */,
-				089A8CEC23D8B2E0000C2F10 /* SpecTools.framework */,
-				0819C98623D841A80075B796 /* Ji.framework */,
 				08A9AC2523D5EF5C00C3DAE5 /* Alamofire.framework */,
 				08A9AC2323D5EF5C00C3DAE5 /* RxAlamofire.framework */,
 				08A9AC2423D5EF5C00C3DAE5 /* RxBlocking.framework */,
