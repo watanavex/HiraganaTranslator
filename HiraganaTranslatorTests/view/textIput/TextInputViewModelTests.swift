@@ -33,32 +33,36 @@ class TextInputViewModelTests: XCTestCase {
     }
     
     func test_文章変換メソッドとXMLパースが成功を通知したらStateがsuccessに更新されること() {
-        let word = Word(surface: "", furigana: "")
         stub(self.translateApi) { stub in
             stub.translate(sentence: any()).then { _ in Observable.just(Data()) }
         }
         stub(self.xmlParseModel) { stub in
-            stub.parse(data: any()).then { _ in [word] }
+            stub.parse(data: any()).then { _ in
+                [Word(surface: "魑魅魍魎", furigana: "ちみもうりょう"),
+                Word(surface: "が", furigana: "が"),
+                Word(surface: "、", furigana: "、"),
+                Word(surface: "やって来る", furigana: "やってくる")]
+            }
         }
         
         let state = self.testScheduler.createObserver(Async<TranslateResult>.self)
         _ = self.viewModel.state.map { $0.translateResult }.subscribe(state)
         
-        self.viewModel.translate(sentence: "")
+        self.viewModel.translate(sentence: "魑魅魍魎が、やって来る")
         
         XCTAssertEqual(state.events, [
             .next(0, .uninitialized),
             .next(0, .loading),
             .next(0, .success(TranslateResult(
-                surfaceWordIndexes: [],
-                furiganaWordIndexes: [],
-                surfaceWordInitialIndexes: [0],
-                furiganaWordInitialIndexes: [0],
-                surfaceCentence: "",
-                furiganaCentence: "")))]
+                surfaceWordIndexes: [0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 3],
+                furiganaWordIndexes: [0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 3],
+                surfaceWordInitialIndexes: [0, 4, 5, 6],
+                furiganaWordInitialIndexes: [0, 7, 8, 9],
+                surfaceCentence: "魑魅魍魎が、やって来る",
+                furiganaCentence: "ちみもうりょうが、やってくる")))]
         )
         
-        verify(self.translateApi, atLeastOnce()).translate(sentence: "")
+        verify(self.translateApi, atLeastOnce()).translate(sentence: "魑魅魍魎が、やって来る")
         verifyNoMoreInteractions(self.translateApi)
         verify(self.xmlParseModel, atLeastOnce()).parse(data: equal(to: Data()))
         verifyNoMoreInteractions(self.xmlParseModel)
@@ -77,7 +81,7 @@ class TextInputViewModelTests: XCTestCase {
         let state = self.testScheduler.createObserver(Async<TranslateResult>.self)
         _ = self.viewModel.state.map { $0.translateResult }.subscribe(state)
 
-        self.viewModel.translate(sentence: "")
+        self.viewModel.translate(sentence: "sentence")
 
         XCTAssertEqual(state.events, [
             .next(0, .uninitialized),
@@ -85,7 +89,7 @@ class TextInputViewModelTests: XCTestCase {
             .next(0, .fail(errorMessage: "Error"))]
         )
         
-        verify(self.translateApi, atLeastOnce()).translate(sentence: "")
+        verify(self.translateApi, atLeastOnce()).translate(sentence: "sentence")
         verifyNoMoreInteractions(self.translateApi)
         verifyNoMoreInteractions(self.xmlParseModel)
     }
@@ -101,7 +105,7 @@ class TextInputViewModelTests: XCTestCase {
         let state = self.testScheduler.createObserver(Async<TranslateResult>.self)
         _ = self.viewModel.state.map { $0.translateResult }.subscribe(state)
 
-        self.viewModel.translate(sentence: "")
+        self.viewModel.translate(sentence: "sentence")
 
         XCTAssertEqual(state.events, [
             .next(0, .uninitialized),
@@ -109,7 +113,7 @@ class TextInputViewModelTests: XCTestCase {
             .next(0, .fail(errorMessage: "Error"))]
         )
         
-        verify(self.translateApi, atLeastOnce()).translate(sentence: "")
+        verify(self.translateApi, atLeastOnce()).translate(sentence: "sentence")
         verifyNoMoreInteractions(self.translateApi)
         verify(self.xmlParseModel, atLeastOnce()).parse(data: equal(to: Data()))
         verifyNoMoreInteractions(self.xmlParseModel)

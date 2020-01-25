@@ -45,6 +45,10 @@ class MenuViewModelTests: XCTestCase {
             .next(0, .loading),
             .next(0, .success("test test"))]
         )
+        
+        verify(self.pasteBoardModel, atLeastOnce()).string()
+        verifyNoMoreInteractions(self.pasteBoardModel)
+        verifyNoMoreInteractions(self.textRecognizeModel)
     }
 
     func test_クリップボード取得メソッドがエラーを通知したらStateがfailに更新されること() {
@@ -61,6 +65,10 @@ class MenuViewModelTests: XCTestCase {
             .next(0, .loading),
             .next(0, .fail(errorMessage: "Error"))]
         )
+        
+        verify(self.pasteBoardModel, atLeastOnce()).string()
+        verifyNoMoreInteractions(self.pasteBoardModel)
+        verifyNoMoreInteractions(self.textRecognizeModel)
     }
     
     func test_文字認識メソッドが成功を通知したらStateがsuccessに更新されること() {
@@ -77,6 +85,10 @@ class MenuViewModelTests: XCTestCase {
             .next(0, .loading),
             .next(0, .success("test test"))]
         )
+        
+        verifyNoMoreInteractions(self.pasteBoardModel)
+        verify(self.textRecognizeModel, atLeastOnce()).recognize(any())
+        verifyNoMoreInteractions(self.textRecognizeModel)
     }
     
     func test_文字認識メソッドがエラーを通知したらStateがfailに更新されること() {
@@ -93,5 +105,9 @@ class MenuViewModelTests: XCTestCase {
             .next(0, .loading),
             .next(0, .fail(errorMessage: "Error"))]
         )
+        
+        verifyNoMoreInteractions(self.pasteBoardModel)
+        verify(self.textRecognizeModel, atLeastOnce()).recognize(any())
+        verifyNoMoreInteractions(self.textRecognizeModel)
     }
 }
