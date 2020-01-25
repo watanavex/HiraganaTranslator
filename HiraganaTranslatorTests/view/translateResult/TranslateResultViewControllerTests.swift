@@ -16,8 +16,6 @@ class TranslateResultViewControllerTests: FBSnapshotTestCase {
 
     var testScheduler: TestScheduler!
     var viewController: TranslateResultViewController!
-    var viewModel: TranslateResultViewModel!
-    var alertService: AlertServiceStub!
     var window: UIWindow!
     
     override func setUp() {
@@ -26,11 +24,14 @@ class TranslateResultViewControllerTests: FBSnapshotTestCase {
         
         self.testScheduler = TestScheduler(initialClock: 0)
         
-        self.viewModel = TranslateResultViewModel(errorTranslator: ErrorTranslatorImpl())
-        self.viewModel.isStubEnable = true
-        self.alertService = AlertServiceStub()
-        
-        self.viewController = TranslateResultViewController(viewModel: self.viewModel, alertService: self.alertService)
+        let translateResult = TranslateResult(
+            surfaceWordIndexes: [0, 0],
+            furiganaWordIndexes: [1, 1],
+            surfaceWordInitialIndexes: [0],
+            furiganaWordInitialIndexes: [0],
+            surfaceCentence: "漢字",
+            furiganaCentence: "かんじ")
+        self.viewController = TranslateResultViewController(translateResult: translateResult)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window.rootViewController = self.viewController
@@ -56,6 +57,17 @@ class TranslateResultViewControllerTests: FBSnapshotTestCase {
     }
     
     func test_snapshot() {
+        let translateResult = TranslateResult(
+            surfaceWordIndexes: [0, 0],
+            furiganaWordIndexes: [1, 1],
+            surfaceWordInitialIndexes: [0],
+            furiganaWordInitialIndexes: [0],
+            surfaceCentence: "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。",
+            furiganaCentence: "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。")
+
+        
+        self.viewController = TranslateResultViewController(translateResult: translateResult)
+        self.window.rootViewController = self.viewController
         snapshot(self.window)
     }
 

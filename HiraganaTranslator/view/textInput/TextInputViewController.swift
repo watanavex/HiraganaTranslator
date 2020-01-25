@@ -115,8 +115,8 @@ class TextInputViewController: UIViewController {
             .bind { [weak self] transition in
                 guard let self = self else { return }
                 switch transition {
-                case .translateResult:
-                    let viewController = sharedTranslateResultContainer.resolve(TranslateResultViewController.self)!
+                case .translateResult(let translateResult):
+                    let viewController = sharedTranslateResultContainer.resolve(TranslateResultViewController.self, argument: translateResult)!
                     self.navigationController?.pushViewController(viewController, animated: true)
                 case .dismiss:
                     self.navigationController?.popViewController(animated: true)

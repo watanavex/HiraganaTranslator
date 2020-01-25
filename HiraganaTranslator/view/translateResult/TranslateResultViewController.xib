@@ -16,6 +16,8 @@
             <connections>
                 <outlet property="backButton" destination="O2D-5j-qXM" id="o2n-YB-BXr"/>
                 <outlet property="backToTopButton" destination="ghB-Ia-xLI" id="aGZ-vS-tKb"/>
+                <outlet property="furiganaTextView" destination="KRM-Yc-UDt" id="IAp-lg-6Wb"/>
+                <outlet property="surfaceTextView" destination="BaS-AR-s0V" id="Wpa-KR-se8"/>
                 <outlet property="view" destination="iN0-l3-epB" id="DvP-ds-AKX"/>
             </connections>
         </placeholder>
@@ -30,14 +32,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-AR-s0V" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-AR-s0V" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
                     <rect key="frame" x="30" y="53" width="260" height="142"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KRM-Yc-UDt" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KRM-Yc-UDt" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
                     <rect key="frame" x="30" y="258" width="260" height="142"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
