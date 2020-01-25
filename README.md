@@ -1,3 +1,5 @@
+![bitrise](https://app.bitrise.io/app/7e33687043c6ea5a/status.svg?token=DcPbhtog-598cAxuYpPkzQ)
+
 # アプリ概要
 漢字を含む文章をひらがなに変換するアプリ。
 詳細は[wiki](/../../wiki/アプリ概要)に記載。
@@ -32,6 +34,6 @@ https://firebase.google.com/docs/ml-kit?hl=ja
 テキスト解析は同じ文章が繰り返されるだけだがアプリの動作は確認できる。
 
 * CI/CD  
-bitriseでキャッシュが動作しない問題が発生しており、
-現在はプロジェクトを無効化している。  
+bitrise上で、PRのあるブランチでキャッシュが動作しない問題が発生しており、
+masterブランチのみテストしている状況。
 [#21](/../../issues/21)
