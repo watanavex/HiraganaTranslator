@@ -13,6 +13,12 @@ let sharedTranslateResultContainer: Container = Container(parent: AppContainer.c
     container.autoregister(TranslateResultViewModel.self, initializer: TranslateResultViewModel.init)
         .inObjectScope(.transient)
 
-    container.autoregister(TranslateResultViewController.self, initializer: TranslateResultViewController.init)
-        .inObjectScope(.transient)
+    container.register(TranslateResultViewController.self) { (resolver, translateResult: TranslateResult) -> TranslateResultViewController in
+        let viewModel = resolver.resolve(TranslateResultViewModel.self)!
+        let alertService = resolver.resolve(AlertService.self)!
+        return TranslateResultViewController(viewModel: viewModel,
+                                             alertService: alertService,
+                                             translateResult: translateResult)
+    }
+    .inObjectScope(.transient)
 }
