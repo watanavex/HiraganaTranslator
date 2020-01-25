@@ -12,7 +12,7 @@ import Swinject
 class TextInputViewController: UIViewController {
 
     enum Transition: Equatable {
-        case translateResult
+        case translateResult(TranslateResult)
         case dismiss
         case errorAlert(String)
     }
@@ -21,18 +21,22 @@ class TextInputViewController: UIViewController {
     private let alertService: AlertService
     private let disposeBag = DisposeBag()
     let transitionDispatcher = PublishSubject<Transition>()
+    private let initialText: String
 
     @IBOutlet weak var backButton: ThemeButton!
     @IBOutlet weak var translateButton: ThemeButton!
+    @IBOutlet weak var textView: RoundTextView!
+    var loadingView: LoadingView!
     
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(viewModel: TextInputViewModel, alertService: AlertService) {
+    init(viewModel: TextInputViewModel, alertService: AlertService, initialText: String) {
         self.viewModel = viewModel
         self.alertService = alertService
+        self.initialText = initialText
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -48,17 +52,20 @@ class TextInputViewController: UIViewController {
 
     // MARK: - setup view
     func setupView() {
+        self.textView.text = self.initialText
+        
+        self.loadingView = LoadingView()
+        self.view.addSubview(self.loadingView)
+        self.loadingView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        self.loadingView.isHidden = true
+        
         self.backButton.rx.tap
             .bind { [transitionDispatcher] in
                 transitionDispatcher.onNext(.dismiss)
             }
-            .disposed(by: self.disposeBag)
-        self.translateButton.rx.tap
-            .bind { [transitionDispatcher] in
-                transitionDispatcher.onNext(.translateResult)
-            }
-            .disposed(by: self.disposeBag)
-        
+            .disposed(by: self.disposeBag)        
         let gradientLayer = CAGradientLayer()
         gradientLayer.setSkyGradientColor()
         self.view.layer.insertSublayer(gradientLayer, at: 0)
@@ -72,10 +79,34 @@ class TextInputViewController: UIViewController {
 
     // MARK: - bind intent
     func bindIntent(viewModel: TextInputViewModel) {
+        self.translateButton.rx.tap
+            .bind { [textView] in
+                guard let textView = textView else { return }
+                viewModel.translate(sentence: textView.text)
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind render
     func bindRender(viewModel: TextInputViewModel) {
+        viewModel.state.map { $0.translateResult }
+            .loading()
+            .bind { [loadingView] isLoading in
+                loadingView?.isHidden = !isLoading
+            }
+            .disposed(by: self.disposeBag)
+        viewModel.state.map { $0.translateResult }
+            .fail()
+            .bind { [transitionDispatcher] errorMessage in
+                transitionDispatcher.onNext(.errorAlert(errorMessage))
+            }
+            .disposed(by: self.disposeBag)
+        viewModel.state.map { $0.translateResult }
+            .success()
+            .bind { [transitionDispatcher] result in
+                transitionDispatcher.onNext(.translateResult(result))
+            }
+            .disposed(by: self.disposeBag)
     }
 
     // MARK: - bind transition

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextInputViewController" customModule="HiraganaTranslator" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="apH-Ks-vVU" id="zHq-ev-Bgk"/>
+                <outlet property="textView" destination="cEt-oL-GjS" id="wRA-hR-yuP"/>
                 <outlet property="translateButton" destination="IkS-ba-ycd" id="3ra-HH-mPL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="yXX-LB-UJu"/>
             </connections>
@@ -19,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cEt-oL-GjS" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cEt-oL-GjS" customClass="RoundTextView" customModule="HiraganaTranslator" customModuleProvider="target">
                     <rect key="frame" x="30" y="60" width="260" height="170"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>

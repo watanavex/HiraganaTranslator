@@ -142,8 +142,8 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     let info = [UIImagePickerController.InfoKey.originalImage: image as Any]
                     self.imagePickerController(imagePicker, didFinishPickingMediaWithInfo: info)
                     #endif
-                case .textInput:
-                    let viewController = sharedTextInputContainer.resolve(TextInputViewController.self)!
+                case .textInput(let initialText):
+                    let viewController = sharedTextInputContainer.resolve(TextInputViewController.self, argument: initialText)!
                     self.navigationController?.pushViewController(viewController, animated: true)
                 case .errorAlert(let errorMessage):
                     self.alertService.present(viewController: self,
