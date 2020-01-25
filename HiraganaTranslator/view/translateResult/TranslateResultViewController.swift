@@ -14,11 +14,8 @@ class TranslateResultViewController: UIViewController {
     enum Transition: Equatable {
         case menu
         case dismiss
-        case errorAlert(String)
     }
 
-    private let viewModel: TranslateResultViewModel
-    private let alertService: AlertService
     let disposeBag = DisposeBag()
     let transitionDispatcher = PublishSubject<Transition>()
 
@@ -34,9 +31,7 @@ class TranslateResultViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(viewModel: TranslateResultViewModel, alertService: AlertService, translateResult: TranslateResult) {
-        self.viewModel = viewModel
-        self.alertService = alertService
+    init(translateResult: TranslateResult) {
         self.translateResult = translateResult
         
         super.init(nibName: nil, bundle: nil)
@@ -46,9 +41,7 @@ class TranslateResultViewController: UIViewController {
         super.viewDidLoad()
 
         self.setupView()
-        self.bindRender(viewModel: self.viewModel)
         self.bindTransision(transitionDispatcher: self.transitionDispatcher)
-        self.bindIntent(viewModel: self.viewModel)
     }
 
     // MARK: - setup view
@@ -79,14 +72,6 @@ class TranslateResultViewController: UIViewController {
         .disposed(by: self.disposeBag)
     }
 
-    // MARK: - bind intent
-    func bindIntent(viewModel: TranslateResultViewModel) {
-    }
-
-    // MARK: - bind render
-    func bindRender(viewModel: TranslateResultViewModel) {
-    }
-
     // MARK: - bind transition
     func bindTransision(transitionDispatcher: PublishSubject<Transition>) {
         transitionDispatcher
@@ -97,12 +82,6 @@ class TranslateResultViewController: UIViewController {
                     self.navigationController?.popToRootViewController(animated: true)
                 case .dismiss:
                     self.navigationController?.popViewController(animated: true)
-                case .errorAlert(let errorMessage):
-                    self.alertService.present(viewController: self,
-                                              message: errorMessage,
-                                              actions: [CloseAlertAction()])
-                        .subscribe()
-                        .disposed(by: self.disposeBag)
                 }
             }
             .disposed(by: self.disposeBag)
