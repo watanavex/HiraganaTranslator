@@ -50,7 +50,12 @@ class TextInputViewModelTests: XCTestCase {
             .next(0, .uninitialized),
             .next(0, .loading),
             .next(0, .success(TranslateResult(
-                words: [word], surfaceWordIndexes: [], furiganaWordIndexes: [], surfaceCentence: "", furiganaCentence: "")))]
+                surfaceWordIndexes: [],
+                furiganaWordIndexes: [],
+                surfaceWordInitialIndexes: [0],
+                furiganaWordInitialIndexes: [0],
+                surfaceCentence: "",
+                furiganaCentence: "")))]
         )
         
         verify(self.translateApi, atLeastOnce()).translate(sentence: "")
