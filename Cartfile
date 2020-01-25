@@ -5,5 +5,3 @@ github "Swinject/Swinject"
 github "Swinject/SwinjectAutoregistration"
 github "RxSwiftCommunity/RxAlamofire"
 github "Brightify/Cuckoo"
-github "manGoweb/SpecTools"
-github "honghaoz/Ji" ~> 5.1.0
