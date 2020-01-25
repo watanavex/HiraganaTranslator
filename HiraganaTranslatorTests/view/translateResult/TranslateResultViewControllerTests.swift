@@ -68,7 +68,7 @@ class TranslateResultViewControllerTests: FBSnapshotTestCase {
             surfaceWordInitialIndexes: [0],
             furiganaWordInitialIndexes: [0],
             surfaceCentence: "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。",
-            furiganaCentence: "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。")
+            furiganaCentence: "あのいーはとーヴぉのすきとおったかぜ、なつでもそこにつめたさをもつあおいそら、うつくしいもりでかざられたもりーおし、こうがいのぎらぎらひかるくさのなみ。")
 
         
         self.viewController = TranslateResultViewController(translateResult: translateResult)
