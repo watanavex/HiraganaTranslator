@@ -821,8 +821,8 @@
 			);
 			outputPaths = (
 				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ViewModelMocks.generated.swift",
-				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/PasteBoardModelMock.generated.swift",
-				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/TextRecognizeModelMock.generated.swift",
+				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ModelMocks.generated.swift",
+				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/TranslateApiMock.generated.swift",
 				"$PROJECT_DIR/${PROJECT_NAME}Tests/generated/ErrorTranslatorMock.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
