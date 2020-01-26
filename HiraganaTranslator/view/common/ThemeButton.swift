@@ -11,22 +11,27 @@ import UIKit
 @IBDesignable
 class ThemeButton: UIButton {
     
-    enum Theme: Int {
-        case `default` = 0
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setup()
     }
     
-    @IBInspectable
-    var theme: Int = 0 {
-        didSet {
-            switch Theme(rawValue: self.theme) {
-            case .some(.default):
-                self.applyTheme(UIColor.systemOrange)
-            default: break
-            }
-        }
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        self.setup()
     }
     
-    private func applyTheme(_ themeColor: UIColor) {
+    private func setup() {
+        #if DEBUG
+        print("""
+--------------------------------------------
+Note⚠️: ThemeButton
+This control overrides some properties.
+TitleColor, TintColor, TitleFont, and more.
+These cannot be changed from InterfaceBuilder.
+""")
+        #endif
+        let themeColor = UIColor.systemOrange
         let highlightedColor = self.highlightedColor(from: themeColor)
 
         self.setTitleColor(themeColor, for: .normal)

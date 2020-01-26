@@ -8,15 +8,16 @@
 
 import UIKit
 
+@IBDesignable
 class RoundTextView: UITextView {
 
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    override func awakeFromNib() {
+        super.awakeFromNib()
         self.setup()
     }
-
-    override init(frame: CGRect, textContainer: NSTextContainer?) {
-        super.init(frame: frame, textContainer: textContainer)
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
         self.setup()
     }
     

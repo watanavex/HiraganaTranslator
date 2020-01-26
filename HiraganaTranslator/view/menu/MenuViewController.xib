@@ -34,31 +34,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeM-7l-elQ" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
-                    <rect key="frame" x="158" y="436" width="98" height="24"/>
+                    <rect key="frame" x="127" y="426" width="160" height="44"/>
                     <state key="normal" title="はりつけ" image="Clipboard"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="theme">
-                            <integer key="value" value="0"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIa-Gu-AMp" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
-                    <rect key="frame" x="149" y="510" width="116" height="24"/>
+                    <rect key="frame" x="113" y="520" width="188" height="44"/>
                     <state key="normal" title="きーぼーど" image="Keyboard"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="theme">
-                            <integer key="value" value="0"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIb-Vd-5W2" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
-                    <rect key="frame" x="167" y="362" width="80" height="24"/>
+                    <rect key="frame" x="141" y="332" width="132" height="44"/>
                     <state key="normal" title="かめら" image="Camera"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="theme">
-                            <integer key="value" value="0"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
