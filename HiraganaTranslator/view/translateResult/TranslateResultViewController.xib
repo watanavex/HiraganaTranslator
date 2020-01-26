@@ -47,22 +47,12 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghB-Ia-xLI" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
-                    <rect key="frame" x="106" y="468" width="108" height="30"/>
+                    <rect key="frame" x="62" y="448" width="196" height="40"/>
                     <state key="normal" title="はじめにもどる"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="theme">
-                            <integer key="value" value="0"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2D-5j-qXM" customClass="ThemeButton" customModule="HiraganaTranslator" customModuleProvider="target">
-                    <rect key="frame" x="91" y="518" width="138" height="30"/>
+                    <rect key="frame" x="34" y="508" width="252" height="40"/>
                     <state key="normal" title="ぶんしょうをなおす"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="theme">
-                            <integer key="value" value="0"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="もとのぶんしょう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5h-gp-7vn">
                     <rect key="frame" x="100" y="235" width="120" height="15"/>
