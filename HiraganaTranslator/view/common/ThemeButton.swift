@@ -22,6 +22,15 @@ class ThemeButton: UIButton {
     }
     
     private func setup() {
+        #if DEBUG
+        print("""
+--------------------------------------------
+Note⚠️: ThemeButton
+This control overrides some properties.
+TitleColor, TintColor, TitleFont, and more.
+These cannot be changed from InterfaceBuilder.
+""")
+        #endif
         let themeColor = UIColor.systemOrange
         let highlightedColor = self.highlightedColor(from: themeColor)
 
